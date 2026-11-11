@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>永濑唯作品 - 作品资料与观看顺序梳理</title>
+<meta name="description" content="永濑唯作品汇总：按年份梳理番号、共演与企划单集，收录2023至2026年新作动态、类型分类、选片判断方法与观众评论，适合想系统补完或挑选单部的观众查阅。">
+<meta name="keywords" content="永濑唯作品">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b23a5b'/%3E%3Cpath d='M20 44V20h6l6 12 6-12h6v24h-6V31l-6 11-6-11v13z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --main:#b23a5b;
+  --main-light:#f6e4ea;
+  --main-mid:#d9728f;
+  --main-dark:#7d2440;
+  --bg:#fbf8f7;
+  --panel:#ffffff;
+  --text:#262024;
+  --text-2:#5c5157;
+  --text-3:#8b8087;
+  --line:#e8dfe2;
+  --radius-card:12px;
+  --radius-btn:8px;
+  --radius-tag:999px;
+  --radius-banner:16px;
+  --shadow:0 1px 2px rgba(38,32,36,.06),0 4px 14px rgba(38,32,36,.05);
+  --shadow-hover:0 4px 10px rgba(38,32,36,.08),0 12px 28px rgba(38,32,36,.10);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --head-h:112px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--head-h);}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.75;font-size:15px;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;letter-spacing:.01em;}
+p{margin:0 0 12px;}
+ul,ol{margin:0 0 12px;padding-left:1.2em;}
+li{margin-bottom:6px;}
+img{max-width:100%;display:block;}
+
+/* 吸顶公告条 + 页头 */
+.sticky-wrap{position:sticky;top:0;z-index:100;}
+.notice-bar{background:var(--main-dark);color:#fbeef2;font-size:13px;padding:7px 16px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:center;}
+.notice-bar .nb-brand{font-weight:700;color:#fff;letter-spacing:.04em;}
+.notice-bar .nb-item{display:inline-flex;gap:6px;align-items:center;}
+.notice-bar .nb-date{color:#f0c3d1;font-variant-numeric:tabular-nums;}
+.site-header{background:rgba(251,248,247,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.header-inner{max-width:1340px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.02em;}
+.logo svg{flex:none;}
+.logo .logo-text{color:var(--main-dark);}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;font-size:14px;}
+.main-nav a{padding:6px 11px;border-radius:var(--radius-btn);color:var(--text-2);transition:background .2s,color .2s;}
+.main-nav a:hover,.main-nav a:focus-visible{background:var(--main-light);color:var(--main-dark);}
+.header-search{margin-left:auto;display:flex;align-items:center;gap:6px;}
+.header-search input{font-family:inherit;font-size:13px;padding:7px 12px;border:1px solid var(--line);border-radius:var(--radius-btn);background:#fff;width:180px;color:var(--text);}
+.header-search input:focus{outline:2px solid var(--main-mid);outline-offset:1px;}
+.header-search button{font-family:inherit;font-size:13px;padding:7px 14px;border:none;border-radius:var(--radius-btn);background:var(--main);color:#fff;cursor:pointer;transition:background .2s;}
+.header-search button:hover{background:var(--main-dark);}
+.hamburger{display:none;background:none;border:1px solid var(--line);border-radius:var(--radius-btn);padding:6px 10px;cursor:pointer;font-size:16px;color:var(--main-dark);}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#f9e7ee 0%,#fdf5f2 55%,#f4ecef 100%);border-bottom:1px solid var(--line);}
+.hero-inner{max-width:1340px;margin:0 auto;padding:52px 20px 46px;display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:center;position:relative;z-index:2;}
+.hero h1{font-size:40px;letter-spacing:.03em;color:var(--main-dark);}
+.hero .hero-sub{margin-top:14px;font-size:16px;color:var(--text-2);max-width:560px;}
+.hero-tags{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;}
+.hero-tags a{font-size:13px;padding:6px 13px;border-radius:var(--radius-tag);background:#fff;border:1px solid var(--main-light);color:var(--main-dark);box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;}
+.hero-tags a:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover);}
+.hero-stats{margin-top:24px;display:flex;gap:26px;flex-wrap:wrap;font-size:13px;color:var(--text-3);}
+.hero-stats b{display:block;font-size:21px;color:var(--main);font-variant-numeric:tabular-nums;}
+.hero-art{position:relative;height:260px;}
+.hero-art svg{width:100%;height:100%;}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-art .float{animation:drift 7s ease-in-out infinite;}
+
+/* 布局：三栏门户 */
+.layout{max-width:1340px;margin:0 auto;padding:34px 20px 10px;display:grid;grid-template-columns:180px minmax(0,1fr) 250px;gap:28px;align-items:start;}
+.side-left{position:sticky;top:calc(var(--head-h) + 14px);}
+.channel-index{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:14px 12px;box-shadow:var(--shadow);}
+.channel-index h2{font-size:14px;color:var(--text-3);font-weight:600;margin-bottom:10px;letter-spacing:.08em;}
+.channel-index a{display:block;font-size:13.5px;padding:7px 9px;border-radius:var(--radius-btn);color:var(--text-2);border-left:2px solid transparent;transition:background .18s,color .18s,border-color .18s;}
+.channel-index a:hover,.channel-index a.active{background:var(--main-light);color:var(--main-dark);border-left-color:var(--main);}
+.side-right{position:sticky;top:calc(var(--head-h) + 14px);display:flex;flex-direction:column;gap:18px;}
+.aside-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:14px 15px;box-shadow:var(--shadow);}
+.aside-card h2{font-size:14px;margin-bottom:10px;color:var(--main-dark);}
+.aside-card ol{padding-left:1.1em;font-size:13px;color:var(--text-2);}
+.aside-card ol li{margin-bottom:8px;}
+.aside-card ol li span{color:var(--main);font-weight:700;margin-right:4px;font-variant-numeric:tabular-nums;}
+.aside-card .mini-list{list-style:none;padding:0;font-size:13px;}
+.aside-card .mini-list li{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line);}
+.aside-card .mini-list li:last-child{border-bottom:none;}
+.aside-card .mini-list em{font-style:normal;color:var(--text-3);font-size:12px;white-space:nowrap;}
+
+/* 板块通用 */
+section.block{margin-bottom:38px;scroll-margin-top:var(--head-h);}
+.block-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px;}
+.block-head h2{font-size:21px;color:var(--main-dark);}
+.block-head .block-note{font-size:13px;color:var(--text-3);}
+.overview-text{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:20px 22px;box-shadow:var(--shadow);font-size:14.5px;color:var(--text-2);}
+.overview-text p:last-child{margin-bottom:0;}
+
+/* 精选卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);}
+.card img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:7px;flex:1;}
+.card-title{font-size:15px;font-weight:700;line-height:1.4;}
+.card-type{font-size:11.5px;color:var(--main);background:var(--main-light);align-self:flex-start;padding:2px 9px;border-radius:var(--radius-tag);}
+.card-desc{font-size:13px;color:var(--text-2);line-height:1.65;}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;}
+.card-tags span{font-size:11.5px;color:var(--text-3);border:1px solid var(--line);padding:1px 7px;border-radius:var(--radius-tag);}
+.card-meta{font-size:11.5px;color:var(--text-3);display:flex;gap:12px;border-top:1px dashed var(--line);padding-top:8px;font-variant-numeric:tabular-nums;}
+.card-meta b{color:var(--main);font-weight:700;}
+
+/* 更新列表 */
+.update-list{list-style:none;padding:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);box-shadow:var(--shadow);overflow:hidden;}
+.update-list li{display:grid;grid-template-columns:88px 1fr;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:13.5px;}
+.update-list li:last-child{border-bottom:none;}
+.update-list time{color:var(--text-3);font-size:12.5px;font-variant-numeric:tabular-nums;padding-top:1px;}
+.update-list strong{color:var(--main-dark);}
+.update-list p{margin:2px 0 0;color:var(--text-2);font-size:13px;}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.cat-item{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:14px;box-shadow:var(--shadow);transition:border-color .2s,transform .2s;}
+.cat-item:hover{border-color:var(--main-mid);transform:translateY(-2px);}
+.cat-item h3{font-size:14.5px;color:var(--main-dark);margin-bottom:5px;}
+.cat-item p{font-size:12.5px;color:var(--text-3);margin:0;line-height:1.6;}
+
+/* 深度解析 */
+.article{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:24px 26px;box-shadow:var(--shadow);font-size:14.5px;color:var(--text-2);}
+.article h3{font-size:16.5px;color:var(--main-dark);margin:22px 0 10px;}
+.article h3:first-child{margin-top:0;}
+.article ul{padding-left:1.25em;}
+.article li{margin-bottom:7px;}
+.article strong{color:var(--text);}
+.article .callout{background:var(--main-light);border-left:3px solid var(--main);border-radius:0 var(--radius-btn) var(--radius-btn) 0;padding:12px 16px;font-size:13.5px;margin:14px 0;color:var(--main-dark);}
+.article table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0;background:#fff;}
+.article th,.article td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+.article th{background:var(--main-light);color:var(--main-dark);font-weight:600;}
+
+/* 指南步骤 */
+.steps{counter-reset:step;display:grid;gap:12px;}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:16px 18px 16px 56px;position:relative;box-shadow:var(--shadow);}
+.step::before{counter-increment:step;content:counter(step);position:absolute;left:16px;top:16px;width:26px;height:26px;border-radius:50%;background:var(--main);color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center;}
+.step h3{font-size:14.5px;color:var(--main-dark);margin-bottom:5px;}
+.step p{font-size:13.5px;color:var(--text-2);margin:0;}
+
+/* FAQ */
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:0;margin-bottom:10px;box-shadow:var(--shadow);overflow:hidden;}
+.faq summary{cursor:pointer;padding:14px 18px;font-size:14.5px;font-weight:600;color:var(--main-dark);list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";color:var(--main-mid);font-size:18px;font-weight:400;flex:none;}
+.faq details[open] summary::after{content:"−";}
+.faq details .faq-body{padding:0 18px 15px;font-size:13.5px;color:var(--text-2);}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.comment{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:13px 15px;box-shadow:var(--shadow);}
+.comment-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:5px;}
+.comment-head b{font-size:13px;color:var(--main-dark);font-weight:600;}
+.comment-head span{font-size:11.5px;color:var(--text-3);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.comment p{font-size:13.5px;color:var(--text-2);margin:0;line-height:1.7;}
+
+/* 资讯 */
+.news-list{list-style:none;padding:0;display:grid;gap:10px;}
+.news-list li{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:14px 18px;box-shadow:var(--shadow);}
+.news-list h3{font-size:14.5px;color:var(--main-dark);margin-bottom:4px;}
+.news-list .news-date{font-size:12px;color:var(--text-3);margin-right:10px;font-variant-numeric:tabular-nums;}
+.news-list p{font-size:13px;color:var(--text-2);margin:0;}
+
+/* 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:8px;}
+.tag-index a{font-size:13px;padding:6px 13px;border-radius:var(--radius-tag);background:var(--panel);border:1px solid var(--line);color:var(--text-2);transition:all .18s;}
+.tag-index a:hover{background:var(--main);color:#fff;border-color:var(--main);}
+
+/* 榜单 */
+.rank-list{list-style:none;padding:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);box-shadow:var(--shadow);overflow:hidden;}
+.rank-list li{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:11px 18px;border-bottom:1px solid var(--line);font-size:13.5px;}
+.rank-list li:last-child{border-bottom:none;}
+.rank-list .rk{font-weight:800;color:var(--main-mid);font-variant-numeric:tabular-nums;}
+.rank-list li:nth-child(-n+3) .rk{color:var(--main);}
+.rank-list .rank-name{color:var(--text);}
+.rank-list .rank-name small{display:block;color:var(--text-3);font-size:12px;font-weight:400;}
+.rank-list .rank-score{font-size:12.5px;color:var(--text-3);font-variant-numeric:tabular-nums;white-space:nowrap;}
+
+/* 投稿 */
+.submit-panel{background:linear-gradient(120deg,var(--main-light),#fdf5f2);border:1px solid var(--main-light);border-radius:var(--radius-banner);padding:22px 24px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;}
+.submit-panel h2{font-size:18px;color:var(--main-dark);margin-bottom:6px;}
+.submit-panel p{font-size:13.5px;color:var(--text-2);margin:0;}
+.submit-panel .btn{font-size:14px;padding:10px 22px;background:var(--main);color:#fff;border-radius:var(--radius-btn);font-weight:600;white-space:nowrap;transition:background .2s;}
+.submit-panel .btn:hover{background:var(--main-dark);}
+
+/* 页尾 */
+.site-footer{background:#2b2226;color:#cfc3c8;margin-top:30px;padding:38px 20px 24px;font-size:13px;}
+.footer-inner{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;}
+.footer-brand{font-size:17px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:.02em;}
+.footer-inner p{color:#a99ca2;line-height:1.8;}
+.footer-col h3{font-size:13.5px;color:#fff;margin-bottom:10px;font-weight:600;}
+.footer-col a{display:block;color:#a99ca2;padding:3px 0;transition:color .18s;}
+.footer-col a:hover{color:#f0c3d1;}
+.footer-bottom{max-width:1340px;margin:26px auto 0;padding-top:16px;border-top:1px solid #443a3f;font-size:12px;color:#8d8187;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+/* 回到顶部 */
+.to-top{position:fixed;right:20px;bottom:24px;width:42px;height:42px;border-radius:50%;background:var(--main);color:#fff;border:none;cursor:pointer;font-size:17px;box-shadow:var(--shadow-hover);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:90;}
+.to-top.show{opacity:1;pointer-events:auto;}
+.to-top:hover{background:var(--main-dark);transform:translateY(-2px);}
+.search-empty{display:none;padding:16px;font-size:13.5px;color:var(--text-3);background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius-card);}
+
+/* 响应式 */
+@media(max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr) 250px;}
+  .side-left{display:none;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-art{display:none;}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .footer-inner{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:740px){
+  :root{--head-h:96px;}
+  .layout{grid-template-columns:minmax(0,1fr);padding-top:22px;}
+  .side-right{position:static;}
+  .hero h1{font-size:30px;}
+  .hero-inner{padding:34px 18px 30px;}
+  .card-grid,.comment-grid{grid-template-columns:minmax(0,1fr);}
+  .cat-grid{grid-template-columns:minmax(0,1fr);}
+  .update-list li{grid-template-columns:1fr;gap:2px;}
+  .main-nav{display:none;}
+  .main-nav.open{display:flex;flex-direction:column;width:100%;padding-top:8px;}
+  .hamburger{display:block;}
+  .header-search{margin-left:auto;}
+  .header-search input{width:120px;}
+  .submit-panel{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;}
+  .article{padding:18px 16px;}
+  .notice-bar{font-size:12px;gap:10px;padding:6px 12px;}
+  .to-top{right:14px;bottom:16px;}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="notice-bar" role="region" aria-label="更新公告">
+    <span class="nb-brand">永濑唯作品</span>
+    <span class="nb-item"><span class="nb-date">2026-11-07</span>《冬の余白》前篇上线</span>
+    <span class="nb-item"><span class="nb-date">2026-11-05</span>2026年度共演企划追加第4弹</span>
+    <span class="nb-item">本周新增 9 部条目资料</span>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="/#top" aria-label="永濑唯作品 首页">
+        <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#b23a5b"/>
+          <path d="M18 46V18h7l7 14 7-14h7v28h-7V31l-7 13-7-13v15z" fill="#fff"/>
+        </svg>
+        <span class="logo-text">永濑唯作品</span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选作品</a>
+        <a href="/#updates">新作动态</a>
+        <a href="/#categories">类型分类</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">观众评论</a>
+      </nav>
+      <form class="header-search" role="search" id="searchForm">
+        <input type="search" id="searchInput" placeholder="搜索作品名 / 类型" aria-label="站内搜索">
+        <button type="submit">查找</button>
+      </form>
+      <button class="hamburger" id="hamburger" aria-label="展开导航" aria-expanded="false" aria-controls="mainNav">☰</button>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>永濑唯作品</h1>
+        <p class="hero-sub">按年份与番号整理的永濑唯出演条目，含共演企划、单集剧情向与写真向作品，附类型差异说明、选片判断依据与观众反馈。</p>
+        <div class="hero-tags">
+          <a href="/#featured">2026 新作</a>
+          <a href="/#categories">共演企划</a>
+          <a href="/#categories">剧情向单集</a>
+          <a href="/#guide">补完顺序</a>
+          <a href="/#updates">番号检索</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>186</b>收录条目</div>
+          <div><b>2019—2026</b>时间跨度</div>
+          <div><b>9</b>本周新增</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 320 260" class="float">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#d9728f"/>
+              <stop offset="1" stop-color="#7d2440"/>
+            </linearGradient>
+          </defs>
+          <rect x="40" y="30" width="130" height="180" rx="10" fill="url(#g1)" opacity=".9"/>
+          <rect x="58" y="52" width="94" height="10" rx="5" fill="#fff" opacity=".7"/>
+          <rect x="58" y="72" width="70" height="8" rx="4" fill="#fff" opacity=".5"/>
+          <rect x="58" y="150" width="94" height="8" rx="4" fill="#fff" opacity=".4"/>
+          <rect x="58" y="166" width="60" height="8" rx="4" fill="#fff" opacity=".3"/>
+          <circle cx="230" cy="90" r="52" fill="#f6e4ea"/>
+          <circle cx="230" cy="90" r="30" fill="#b23a5b" opacity=".85"/>
+          <rect x="192" y="160" width="100" height="60" rx="8" fill="#fff" stroke="#e8dfe2"/>
+          <rect x="204" y="174" width="52" height="7" rx="3.5" fill="#d9728f"/>
+          <rect x="204" y="189" width="76" height="6" rx="3" fill="#e8dfe2"/>
+          <rect x="204" y="201" width="62" height="6" rx="3" fill="#e8dfe2"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout">
+
+    <aside class="side-left">
+      <nav class="channel-index" id="channelIndex" aria-label="频道索引">
+        <h2>频道索引</h2>
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选作品</a>
+        <a href="/#updates">新作动态</a>
+        <a href="/#categories">类型分类</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">观众评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#related">相关推荐</a>
+        <a href="/#ranking">人气榜单</a>
+        <a href="/#submit">投稿交流</a>
+      </nav>
+    </aside>
+
+    <div class="main-col">
+
+      <section class="block" id="overview">
+        <div class="block-head"><h2>领域概览：作品形态与近期看点</h2></div>
+        <div class="overview-text">
+          <p>永濑唯的出演条目大致分成四类：单集剧情向、共演企划、写真影像、以及近两年增多的短篇合集。单集剧情向通常以固定番号发行，时长在 90 至 120 分钟，剧情设定从职场、校园到生活向各有覆盖；共演企划多为两到四人同框，番号常带系列编号，近年以季度企划形式推出。</p>
+          <p>2026 年值得留意的方向集中在两处。一是《冬の余白》前后篇，10 月底公布阵容、11 月 7 日上线前篇，属于少见的分段发行；二是共演企划第 4 弹，11 月 5 日追加名单后，参与人数从两人扩到四人，官方账号同步放出了 30 秒预告。写真影像方面，2025 年 12 月发行的《白昼の輪郭》是近期讨论度较高的一部，拍摄地位于静冈，全片以自然光为主。</p>
+          <p>条目命名上，官方番号多以字母加数字组合，不同发行方的前缀不一致，检索时按发行方分别查更稳妥。作品类型标签方面，剧情向、共演、写真、合集是目前最常用的四类划分，跨类别的混合企划一般归入共演或合集。</p>
+        </div>
+      </section>
+
+      <section class="block" id="featured">
+        <div class="block-head"><h2>精选作品推荐</h2><span class="block-note">按发行时间与讨论度挑选</span></div>
+        <div class="card-grid">
+          <article class="card" data-title="冬の余白 前篇">
+            <img src="https://picsum.photos/seed/nyui-fuyu1/400/300" width="400" height="300" loading="lazy" alt="《冬の余白》前篇封面，雪景与室内暖光构图">
+            <div class="card-body">
+              <span class="card-type">剧情向单集</span>
+              <h3 class="card-title">冬の余白 前篇</h3>
+              <p class="card-desc">2026 年 11 月 7 日上线，全片 108 分钟，以北海道取景为主，前篇止于主角搬家前夜，留了明显的续接点。</p>
+              <div class="card-tags"><span>北海道外景</span><span>分段发行</span><span>生活向</span></div>
+              <div class="card-meta"><span>热度 <b>92</b></span><span>更新 11-07</span></div>
+            </div>
+          </article>
+          <article class="card" data-title="共演企划 2026 第4弹">
+            <img src="https://picsum.photos/seed/nyui-kyoen4/400/300" width="400" height="300" loading="lazy" alt="2026 共演企划第4弹四人同框宣传照">
+            <div class="card-body">
+              <span class="card-type">共演企划</span>
+              <h3 class="card-title">共演企划 2026 第4弹</h3>
+              <p class="card-desc">11 月 5 日名单从两人扩到四人，新增两位共演者，官方放出 30 秒预告，正片预计 11 月下旬发行。</p>
+              <div class="card-tags"><span>四人共演</span><span>季度企划</span><span>预告已出</span></div>
+              <div class="card-meta"><span>热度 <b>88</b></span><span>更新 11-05</span></div>
+            </div>
+          </article>
+          <article class="card" data-title="白昼の輪郭">
+            <img src="https://picsum.photos/seed/nyui-hakuchu/400/300" width="400" height="300" loading="lazy" alt="《白昼の輪郭》写真影像，静冈海边自然光">
+            <div class="card-body">
+              <span class="card-type">写真影像</span>
+              <h3 class="card-title">白昼の輪郭</h3>
+              <p class="card-desc">2025 年 12 月发行，静冈拍摄三天，全片自然光，几乎无棚拍段落，适合想看外景风格的观众。</p>
+              <div class="card-tags"><span>静冈外景</span><span>自然光</span><span>2025 年发行</span></div>
+              <div class="card-meta"><span>热度 <b>79</b></span><span>评分 4.3</span></div>
+            </div>
+          </article>
+          <article class="card" data-title="雨のあとで">
+            <img src="https://picsum.photos/seed/nyui-ame/400/300" width="400" height="300" loading="lazy" alt="《雨のあとで》剧情向作品，雨天街道取景">
+            <div class="card-body">
+              <span class="card-type">剧情向单集</span>
+              <h3 class="card-title">雨のあとで</h3>
+              <p class="card-desc">2026 年 9 月发行，全片以雨天都市为背景，叙事线较短，前 20 分钟几乎是铺垫，后半段才进入主线。</p>
+              <div class="card-tags"><span>都市外景</span><span>慢节奏</span><span>2026 年发行</span></div>
+              <div class="card-meta"><span>热度 <b>71</b></span><span>更新 09-18</span></div>
+            </div>
+          </article>
+          <article class="card" data-title="短篇合集 Vol.3">
+            <img src="https://picsum.photos/seed/nyui-tanpen3/400/300" width="400" height="300" loading="lazy" alt="短篇合集 Vol.3 合集封面，四格构图">
+            <div class="card-body">
+              <span class="card-type">短篇合集</span>
+              <h3 class="card-title">短篇合集 Vol.3</h3>
+              <p class="card-desc">四段独立短篇拼成，每段约 25 分钟，其中第二段「夜の窓」评价最高，单看这一段也能成立。</p>
+              <div class="card-tags"><span>四段拼盘</span><span>夜の窓</span><span>合集</span></div>
+              <div class="card-meta"><span>热度 <b>67</b></span><span>评分 4.0</span></div>
+            </div>
+          </article>
+          <article class="card" data-title="共演企划 2025 第2弹">
+            <img src="https://picsum.photos/seed/nyui-kyoen2/400/300" width="400" height="300" loading="lazy" alt="2025 共演企划第2弹两人对谈场景">
+            <div class="card-body">
+              <span class="card-type">共演企划</span>
+              <h3 class="card-title">共演企划 2025 第2弹</h3>
+              <p class="card-desc">2025 年 8 月发行，两人共演，前半段以对谈形式展开，后半段才进入正式段落，节奏偏慢。</p>
+              <div class="card-tags"><span>两人共演</span><span>对谈开场</span><span>2025 年发行</span></div>
+              <div class="card-meta"><span>热度 <b>63</b></span><span>评分 4.1</span></div>
+            </div>
+          </article>
+          <article class="card" data-title="春の手紙">
+            <img src="https://picsum.photos/seed/nyui-haru/400/300" width="400" height="300" loading="lazy" alt="《春の手紙》剧情向作品，樱花与信纸元素">
+            <div class="card-body">
+              <span class="card-type">剧情向单集</span>
+              <h3 class="card-title">春の手紙</h3>
+              <p class="card-desc">2026 年 3 月发行，剧情围绕一封旧信展开，取景集中在京都，室内戏比例较高。</p>
+              <div class="card-tags"><span>京都外景</span><span>室内戏多</span><span>2026 年发行</span></div>
+              <div class="card-meta"><span>热度 <b>70</b></span><span>更新 03-21</span></div>
+            </div>
+          </article>
+          <article class="card" data-title="冬の余白 后篇">
+            <img src="https://picsum.photos/seed/nyui-fuyu2/400/300" width="400" height="300" loading="lazy" alt="《冬の余白》后篇预告画面，搬家卡车与雪地">
+            <div class="card-body">
+              <span class="card-type">剧情向单集</span>
+              <h3 class="card-title">冬の余白 后篇</h3>
+              <p class="card-desc">前篇上线后公布，正片排期 11 月下旬，预告显示取景延续北海道，主角搬入新居后的段落占大头。</p>
+              <div class="card-tags"><span>续篇</span><span>北海道外景</span><span>待发行</span></div>
+              <div class="card-meta"><span>热度 <b>85</b></span><span>预告 11-07</span></div>
+            </div>
+          </article>
+          <article class="card" data-title="青の記録">
+            <img src="https://picsum.photos/seed/nyui-ao/400/300" width="400" height="300" loading="lazy" alt="《青の記録》写真影像，蓝色调海景">
+            <div class="card-body">
+              <span class="card-type">写真影像</span>
+              <h3 class="card-title">青の記録</h3>
+              <p class="card-desc">2024 年发行，全片以蓝调为主，拍摄地位于冲绳，节奏慢，适合当作外景影像看。</p>
+              <div class="card-tags"><span>冲绳外景</span><span>慢节奏</span><span>2024 年发行</span></div>
+              <div class="card-meta"><span>热度 <b>58</b></span><span>评分 3.9</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="search-empty" id="searchEmpty">没有匹配的条目，换个关键词试试。</div>
+      </section>
+
+      <section class="block" id="updates">
+        <div class="block-head"><h2>新作动态与发行进度</h2></div>
+        <ul class="update-list">
+          <li><time>2026-11-07</time><div><strong>《冬の余白》前篇上线</strong><p>全片 108 分钟，发行方同步放出 15 秒片段，后篇排期同步公布。</p></div></li>
+          <li><time>2026-11-05</time><div><strong>共演企划 2026 第4弹名单扩充</strong><p>新增两位共演者，参与人数由两人变为四人，30 秒预告已放出。</p></div></li>
+          <li><time>2026-11-03</time><div><strong>《雨のあとで》追加幕后片段</strong><p>发行方账号发布 6 分钟幕后，内容为雨天外景的拍摄花絮。</p></div></li>
+          <li><time>2026-10-29</time><div><strong>短篇合集 Vol.3 第二段单独剪辑</strong><p>「夜の窓」被单独剪成 25 分钟版本，作为独立条目上线。</p></div></li>
+          <li><time>2026-10-24</time><div><strong>《春の手紙》京都取景地公开</strong><p>制作方公布三处取景地，均在京都市内，含一处旧书店。</p></div></li>
+          <li><time>2026-10-18</time><div><strong>2025 年作品合集再版</strong><p>包含《白昼の輪郭》在内的五部 2025 年作品推出再版套装。</p></div></li>
+          <li><time>2026-10-12</time><div><strong>《青の記録》冲绳外景补充片段</strong><p>新增约 8 分钟未收录外景，随再版发行。</p></div></li>
+          <li><time>2026-10-06</time><div><strong>《冬の余白》前后篇确定分段发行</strong><p>发行方确认为两段发行，前篇 11 月 7 日、后篇 11 月下旬。</p></div></li>
+          <li><time>2026-09-28</time><div><strong>共演企划 2025 第2弹上架流媒体</strong><p>2025 年 8 月发行的作品首次进入流媒体平台，画质为 1080p。</p></div></li>
+          <li><time>2026-09-18</time><div><strong>《雨のあとで》正式发行</strong><p>全片 96 分钟，发行首周进入平台新作榜前二十。</p></div></li>
+        </ul>
+      </section>
+
+      <section class="block" id="categories">
+        <div class="block-head"><h2>类型分类入口</h2></div>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#featured"><h3>剧情向单集</h3><p>固定番号、90—120 分钟，剧情设定覆盖职场、校园、生活向。</p></a>
+          <a class="cat-item" href="/#featured"><h3>共演企划</h3><p>两到四人同框，按季度推出，近年以系列编号形式发行。</p></a>
+          <a class="cat-item" href="/#featured"><h3>写真影像</h3><p>以外景与自然光为主，时长偏短，节奏较慢。</p></a>
+          <a class="cat-item" href="/#featured"><h3>短篇合集</h3><p>多段独立短篇拼成，单段约 25 分钟，可拆开看。</p></a>
+          <a class="cat-item" href="/#updates"><h3>2026 年新作</h3><p>含《冬の余白》《雨のあとで》《春の手紙》等当年发行条目。</p></a>
+          <a class="cat-item" href="/#updates"><h3>分段发行</h3><p>前后篇拆分上线的作品，需按顺序观看。</p></a>
+          <a class="cat-item" href="/#ranking"><h3>高讨论度</h3><p>按平台讨论量与评分筛选，集中在近十二个月。</p></a>
+          <a class="cat-item" href="/#guide"><h3>补完顺序</h3><p>按发行时间与剧情连续性给出的观看建议。</p></a>
+        </div>
+      </section>
+
+      <section class="block" id="deep">
+        <div class="block-head"><h2>深度解析：作品类型差异与选片判断</h2></div>
+        <div class="article">
+          <h3>单集剧情向与共演企划的时长结构差异</h3>
+          <p>把近三年条目按时长排一遍，会看到一条清晰的分界。单集剧情向普遍在 90 至 120 分钟之间，前 20 到 30 分钟用于建立情境，主线集中在中段；共演企划多在 120 至 150 分钟，但有效段落被切得更碎，两人共演时通常分成三段，四人共演则增加到四到五段。这个结构差异直接决定了观看体验：单集适合一次看完，共演可以分段看，跳段损失不大。</p>
+          <p>以《冬の余白》前篇为例，108 分钟里前 24 分钟是搬家准备，中段 50 分钟是主线，最后 34 分钟为后篇铺垫。官方在 11 月 7 日放出的 15 秒片段取自中段，说明宣传重心也放在主线段落。对比 2025 年 8 月的共演企划第 2 弹，两人共演全片 132 分钟，前 18 分钟是对谈，之后分三段推进，每段约 35 分钟。</p>
+
+          <h3>番号规则与检索方式</h3>
+          <p>永濑唯作品的番号并非统一体系。不同发行方使用不同前缀，同一发行方内部也按年份和系列分别编号。检索时按发行方分别查，比按名字搜更准。具体规则可以拆成三项来核对：</p>
+          <ul>
+            <li>前缀字母：常见两到三个字母，对应发行方或系列线。</li>
+            <li>数字段：通常四到五位，前两位与年份相关，后几位为序号。</li>
+            <li>后缀标记：部分条目带「-R」表示再版，带「-SP」表示特别版。</li>
+          </ul>
+          <div class="callout">一套可核对的判断方式：先确认前缀对应哪家发行方，再核对数字段是否与发行年份吻合，最后看后缀是否为再版。三项都对上，条目基本可以确认是原版而非二次剪辑。</div>
+
+          <h3>分段发行带来的判断问题</h3>
+          <p>《冬の余白》前后篇是近两年少见的拆分发行。前篇 11 月 7 日上线，后篇排到 11 月下旬，中间隔约三周。这种发行方式对观众的实际影响有两层：一是前篇本身不完整，结尾停在搬家前夜，单独看会觉得收尾仓促；二是后篇的宣传素材已经提前放出，观看前容易先接触到后篇信息。</p>
+          <p>已公开的信息是：发行方确认两段发行，前篇 108 分钟，后篇时长未公布。发行方账号在 11 月 7 日的说明里只提到「后篇延续同一取景地」，没有透露剧情走向。媒体转述部分则出现了「后篇可能加入新角色」的说法，来源是一则未署名的预告解读，可信度需要打折扣。观众侧的推测集中在后篇是否会补拍，目前没有制作方回应。</p>
+
+          <h3>写真影像的取舍标准</h3>
+          <p>写真影像的时长通常短于剧情向，40 到 70 分钟居多。《白昼の輪郭》全片 62 分钟，静冈拍摄三天，自然光段落占八成以上，棚拍只有不到 10 分钟。《青の記録》则是另一种路数，冲绳外景为主，蓝调统一，但节奏更慢，前 15 分钟几乎没有对白。</p>
+          <p>判断一部写真值不值得看，可以按三个要素排优先级：取景地是否稀缺、光线是否有统一设计、是否有叙事线。三项里满足两项，基本不会太差；只满足一项，观感容易两极。《白昼の輪郭》三项都占，是 2025 年评价较稳的一部；《青の記録》占前两项，叙事线偏弱，评分 3.9 也反映了这一点。</p>
+
+          <h3>合集类条目的拆分观看价值</h3>
+          <p>短篇合集 Vol.3 是四段拼盘，每段约 25 分钟。这类条目的问题在于质量不齐，四段里往往只有一到两段值得单独看。Vol.3 的第二段「夜の窓」在 10 月 29 日被单独剪成独立条目上线，说明发行方也认可这一段的市场反馈。其余三段里，第一段和第四段评价接近，第三段偏弱。</p>
+          <p>合集类的观看策略可以简化成：先看被单独剪出来的段落，再决定是否补完整版。这个顺序在近两年的合集条目里基本适用，因为单独剪辑通常意味着发行方做过一轮筛选。</p>
+        </div>
+      </section>
+
+      <section class="block" id="guide">
+        <div class="block-head"><h2>观看指南：补完顺序与投入判断</h2></div>
+        <div class="steps">
+          <div class="step"><h3>先按发行时间排一遍</h3><p>2019 至 2022 年的条目类型较单一，以单集剧情向为主；2023 年之后共演企划和合集比例上升。按时间排能看清类型变化，也方便判断哪些条目属于早期风格。</p></div>
+          <div class="step"><h3>剧情连续性优先于发行热度</h3><p>分段发行的作品必须按前后篇顺序看，《冬の余白》前篇结尾直接接后篇，跳看会断线。非分段的单集可以按兴趣挑，热度高低与剧情完整度关系不大。</p></div>
+          <div class="step"><h3>用三项要素判断是否值得投入时间</h3><p>取景地、光线设计、叙事线，三项里满足两项再决定看全片。写真影像尤其适用，剧情向可以再加一项「剧情设定是否有具体场景」。</p></div>
+          <div class="step"><h3>合集先看单剪段落</h3><p>被单独剪出来的段落通常经过筛选，先看这一段，再决定是否补完整版，能省掉不少时间。</p></div>
+          <div class="step"><h3>同类条目横向比较</h3><p>同一年发行的两部剧情向，比较时长结构、取景地和叙事密度，比单看评分更可靠。评分受发行时间和平台影响，跨年比较意义有限。</p></div>
+        </div>
+      </section>
+
+      <section class="block" id="faq">
+        <div class="block-head"><h2>常见问答</h2></div>
+        <div class="faq">
+          <details><summary>《冬の余白》前篇和后篇必须按顺序看吗？</summary><div class="faq-body">必须。前篇 108 分钟停在主角搬家前夜，后篇从搬入新居开始，剧情直接衔接。前篇结尾没有独立收束，跳看会缺少前情。</div></details>
+          <details><summary>共演企划 2026 第4弹的四人名单是什么时候确定的？</summary><div class="faq-body">2026 年 11 月 5 日。发行方当天把参与人数从两人扩到四人，并同步放出 30 秒预告，正片预计 11 月下旬发行。</div></details>
+          <details><summary>番号里的「-R」和「-SP」分别代表什么？</summary><div class="faq-body">「-R」表示再版，通常是原版发行一段时间后重新上架；「-SP」表示特别版，可能包含追加片段或不同剪辑。两者都不是新作。</div></details>
+          <details><summary>写真影像和剧情向单集怎么区分？</summary><div class="faq-body">看时长和结构。写真影像多在 40 至 70 分钟，以外景和光线为主，叙事线弱；剧情向单集 90 至 120 分钟，有明确的情境建立和主线推进。</div></details>
+          <details><summary>短篇合集 Vol.3 只看看第二段可以吗？</summary><div class="faq-body">可以。「夜の窓」在 2026 年 10 月 29 日被单独剪成 25 分钟版本上线，四段之间没有剧情关联，单看第二段不影响理解。</div></details>
+          <details><summary>《白昼の輪郭》为什么讨论度比《青の記録》高？</summary><div class="faq-body">取景地、光线设计、叙事线三项里，《白昼の輪郭》三项都占，评分 4.3；《青の記録》叙事线偏弱，评分 3.9。差异主要在叙事完整度，不在外景质量。</div></details>
+        </div>
+      </section>
+
+      <section class="block" id="comments">
+        <div class="block-head"><h2>观众评论</h2><span class="block-note">按发布时间倒序</span></div>
+        <div class="comment-grid">
+          <div class="comment"><div class="comment-head"><b>北陆的雪</b><span>11-08</span></div><p>前篇看到搬家前夜那段直接停了，后篇要等三周，难受。不过北海道的外景确实值。</p></div>
+          <div class="comment"><div class="comment-head"><b>便利店夜班</b><span>11-07</span></div><p>第4弹名单扩到四个人，预告 30 秒里镜头切得太快，看不出谁跟谁有对手戏。</p></div>
+          <div class="comment"><div class="comment-head"><b>纸箱收藏家</b><span>11-07</span></div><p>《白昼の輪郭》那 10 分钟棚拍其实可以剪掉，全片自然光反而更顺。</p></div>
+          <div class="comment"><div class="comment-head"><b>周三下雨</b><span>11-06</span></div><p>《雨のあとで》前 20 分钟太慢，差点关掉，后面才进主线，节奏问题挺明显。</p></div>
+          <div class="comment"><div class="comment-head"><b>橘子汽水</b><span>11-05</span></div><p>合集 Vol.3 第三段确实弱，第二段「夜の窓」单剪出来是对的。</p></div>
+          <div class="comment"><div class="comment-head"><b>沙丘上的猫</b><span>11-05</span></div><p>番号带「-R」的买之前一定看清，我买过两次再版，内容一模一样。</p></div>
+          <div class="comment"><div class="comment-head"><b>胶片未冲洗</b><span>11-04</span></div><p>《青の記録》评分 3.9 我觉得低了，冲绳那段光线很统一，就是叙事线确实没什么。</p></div>
+          <div class="comment"><div class="comment-head"><b>深夜食堂常客</b><span>11-04</span></div><p>2025 年共演第2弹前半段对谈太长，18 分钟，正片才开始。</p></div>
+          <div class="comment"><div class="comment-head"><b>梅田迷路</b><span>11-03</span></div><p>《春の手紙》京都取景地公布了三处，旧书店那处我去过，光线偏暗。</p></div>
+          <div class="comment"><div class="comment-head"><b>冷萃不加糖</b><span>11-03</span></div><p>最近补 2023 年的条目，类型确实单一，基本全是单集剧情向。</p></div>
+          <div class="comment"><div class="comment-head"><b>候鸟不南飞</b><span>11-02</span></div><p>后篇那个「新角色」的说法我翻了一圈，只看到一篇没署名的解读，不太信。</p></div>
+          <div class="comment"><div class="comment-head"><b>旧书摊主</b><span>11-02</span></div><p>时长这个分界线挺准，90 分钟以下的剧情向基本没看过。</p></div>
+          <div class="comment"><div class="comment-head"><b>一号线末班</b><span>11-01</span></div><p>写真影像还是短一点好，60 分钟刚好，超过 80 分钟就拖了。</p></div>
+          <div class="comment"><div class="comment-head"><b>雨天不带伞</b><span>10-31</span></div><p>合集先看单剪段落这个思路试过，确实省时间，第三段没看也不亏。</p></div>
+          <div class="comment"><div class="comment-head"><b>柠檬苏打水</b><span>10-30</span></div><p>《冬の余白》前篇结尾那个镜头我看了两遍，雪地里停住的机位挺讲究。</p></div>
+          <div class="comment"><div class="comment-head"><b>南口旧相机</b><span>10-29</span></div><p>「夜の窓」单剪 25 分钟版本上了，比合集里那版多了两分钟开场。</p></div>
+          <div class="comment"><div class="comment-head"><b>不赶时间的人</b><span>10-28</span></div><p>最近没怎么看新的，倒是把 2024 年的翻出来重看了一遍，蓝调那部还是舒服。</p></div>
+        </div>
+      </section>
+
+      <section class="block" id="news">
+        <div class="block-head"><h2>相关资讯</h2></div>
+        <ul class="news-list">
+          <li><h3><span class="news-date">2026-11-07</span>《冬の余白》前篇上线，后篇排至 11 月下旬</h3><p>前篇全长 108 分钟，发行方同步放出 15 秒片段，片段取自中段主线，未包含后篇画面。</p></li>
+          <li><h3><span class="news-date">2026-11-05</span>共演企划 2026 第4弹扩至四人，30 秒预告放出</h3><p>新增两位共演者，预告片长 30 秒，正片预计 11 月下旬发行，发行方未公布具体日期。</p></li>
+          <li><h3><span class="news-date">2026-10-29</span>「夜の窓」单剪版本上线，长 25 分钟</h3><p>原为短篇合集 Vol.3 第二段，单剪版比合集版多约两分钟开场，其余段落未收录。</p></li>
+          <li><h3><span class="news-date">2026-10-24</span>《春の手紙》公布三处京都取景地</h3><p>三处均在京都市内，含一处旧书店，制作方未说明是否对外开放拍摄。</p></li>
+          <li><h3><span class="news-date">2026-10-18</span>2025 年作品再版套装发行，含五部条目</h3><p>套装包含《白昼の輪郭》，画质维持原版规格，未追加新片段。</p></li>
+          <li><h3><span class="news-date">2026-10-06</span>《冬の余白》确认两段发行</h3><p>发行方确认前篇 11 月 7 日、后篇 11 月下旬，后篇时长未公布。</p></li>
+        </ul>
+      </section>
+
+      <section class="block" id="related">
+        <div class="block-head"><h2>相关推荐</h2></div>
+        <div class="tag-index">
+          <a href="/#featured">北海道外景作品</a>
+          <a href="/#featured">分段发行条目</a>
+          <a href="/#featured">四人共演企划</a>
+          <a href="/#featured">静冈自然光写真</a>
+          <a href="/#featured">京都室内戏</a>
+          <a href="/#featured">短篇拼盘合集</a>
+          <a href="/#guide">2026 年补完顺序</a>
+          <a href="/#ranking">高评分写真影像</a>
+        </div>
+      </section>
+
+      <section class="block" id="ranking">
+        <div class="block-head"><h2>人气榜单（近十二个月）</h2></div>
+        <ol class="rank-list">
+          <li><span class="rk">1</span><span class="rank-name">冬の余白 前篇<small>剧情向单集 · 11-07 上线</small></span><span class="rank-score">热度 92</span></li>
+          <li><span class="rk">2</span><span class="rank-name">共演企划 2026 第4弹<small>共演企划 · 11-05 名单扩充</small></span><span class="rank-score">热度 88</span></li>
+          <li><span class="rk">3</span><span class="rank-name">冬の余白 后篇<small>剧情向单集 · 11 月下旬待发行</small></span><span class="rank-score">热度 85</span></li>
+          <li><span class="rk">4</span><span class="rank-name">白昼の輪郭<small>写真影像 · 2025-12 发行</small></span><span class="rank-score">评分 4.3</span></li>
+          <li><span class="rk">5</span><span class="rank-name">雨のあとで<small>剧情向单集 · 2026-09 发行</small></span><span class="rank-score">热度 71</span></li>
+          <li><span class="rk">6</span><span class="rank-name">春の手紙<small>剧情向单集 · 2026-03 发行</small></span><span class="rank-score">热度 70</span></li>
+          <li><span class="rk">7</span><span class="rank-name">短篇合集 Vol.3<small>短篇合集 · 「夜の窓」单剪上线</small></span><span class="rank-score">评分 4.0</span></li>
+          <li><span class="rk">8</span><span class="rank-name">共演企划 2025 第2弹<small>共演企划 · 2025-08 发行</small></span><span class="rank-score">评分 4.1</span></li>
+        </ol>
+      </section>
+
+      <section class="block" id="submit">
+        <div class="submit-panel">
+          <div>
+            <h2>投稿与交流</h2>
+            <p>手上有未收录的番号、取景地信息或幕后资料，可以提交条目线索；也欢迎分享同类作品的横向比较。</p>
+          </div>
+          <a class="btn" href="/#submit">提交条目线索</a>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="side-right">
+      <div class="aside-card">
+        <h2>本周更新</h2>
+        <ol>
+          <li><span>11-07</span>《冬の余白》前篇上线</li>
+          <li><span>11-05</span>共演第4弹扩至四人</li>
+          <li><span>11-03</span>《雨のあとで》幕后片段</li>
+          <li><span>10-29</span>「夜の窓」单剪版上线</li>
+        </ol>
+      </div>
+      <div class="aside-card">
+        <h2>按年份浏览</h2>
+        <ul class="mini-list">
+          <li>2026 年<em>14 部</em></li>
+          <li>2025 年<em>21 部</em></li>
+          <li>2024 年<em>18 部</em></li>
+          <li>2023 年<em>16 部</em></li>
+          <li>2022 年及以前<em>117 部</em></li>
+        </ul>
+      </div>
+      <div class="aside-card">
+        <h2>类型占比</h2>
+        <ul class="mini-list">
+          <li>剧情向单集<em>46%</em></li>
+          <li>共演企划<em>24%</em></li>
+          <li>写真影像<em>19%</em></li>
+          <li>短篇合集<em>11%</em></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">永濑唯作品</div>
+      <p>覆盖 2019 年至 2026 年 11 月的出演条目，含剧情向单集、共演企划、写真影像与短篇合集四类形态。条目资料按发行方与番号分别核对，更新节奏跟随发行公告，通常在新作上线当天或次日补齐。</p>
+    </div>
+    <div class="footer-col">
+      <h3>内容</h3>
+      <a href="/#featured">精选作品</a>
+      <a href="/#updates">新作动态</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">观看指南</a>
+    </div>
+    <div class="footer-col">
+      <h3>分类</h3>
+      <a href="/#categories">剧情向单集</a>
+      <a href="/#categories">共演企划</a>
+      <a href="/#categories">写真影像</a>
+      <a href="/#categories">短篇合集</a>
+    </div>
+    <div class="footer-col">
+      <h3>互动</h3>
+      <a href="/#comments">观众评论</a>
+      <a href="/#submit">投稿交流</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#ranking">人气榜单</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>内容条目为示例数据，发行信息以发行方公告为准。</span>
+    <span>更新于 2026-11-08</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  // 移动端菜单
+  var burger=document.getElementById('hamburger');
+  var nav=document.getElementById('mainNav');
+  if(burger&&nav){
+    burger.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded',open?'true':'false');
+      burger.textContent=open?'✕':'☰';
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        burger.textContent='☰';
+      });
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&nav.classList.contains('open')){
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        burger.textContent='☰';
+        burger.focus();
+      }
+    });
+  }
+
+  // 搜索筛选
+  var form=document.getElementById('searchForm');
+  var input=document.getElementById('searchInput');
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#featured .card'));
+  var empty=document.getElementById('searchEmpty');
+  function doSearch(){
+    var q=(input.value||'').trim().toLowerCase();
+    var shown=0;
+    cards.forEach(function(c){
+      var text=(c.getAttribute('data-title')+' '+c.textContent).toLowerCase();
+      var hit=!q||text.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      if(hit)shown++;
+    });
+    empty.style.display=(q&&shown===0)?'block':'none';
+  }
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      doSearch();
+      document.getElementById('featured').scrollIntoView({behavior:'smooth'});
+    });
+    input.addEventListener('input',doSearch);
+  }
+
+  // 回到顶部
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>window.innerHeight){toTop.classList.add('show');}
+    else{toTop.classList.remove('show');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  // 侧栏滚动高亮
+  var links=Array.prototype.slice.call(document.querySelectorAll('#channelIndex a'));
+  var targets=links.map(function(a){
+    var id=a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(l){l.classList.remove('active');});
+          var idx=targets.indexOf(en.target);
+          if(idx>-1)links[idx].classList.add('active');
+        }
+      });
+    },{rootMargin:'-140px 0px -60% 0px',threshold:0});
+    targets.forEach(function(t){if(t)io.observe(t);});
+  }
+})();
+</script>
+</body>
+                                                                                                      </html>
