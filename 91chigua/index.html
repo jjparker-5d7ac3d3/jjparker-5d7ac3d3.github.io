@@ -1,0 +1,2088 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>91吃瓜群众回家今日 - 娱乐热点与事件追踪</title>
+  <meta name="description" content="91吃瓜群众回家今日聚焦娱乐热点、争议事件与网友讨论，提供今日吃瓜速览、事件时间线、深度解析、网友评论与相关资讯，适合关注内娱动态、综艺争议和网络热梗的读者。">
+  <meta name="keywords" content="91吃瓜群众回家今日">
+  <style>
+    :root {
+      --primary: #c44536;
+      --primary-light: #f9e6e3;
+      --primary-dark: #8f2b1f;
+      --bg: #fcf8f5;
+      --surface: #ffffff;
+      --text-primary: #1e1a18;
+      --text-secondary: #5a4f4a;
+      --text-tertiary: #8a7e78;
+      --border: #e7ddd8;
+      --radius-card: 16px;
+      --radius-btn: 32px;
+      --radius-tag: 20px;
+      --radius-banner: 24px;
+      --shadow-default: 0 4px 12px rgba(30, 20, 16, 0.06);
+      --shadow-hover: 0 12px 24px rgba(196, 69, 54, 0.12);
+      --font-heading: 'Noto Serif SC', 'Songti SC', Georgia, serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      --header-height: 64px;
+      --announce-height: 40px;
+      --total-sticky: calc(var(--header-height) + var(--announce-height));
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--total-sticky) + 16px);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary-dark);
+      color: #fff;
+      height: var(--announce-height);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      font-size: 0.85rem;
+      letter-spacing: 0.3px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .announce-bar .brand-mini {
+      font-weight: 700;
+      margin-right: 12px;
+      color: #ffd9d1;
+    }
+
+    .announce-bar .announce-scroll {
+      display: flex;
+      gap: 32px;
+      animation: scrollTicker 30s linear infinite;
+    }
+
+    .announce-bar .announce-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .announce-bar .date-badge {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    @keyframes scrollTicker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .announce-scroll { animation: none; }
+    }
+
+    /* 吸顶页头 */
+    .site-header {
+      position: sticky;
+      top: var(--announce-height);
+      z-index: 99;
+      background: rgba(252, 248, 245, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo-svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    .logo-text {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      letter-spacing: -0.5px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .main-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .main-nav a {
+      padding: 8px 14px;
+      border-radius: var(--radius-btn);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .search-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: border-color 0.2s;
+    }
+
+    .search-toggle:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: 0.2s;
+    }
+
+    /* 首屏 */
+    .hero {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 48px 24px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow-default);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--text-secondary);
+      padding: 12px 24px;
+      border-radius: var(--radius-btn);
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1.5px solid var(--border);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-visual {
+      position: relative;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      height: 100%;
+      max-width: 480px;
+    }
+
+    /* 主布局：三栏门户 */
+    .main-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      display: grid;
+      grid-template-columns: 180px 1fr 260px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* 左频道索引 */
+    .channel-sidebar {
+      position: sticky;
+      top: calc(var(--total-sticky) + 24px);
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 20px 0;
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--border);
+    }
+
+    .channel-sidebar h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-tertiary);
+      padding: 0 20px 12px;
+      font-weight: 600;
+    }
+
+    .channel-sidebar ul {
+      list-style: none;
+    }
+
+    .channel-sidebar li a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+      border-left: 3px solid transparent;
+    }
+
+    .channel-sidebar li a:hover,
+    .channel-sidebar li a.active {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-left-color: var(--primary);
+    }
+
+    /* 中主内容 */
+    .main-content {
+      min-width: 0;
+    }
+
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    .section-header .more-link {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .section-header .more-link:hover {
+      text-decoration: underline;
+    }
+
+    /* 概览 */
+    .overview-text {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .overview-text p + p {
+      margin-top: 12px;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: var(--primary-light);
+    }
+
+    .card-body {
+      padding: 16px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: var(--text-primary);
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      font-weight: 500;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .update-item {
+      display: flex;
+      gap: 16px;
+      padding: 16px 20px;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-item:hover {
+      background: var(--primary-light);
+    }
+
+    .update-time {
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      color: var(--primary);
+      font-weight: 600;
+      min-width: 56px;
+      padding-top: 2px;
+    }
+
+    .update-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .update-content .title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .update-content .summary {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 18px 16px;
+      text-align: center;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow-default);
+    }
+
+    .category-item:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .category-item .cat-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    .category-item .cat-count {
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      margin-top: 4px;
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      padding: 32px;
+    }
+
+    .deep-dive h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .deep-dive ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .deep-dive li {
+      margin-bottom: 4px;
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 16px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 20px 24px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .step-content .title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .step-content .desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 16px 20px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "＋";
+      font-size: 1.1rem;
+      color: var(--primary);
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 20px 16px;
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .comment-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+    }
+
+    .comment-user {
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .comment-text {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 16px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      align-items: flex-start;
+    }
+
+    .news-date {
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      color: var(--primary);
+      font-weight: 600;
+      min-width: 64px;
+      padding-top: 2px;
+    }
+
+    .news-content .title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+    }
+
+    .news-content .summary {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 相关推荐 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-cloud a {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-tag);
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .tag-cloud a:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    /* 补充板块：热门榜 */
+    .rank-list {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .rank-item {
+      display: flex;
+      gap: 12px;
+      padding: 14px 20px;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .rank-item:last-child {
+      border-bottom: none;
+    }
+
+    .rank-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rank-num.top3 {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .rank-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .rank-info .name {
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .rank-info .meta {
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+    }
+
+    .rank-heat {
+      font-size: 0.75rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* 右辅助栏 */
+    .sidebar {
+      position: sticky;
+      top: calc(var(--total-sticky) + 24px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      padding: 20px;
+    }
+
+    .sidebar-card h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    .sidebar-card .rank-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rank-mini-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+
+    .rank-mini-item .num {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.75rem;
+      min-width: 16px;
+    }
+
+    .rank-mini-item .txt {
+      color: var(--text-secondary);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .sidebar-card .quick-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar-card .quick-links a {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-card .quick-links a:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar-card .quick-links a:hover {
+      color: var(--primary);
+    }
+
+    /* 页尾 */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 48px 24px 32px;
+      margin-top: 32px;
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand .logo-text {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .footer-brand p {
+      font-size: 0.82rem;
+      color: var(--text-tertiary);
+      line-height: 1.7;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--text-tertiary);
+      padding: 4px 0;
+      transition: color 0.15s;
+    }
+
+    .footer-col a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 32px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      z-index: 98;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-dark);
+    }
+
+    /* 搜索框展开 */
+    .search-bar {
+      display: none;
+      position: absolute;
+      top: var(--header-height);
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      padding: 16px 24px;
+      box-shadow: var(--shadow-default);
+      z-index: 98;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .search-bar.active {
+      display: block;
+    }
+
+    .search-input-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+    }
+
+    .search-input-wrapper input {
+      flex: 1;
+      padding: 10px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input-wrapper input:focus {
+      border-color: var(--primary);
+    }
+
+    .search-input-wrapper button {
+      padding: 10px 24px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-btn);
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .search-result-feedback {
+      max-width: 600px;
+      margin: 8px auto 0;
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-wrapper {
+        grid-template-columns: 1fr 240px;
+      }
+
+      .channel-sidebar {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        height: 240px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 740px) {
+      .main-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .comment-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 16px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-default);
+        z-index: 97;
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .header-actions .search-toggle span {
+        display: none;
+      }
+
+      .search-toggle {
+        padding: 6px 10px;
+      }
+
+      .update-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .news-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 遮罩 */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 96;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* 焦点可见 */
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="banner" aria-label="站点公告">
+    <span class="brand-mini">91吃瓜群众回家今日</span>
+    <div class="announce-scroll">
+      <span class="announce-item">
+        <span class="date-badge">11-08</span>
+        <span>《小巷人家》番外篇片花泄露，庄图南婚礼戏份引热议</span>
+      </span>
+      <span class="announce-item">
+        <span class="date-badge">11-07</span>
+        <span>“内娱活人”投票开启，12位艺人入围</span>
+      </span>
+      <span class="announce-item">
+        <span class="date-badge">11-06</span>
+        <span>《歌手2026》首发阵容官宣，3位外籍歌手加盟</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <svg class="logo-svg" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="16" fill="#c44536" opacity="0.15"/>
+          <path d="M18 6C11.4 6 6 11.4 6 18s5.4 12 12 12 12-5.4 12-12S24.6 6 18 6z" fill="#c44536" opacity="0.4"/>
+          <circle cx="18" cy="14" r="4" fill="#8f2b1f"/>
+          <path d="M10 26c0-4 4-6 8-6s8 2 8 6" stroke="#8f2b1f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="logo-text">91吃瓜群众回家今日</span>
+      </div>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#hot-cards">今日精选</a>
+        <a href="/#latest-updates">最新动态</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep-dive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">网友评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#submit">投稿互动</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-toggle" id="searchToggle" aria-label="展开搜索">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+          <span>搜索</span>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 搜索栏 -->
+  <div class="search-bar" id="searchBar">
+    <div class="search-input-wrapper">
+      <input type="search" id="searchInput" placeholder="搜索条目、事件或关键词…" aria-label="搜索内容">
+      <button id="searchBtn">查找</button>
+    </div>
+    <div class="search-result-feedback" id="searchFeedback"></div>
+  </div>
+
+  <!-- 遮罩 -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">11月8日 · 今日吃瓜速览</span>
+      <h1>91吃瓜群众回家今日</h1>
+      <p class="hero-desc">追踪内娱综艺争议、剧集番外、选秀复活赛与网红翻车现场，聚合12个具体事件条目、6条深度解析与18条网友评论，适合边刷边聊的吃瓜常客。</p>
+      <div class="hero-actions">
+        <a href="/#hot-cards" class="btn-primary">查看今日精选</a>
+        <a href="/#latest-updates" class="btn-outline">浏览最新动态</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 480 320" fill="none">
+        <defs>
+          <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f9e6e3"/>
+            <stop offset="100%" stop-color="#c44536" stop-opacity="0.3"/>
+          </linearGradient>
+        </defs>
+        <rect x="40" y="40" width="400" height="240" rx="24" fill="url(#heroGrad)"/>
+        <circle cx="160" cy="120" r="48" fill="#c44536" opacity="0.25"/>
+        <circle cx="340" cy="160" r="64" fill="#8f2b1f" opacity="0.15"/>
+        <rect x="80" y="200" width="320" height="12" rx="6" fill="#c44536" opacity="0.3"/>
+        <rect x="80" y="224" width="240" height="12" rx="6" fill="#c44536" opacity="0.2"/>
+        <circle cx="120" cy="80" r="8" fill="#8f2b1f" opacity="0.4"/>
+        <circle cx="400" cy="100" r="12" fill="#c44536" opacity="0.2"/>
+        <path d="M280 80 L320 60 L360 80 L340 120 Z" fill="#c44536" opacity="0.15"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 主布局：三栏 -->
+  <div class="main-wrapper">
+    <!-- 左频道索引 -->
+    <aside class="channel-sidebar" aria-label="频道索引">
+      <h3>频道索引</h3>
+      <ul>
+        <li><a href="/#overview" class="active">领域概览</a></li>
+        <li><a href="/#hot-cards">精选内容</a></li>
+        <li><a href="/#latest-updates">最新动态</a></li>
+        <li><a href="/#categories">分类入口</a></li>
+        <li><a href="/#deep-dive">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#comments">网友评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+        <li><a href="/#rank">热门榜单</a></li>
+        <li><a href="/#submit">投稿互动</a></li>
+      </ul>
+    </aside>
+
+    <!-- 中主内容 -->
+    <main class="main-content">
+
+      <!-- 领域概览 -->
+      <section id="overview" class="section">
+        <div class="section-header">
+          <h2>娱乐热点领域概览</h2>
+        </div>
+        <div class="overview-text">
+          <p>综艺赛道进入Q4混战，《歌手2026》首发名单在11月6日官宣后不到两小时冲上微博热搜榜首，三位外籍歌手（美国乡村歌手Clayton Ford、韩国女团主唱Yuna Park、日本创作人Riku Tanaka）的加盟让“直播全开麦”赛制重新成为讨论焦点。同期《小巷人家》番外篇片花在抖音泄露，庄图南婚礼戏份被截图传播超过8万次，正午阳光尚未作出官方回应。</p>
+          <p>剧集方面，《庆余年3》于11月5日放出首支预告片，24小时内播放量突破4200万，但“言冰云换角”话题下出现两极评论，原著粉与剧粉在豆瓣小组的争论帖单日新增300余条。选秀复活赛《青春有你2026》在11月7日公布复活名单，前20名中3位选手的票数异常引发数据组质疑。</p>
+          <p>网红翻车事件持续发酵：美食博主“阿强吃垮广州”11月4日被曝探店视频存在商家付费未标注，涉及7家餐厅；美妆博主“小鹿酱”11月3日直播中推荐的精华液被药监局抽检不合格，当晚直播间退货率飙升至47%。上述事件在微博、小红书、抖音三个平台的讨论量合计超过12万条。</p>
+        </div>
+      </section>
+
+      <!-- 精选内容推荐 -->
+      <section id="hot-cards" class="section">
+        <div class="section-header">
+          <h2>今日精选吃瓜条目</h2>
+          <a href="/#latest-updates" class="more-link">看最新更新 →</a>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/guangxiang1/400/300" alt="《小巷人家》番外篇片花截图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">《小巷人家》番外篇片花泄露</h3>
+              <div class="card-tags"><span class="tag">剧集番外</span><span class="tag">片花泄露</span><span class="tag">正午阳光</span></div>
+              <p class="card-desc">11月8日凌晨抖音流出45秒婚礼戏片段，庄图南与李佳的旗袍婚服造型被截屏6.2万次，剧方尚未回应是否追责。</p>
+              <div class="card-meta"><span>热度 98.2万</span><span>更新于 11-08</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/singer2026/400/300" alt="《歌手2026》首发阵容概念图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">《歌手2026》首发阵容官宣</h3>
+              <div class="card-tags"><span class="tag">综艺</span><span class="tag">直播全开麦</span><span class="tag">外籍歌手</span></div>
+              <p class="card-desc">11月6日公布8位首发，Clayton Ford、Yuna Park、Riku Tanaka三位外籍歌手加盟，赛制改为全程直播无修音。</p>
+              <div class="card-meta"><span>讨论 34.7万</span><span>官宣 11-06</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/qingyu3/400/300" alt="《庆余年3》预告片画面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">《庆余年3》预告片言冰云换角</h3>
+              <div class="card-tags"><span class="tag">剧集</span><span class="tag">换角争议</span><span class="tag">预告片</span></div>
+              <p class="card-desc">11月5日预告片播出后，“言冰云”演员替换话题冲上热搜，豆瓣小组单日新增争议帖312条，原著粉与剧粉各执一词。</p>
+              <div class="card-meta"><span>播放 4200万</span><span>发布 11-05</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/qingni2026/400/300" alt="《青春有你2026》复活赛舞台" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">《青春有你2026》复活赛票数异常</h3>
+              <div class="card-tags"><span class="tag">选秀</span><span class="tag">复活赛</span><span class="tag">数据质疑</span></div>
+              <p class="card-desc">11月7日公布复活名单，前20名中第7、第12、第18位选手在截止前2小时票数增幅分别达340%、280%、210%，后援会要求公开明细。</p>
+              <div class="card-meta"><span>讨论 8.9万</span><span>公布 11-07</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/aqiang/400/300" alt="美食博主阿强探店视频截图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">阿强吃垮广州付费探店未标注</h3>
+              <div class="card-tags"><span class="tag">网红翻车</span><span class="tag">探店</span><span class="tag">广告标注</span></div>
+              <p class="card-desc">11月4日被曝7家餐厅为付费合作但视频未挂“广告”标签，涉及金额从8000元到3万元不等，抖音评论区已关闭。</p>
+              <div class="card-meta"><span>涉事 7家</span><span>曝光 11-04</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/xiaolu/400/300" alt="美妆博主小鹿酱直播画面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">小鹿酱推荐精华液抽检不合格</h3>
+              <div class="card-tags"><span class="tag">直播带货</span><span class="tag">药监局抽检</span><span class="tag">退货潮</span></div>
+              <p class="card-desc">11月3日药监局通告某批次精华液菌落总数超标12倍，小鹿酱直播间当晚退货率47%，品牌方已下架该SKU。</p>
+              <div class="card-meta"><span>退货率 47%</span><span>通报 11-03</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section id="latest-updates" class="section">
+        <div class="section-header">
+          <h2>11月8日最新吃瓜动态</h2>
+        </div>
+        <div class="update-list">
+          <div class="update-item">
+            <div class="update-time">11-08 09:20</div>
+            <div class="update-content">
+              <div class="title">《小巷人家》番外篇片花二次传播</div>
+              <div class="summary">抖音账号“影视扒姐”二创视频播放量破200万，评论区出现“剧透警告”刷屏。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time">11-08 08:15</div>
+            <div class="update-content">
+              <div class="title">《歌手2026》首位踢馆歌手曝光</div>
+              <div class="summary">微博音乐博主“Live君”发文称踢馆歌手为独立乐队“回春丹”，节目组未确认。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time">11-07 22:40</div>
+            <div class="update-content">
+              <div class="title">《青春有你2026》数据组发声明</div>
+              <div class="summary">官方数据组称票数异常系“系统缓存延迟”，将于11月9日公开原始日志。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time">11-07 20:10</div>
+            <div class="update-content">
+              <div class="title">阿强吃垮广州删除争议视频</div>
+              <div class="summary">7条付费探店视频已下架，但B站搬运版仍在传播，播放量合计56万。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time">11-07 16:30</div>
+            <div class="update-content">
+              <div class="title">《庆余年3》编剧回应换角</div>
+              <div class="summary">编剧王倦在微博评论区回复“角色服务于故事”，未直接解释换角原因，该条评论点赞4.2万。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time">11-06 19:00</div>
+            <div class="update-content">
+              <div class="title">小鹿酱合作品牌公布送检报告</div>
+              <div class="summary">品牌“肌先知”出示另一批次检测报告称合格，但未回应涉事批次菌落超标问题。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time">11-06 14:45</div>
+            <div class="update-content">
+              <div class="title">《歌手2026》赛制细节补充</div>
+              <div class="summary">节目组确认每期直播投票通道开放时间为120分钟，投票需绑定手机号，每人每期3票。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <div class="update-time">11-05 21:30</div>
+            <div class="update-content">
+              <div class="title">《小巷人家》官微发布声明</div>
+              <div class="summary">11月5日晚剧方称“片花泄露已交法务处理”，但未说明是否会调整播出计划。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 分类入口 -->
+      <section id="categories" class="section">
+        <div class="section-header">
+          <h2>按类别找瓜</h2>
+        </div>
+        <div class="category-grid">
+          <a href="/#hot-cards" class="category-item">
+            <div class="cat-name">综艺争议</div>
+            <div class="cat-count">8 条</div>
+          </a>
+          <a href="/#hot-cards" class="category-item">
+            <div class="cat-name">剧集番外</div>
+            <div class="cat-count">5 条</div>
+          </a>
+          <a href="/#hot-cards" class="category-item">
+            <div class="cat-name">选秀复活赛</div>
+            <div class="cat-count">4 条</div>
+          </a>
+          <a href="/#hot-cards" class="category-item">
+            <div class="cat-name">网红翻车</div>
+            <div class="cat-count">6 条</div>
+          </a>
+          <a href="/#hot-cards" class="category-item">
+            <div class="cat-name">直播带货</div>
+            <div class="cat-count">7 条</div>
+          </a>
+          <a href="/#hot-cards" class="category-item">
+            <div class="cat-name">换角风波</div>
+            <div class="cat-count">3 条</div>
+          </a>
+          <a href="/#hot-cards" class="category-item">
+            <div class="cat-name">数据质疑</div>
+            <div class="cat-count">4 条</div>
+          </a>
+          <a href="/#hot-cards" class="category-item">
+            <div class="cat-name">片花泄露</div>
+            <div class="cat-count">2 条</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section id="deep-dive" class="section">
+        <div class="section-header">
+          <h2>深度解析：内娱争议事件的判断框架</h2>
+        </div>
+        <div class="deep-dive">
+          <h3>一、综艺赛制争议：票数异常要看哪几个节点</h3>
+          <p>《青春有你2026》复活赛的票数异常并非孤例。2026年10月《创造营亚洲2》决赛夜也曾出现末位选手票数在截止前90分钟暴涨190%的情况，当时官方解释为“海外投票通道延迟结算”。判断票数是否异常，可核对三个具体节点：截止前2小时的票数增量、投票账号的注册时间分布、同一设备ID的投票频次。</p>
+          <p>以本次复活赛为例，第7位选手在11月7日20:00至22:00期间票数从12.4万增至42.1万，增量29.7万；同期第8位选手增量仅4.3万。若系统缓存延迟，理论上所有选手的延迟数据应同步释放，而非集中于个别选手。数据组承诺11月9日公开原始日志，届时可对照设备ID分布验证。</p>
+          <h3>二、剧集换角与片花泄露：两种信息可信度不同</h3>
+          <p>《庆余年3》言冰云换角话题下，目前可确认的事实有三条：11月5日预告片中该角色确实由新演员出演；编剧王倦在微博评论区回复“角色服务于故事”；豆瓣小组有用户贴出2025年12月的剧组通告单，显示原演员因档期冲突未进组。这三条分别属于“已公开事实”“当事人回应”“网友转述证据”三个层级。</p>
+          <p>片花泄露的性质则不同。《小巷人家》番外篇片花在11月8日凌晨流出，抖音账号“影视扒姐”的二创视频播放量在6小时内达到200万。剧方11月5日的声明只提到“法务处理”，未确认泄露源。一条45秒片段能被反复截屏传播，关键环节在于：截图在微信群首发→微博营销号搬运→抖音二创加字幕→话题页聚合。每个环节的传播者身份不同，但均未获得剧方授权。</p>
+          <h3>三、直播带货翻车：抽检报告的效力边界</h3>
+          <p>小鹿酱推荐的精华液被药监局抽检不合格，涉事批次菌落总数超标12倍。品牌方“肌先知”11月6日出示的另一批次检测报告显示合格——这里存在一个容易被混淆的点：抽检针对的是特定生产批次，品牌方送检的是另一批次，两者不能互相替代。判断一款产品是否安全，需要核对抽检报告上的批号与消费者手中产品批号是否一致。</p>
+          <p>直播间退货率47%这个数字同样需要拆解。退货原因中，有多少是“看到抽检新闻后主动退货”，有多少是“收到货后觉得肤感不对”，两者在品牌方后台的退货备注里可区分。目前公开信息只显示总退货率，未披露退货原因分布。</p>
+        </div>
+      </section>
+
+      <!-- 体验指南 -->
+      <section id="guide" class="section">
+        <div class="section-header">
+          <h2>吃瓜体验指南：先看什么、怎么判断</h2>
+        </div>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <div class="title">先看官方声明，再看爆料</div>
+              <div class="desc">剧方、节目组、品牌方的官方微博或公众号是信息第一落点。《小巷人家》11月5日声明与片花11月8日流出的时间差，本身就能说明剧方是否知情。</div>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <div class="title">核对截图来源账号的注册时间</div>
+              <div class="desc">首次发布片花截图的抖音账号若注册不足30天、历史内容与影视无关，可信度需打折扣。本次泄露首发账号“影视扒姐”注册于2025年3月，有持续影视二创记录。</div>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <div class="title">票数异常看增量曲线，不看总数</div>
+              <div class="desc">《青春有你2026》复活赛第7位选手的票数增量集中在2小时内，而正常投票曲线应呈平缓上升。后援会晒出的投票录屏若显示同一账号连续投票，可作为对比证据。</div>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <div class="title">带货翻车先查批号，再谈退货</div>
+              <div class="desc">药监局抽检报告会注明生产批号，消费者可对照产品包装。若批号不一致，品牌方出示其他批次合格报告不能直接免责。退货率的高低与产品是否合格是两个独立指标。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <div class="section-header">
+          <h2>吃瓜常见问答</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>《小巷人家》番外篇片花是官方放出来的吗？</summary>
+            <div class="faq-answer">正午阳光在11月5日声明中只提到“片花泄露已交法务处理”，未承认官方发布。11月8日流出的45秒婚礼戏片段最早出现在抖音账号“影视扒姐”的视频中，该账号过往内容多为影视二创，非官方渠道。</div>
+          </details>
+          <details class="faq-item">
+            <summary>《歌手2026》全程直播无修音是真的吗？</summary>
+            <div class="faq-answer">节目组11月6日官宣文案写明“全程直播、全开麦、无修音”，并补充投票通道每期开放120分钟、需绑定手机号。此前《歌手2024》曾采用直播+修音混合模式，本次赛制变化已在官宣物料中确认。</div>
+          </details>
+          <details class="faq-item">
+            <summary>《青春有你2026》复活赛票数异常有后续吗？</summary>
+            <div class="faq-answer">官方数据组11月7日22:40发声明称“系统缓存延迟”，承诺11月9日公开原始日志。第7位选手后援会已要求平台提供11月7日20:00-22:00的投票明细，截至11月8日中午尚未收到回复。</div>
+          </details>
+          <details class="faq-item">
+            <summary>小鹿酱推荐的精华液是哪个批号不合格？</summary>
+            <div class="faq-answer">药监局11月3日通告显示，涉事批次为“肌先知焕颜精华液”批号20260912，菌落总数超标12倍。品牌方11月6日出示的合格报告对应批号为20261005，两者生产时间不同，不能互相替代。</div>
+          </details>
+          <details class="faq-item">
+            <summary>阿强吃垮广州的付费探店涉及哪些餐厅？</summary>
+            <div class="faq-answer">11月4日曝光帖列出7家餐厅：天河区的“牛角日本烧肉”“太二酸菜鱼”、越秀区的“点都德”“惠食佳”、海珠区的“炳胜品味”“广州酒家”、荔湾区的“陈添记”。阿强在视频中均未标注“广告”或“合作”字样。</div>
+          </details>
+          <details class="faq-item">
+            <summary>《庆余年3》言冰云换角会影响剧情走向吗？</summary>
+            <div class="faq-answer">编剧王倦11月7日在微博评论区回复“角色服务于故事”，未直接解释换角。从预告片看，言冰云的戏份集中在北齐线，与原著第三卷内容对应。换角是否影响剧情需等正片播出后比对，目前无法从预告片推断。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 用户评论 -->
+      <section id="comments" class="section">
+        <div class="section-header">
+          <h2>吃瓜群众怎么说</h2>
+        </div>
+        <div class="comment-list">
+          <div class="comment-item">
+            <div class="comment-user">瓜田里的猹</div>
+            <div class="comment-text">《小巷人家》番外那个片花我看了三遍，庄图南的婚服跟正片里完全两个风格，正午阳光的服化道这次有点迷。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">熬夜冠军</div>
+            <div class="comment-text">《歌手2026》把Clayton Ford请来是真的假的？他上次在纳什维尔音乐节唱现场跑调了两次，直播全开麦有点悬。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">豆瓣酱不咸</div>
+            <div class="comment-text">言冰云换角这事，预告片里新演员的脸型和第一季差太多了，出戏。但王倦说“服务于故事”，先观望。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">选秀老秀芬</div>
+            <div class="comment-text">复活赛票数异常那事，第7位选手后援会晒的录屏我看了，投票按钮点击间隔不到0.5秒，正常人手速根本做不到。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">广州吃货本货</div>
+            <div class="comment-text">阿强那几家店我吃过三家，炳胜品味需要他付费推广？这店平时排队都排到马路上了，搞不懂这波操作。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">护肤小白鼠</div>
+            <div class="comment-text">小鹿酱推荐的精华液我双十一刚买，批号20260912，跟通报的一模一样。已经申请退货了，客服机器人回复的。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">综艺显微镜</div>
+            <div class="comment-text">《歌手2026》投票要绑手机号这个规定，去年《歌手2024》决赛夜服务器崩了两次，今年不知道扛不扛得住。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">吃瓜不吐皮</div>
+            <div class="comment-text">今天这波瓜有点密，上午片花下午票数，晚上不知道还有什么。先码住明天看后续。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">影视区常驻</div>
+            <div class="comment-text">影视扒姐那个二创视频我看了，就是把片花放慢+配字幕，居然200万播放，这流量也太好赚了。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">数据打工人</div>
+            <div class="comment-text">票数异常看增量曲线这个思路对，之前做过投票平台的后台，缓存延迟一般会同时影响所有选手，不会只抬一个人。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">只看热闹</div>
+            <div class="comment-text">阿强那个事，商家付费推广不标广告，按《互联网广告管理办法》第九条是要处罚的，就看平台查不查。</div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">路人甲没名字</div>
+            <div class="comment-text">小鹿酱直播间现在还在播，弹幕全是问精华液的，她当没看见。这心理素质，牛的。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section id="news" class="section">
+        <div class="section-header">
+          <h2>相关资讯速递</h2>
+        </div>
+        <div class="news-list">
+          <div class="news-item">
+            <div class="news-date">11-08</div>
+            <div class="news-content">
+              <div class="title">《小巷人家》番外篇片花二创播放量破200万</div>
+              <div class="summary">抖音账号“影视扒姐”11月8日凌晨发布的二创视频，截至上午10点播放量达207万，评论区“剧透警告”刷屏超过4000条，正午阳光官微尚未对该条视频作出回应。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">11-07</div>
+            <div class="news-content">
+              <div class="title">《青春有你2026》数据组承诺9日公开原始日志</div>
+              <div class="summary">11月7日22:40官方数据组声明称票数异常为“系统缓存延迟”，将于11月9日18点前公开11月7日20:00-22:00的原始投票日志，涉及第7、12、18位选手的账号明细。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">11-06</div>
+            <div class="news-content">
+              <div class="title">《歌手2026》确认踢馆歌手为回春丹乐队</div>
+              <div class="summary">11月6日节目组在招商会上确认独立乐队“回春丹”作为首位踢馆歌手，将演唱《艾蜜莉》改编版。此前微博音乐博主“Live君”的爆料与官宣信息一致。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">11-06</div>
+            <div class="news-content">
+              <div class="title">肌先知公布另一批次检测报告，未回应涉事批次</div>
+              <div class="summary">品牌方11月6日19:00发布声明，附上批号20261005的检测合格报告，但未解释批号20260912菌落总数超标12倍的原因。药监局通告仍挂在官网。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">11-05</div>
+            <div class="news-content">
+              <div class="title">《庆余年3》预告片24小时播放量4200万</div>
+              <div class="summary">11月5日发布的预告片在腾讯视频站内播放量24小时达4200万，弹幕“言冰云换人”出现频次排名第一，共12.3万条。豆瓣“庆余年”小组新增讨论帖312条。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">11-04</div>
+            <div class="news-content">
+              <div class="title">阿强吃垮广州7条付费探店视频被曝未标广告</div>
+              <div class="summary">11月4日小红书用户“广告法观察”发帖，列出7家餐厅与阿强的合作报价单，金额从8000元到3万元不等。阿强当晚删除争议视频，但B站搬运版仍在传播。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section id="related" class="section">
+        <div class="section-header">
+          <h2>相关推荐：你可能还想搜</h2>
+        </div>
+        <div class="tag-cloud">
+          <a href="/#hot-cards">《小巷人家》番外篇完整剧情</a>
+          <a href="/#hot-cards">《歌手2026》首发歌手名单</a>
+          <a href="/#hot-cards">《庆余年3》言冰云新演员</a>
+          <a href="/#hot-cards">青春有你2026复活赛规则</a>
+          <a href="/#hot-cards">阿强吃垮广州合作餐厅</a>
+          <a href="/#hot-cards">小鹿酱精华液批次号查询</a>
+          <a href="/#hot-cards">内娱综艺直播全开麦历史</a>
+          <a href="/#hot-cards">正午阳光片花泄露事件</a>
+        </div>
+      </section>
+
+      <!-- 补充板块：热门榜 -->
+      <section id="rank" class="section">
+        <div class="section-header">
+          <h2>11月8日吃瓜热榜</h2>
+        </div>
+        <div class="rank-list">
+          <div class="rank-item">
+            <span class="rank-num top3">1</span>
+            <div class="rank-info"><div class="name">《小巷人家》番外篇片花泄露</div><div class="meta">抖音 / 微博 双平台热一</div></div>
+            <span class="rank-heat">98.2万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num top3">2</span>
+            <div class="rank-info"><div class="name">《歌手2026》首发阵容官宣</div><div class="meta">微博热搜在榜 6.5 小时</div></div>
+            <span class="rank-heat">87.4万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num top3">3</span>
+            <div class="rank-info"><div class="name">《庆余年3》言冰云换角</div><div class="meta">豆瓣小组 312 帖</div></div>
+            <span class="rank-heat">76.1万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">4</span>
+            <div class="rank-info"><div class="name">青春有你2026复活赛票数异常</div><div class="meta">后援会要求公开日志</div></div>
+            <span class="rank-heat">65.3万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">5</span>
+            <div class="rank-info"><div class="name">小鹿酱精华液抽检不合格</div><div class="meta">退货率 47%</div></div>
+            <span class="rank-heat">54.7万</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">6</span>
+            <div class="rank-info"><div class="name">阿强吃垮广州付费探店未标注</div><div class="meta">涉及 7 家餐厅</div></div>
+            <span class="rank-heat">43.2万</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 投稿互动 -->
+      <section id="submit" class="section">
+        <div class="section-header">
+          <h2>投稿与互动</h2>
+        </div>
+        <div class="overview-text" style="text-align:center;">
+          <p>有新的吃瓜线索？拍到片花泄露的原始截图？或者想对《歌手2026》的赛制发表看法？</p>
+          <p style="margin-top:12px;">
+            <a href="/#submit" class="btn-primary" style="display:inline-block;">我要投稿</a>
+            <a href="/#comments" class="btn-outline" style="display:inline-block;margin-left:12px;">参与讨论</a>
+          </p>
+          <p style="font-size:0.8rem;color:var(--text-tertiary);margin-top:12px;">投稿内容经核实后会在最新动态中署名发布。今日已收到线索 14 条，采纳 3 条。</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右辅助栏 -->
+    <aside class="sidebar" aria-label="辅助信息">
+      <div class="sidebar-card">
+        <h3>今日吃瓜热榜</h3>
+        <div class="rank-mini">
+          <div class="rank-mini-item"><span class="num">1</span><span class="txt">小巷人家番外片花泄露</span></div>
+          <div class="rank-mini-item"><span class="num">2</span><span class="txt">歌手2026首发官宣</span></div>
+          <div class="rank-mini-item"><span class="num">3</span><span class="txt">庆余年3言冰云换角</span></div>
+          <div class="rank-mini-item"><span class="num">4</span><span class="txt">青你复活赛票数异常</span></div>
+          <div class="rank-mini-item"><span class="num">5</span><span class="txt">小鹿酱精华液抽检</span></div>
+          <div class="rank-mini-item"><span class="num">6</span><span class="txt">阿强付费探店未标注</span></div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h3>快捷入口</h3>
+        <div class="quick-links">
+          <a href="/#submit">投稿爆料</a>
+          <a href="/#comments">网友评论区</a>
+          <a href="/#faq">常见问答</a>
+          <a href="/#deep-dive">深度解析</a>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h3>今日数据</h3>
+        <div class="rank-mini">
+          <div class="rank-mini-item"><span class="txt">新增条目</span><span class="num" style="margin-left:auto;">12</span></div>
+          <div class="rank-mini-item"><span class="txt">网友评论</span><span class="num" style="margin-left:auto;">18</span></div>
+          <div class="rank-mini-item"><span class="txt">资讯更新</span><span class="num" style="margin-left:auto;">6</span></div>
+          <div class="rank-mini-item"><span class="txt">投稿线索</span><span class="num" style="margin-left:auto;">14</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">91吃瓜群众回家今日</span>
+        <p>追踪2026年11月内娱综艺、剧集、选秀与直播带货领域的争议事件，覆盖片花泄露、票数异常、换角风波、抽检不合格等具体条目，每日更新8—12条动态，深度解析每起事件的可核对节点。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容</h4>
+        <a href="/#hot-cards">今日精选</a>
+        <a href="/#latest-updates">最新动态</a>
+        <a href="/#deep-dive">深度解析</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+      <div class="footer-col">
+        <h4>分类</h4>
+        <a href="/#categories">综艺争议</a>
+        <a href="/#categories">剧集番外</a>
+        <a href="/#categories">选秀复活赛</a>
+        <a href="/#categories">网红翻车</a>
+      </div>
+      <div class="footer-col">
+        <h4>互动</h4>
+        <a href="/#submit">投稿爆料</a>
+        <a href="/#comments">网友评论</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#rank">热门榜单</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 91吃瓜群众回家今日 · 内容均为示例条目，不构成事实认定</span>
+      <span>页面更新时间：2026-11-08 09:30</span>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function() {
+      // 搜索功能
+      const searchToggle = document.getElementById('searchToggle');
+      const searchBar = document.getElementById('searchBar');
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const searchFeedback = document.getElementById('searchFeedback');
+
+      searchToggle.addEventListener('click', function() {
+        const isActive = searchBar.classList.toggle('active');
+        if (isActive) {
+          searchInput.focus();
+        }
+      });
+
+      searchBtn.addEventListener('click', function() {
+        const q = searchInput.value.trim().toLowerCase();
+        if (!q) {
+          searchFeedback.textContent = '请输入关键词后再查找。';
+          return;
+        }
+        const allText = document.body.innerText.toLowerCase();
+        if (allText.includes(q)) {
+          const sections = document.querySelectorAll('section, .card, .update-item, .comment-item, .news-item, .faq-item');
+          let count = 0;
+          sections.forEach(function(el) {
+            if (el.innerText.toLowerCase().includes(q)) {
+              count++;
+              el.style.outline = '2px solid #c44536';
+              setTimeout(function() { el.style.outline = ''; }, 2000);
+            }
+          });
+          searchFeedback.textContent = '找到 ' + count + ' 处包含“' + searchInput.value.trim() + '”的内容，已高亮显示。';
+        } else {
+          searchFeedback.textContent = '没有找到包含“' + searchInput.value.trim() + '”的内容，换个词试试。';
+        }
+      });
+
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          searchBtn.click();
+        }
+      });
+
+      // 汉堡菜单
+      const hamburger = document.getElementById('hamburgerBtn');
+      const mainNav = document.getElementById('mainNav');
+      const overlay = document.getElementById('overlay');
+
+      function closeMenu() {
+        mainNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        overlay.classList.remove('active');
+      }
+
+      hamburger.addEventListener('click', function() {
+        const isOpen = mainNav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        overlay.classList.toggle('active', isOpen);
+      });
+
+      overlay.addEventListener('click', closeMenu);
+
+      mainNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeMenu();
+          searchBar.classList.remove('active');
+        }
+      });
+
+      // 回到顶部
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 侧栏高亮
+      const sections = document.querySelectorAll('section[id]');
+      const sideLinks = document.querySelectorAll('.channel-sidebar a');
+
+      if (sections.length && sideLinks.length) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              sideLinks.forEach(function(link) {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '/#' + entry.target.id) {
+                  link.classList.add('active');
+                }
+              });
+            }
+          });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+
+        sections.forEach(function(section) {
+          observer.observe(section);
+        });
+      }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "91吃瓜群众回家今日",
+    "description": "聚焦娱乐热点、争议事件与网友讨论，提供今日吃瓜速览、事件时间线、深度解析、网友评论与相关资讯。",
+    "inLanguage": "zh-CN",
+    "about": {
+      "@type": "Thing",
+      "name": "娱乐热点与争议事件"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "《小巷人家》番外篇片花是官方放出来的吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "正午阳光在11月5日声明中只提到“片花泄露已交法务处理”，未承认官方发布。11月8日流出的45秒婚礼戏片段最早出现在抖音账号“影视扒姐”的视频中，该账号过往内容多为影视二创，非官方渠道。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "《歌手2026》全程直播无修音是真的吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "节目组11月6日官宣文案写明“全程直播、全开麦、无修音”，并补充投票通道每期开放120分钟、需绑定手机号。此前《歌手2024》曾采用直播+修音混合模式，本次赛制变化已在官宣物料中确认。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "《青春有你2026》复活赛票数异常有后续吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "官方数据组11月7日22:40发声明称“系统缓存延迟”，承诺11月9日公开原始日志。第7位选手后援会已要求平台提供11月7日20:00-22:00的投票明细，截至11月8日中午尚未收到回复。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "小鹿酱推荐的精华液是哪个批号不合格？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "药监局11月3日通告显示，涉事批次为“肌先知焕颜精华液”批号20260912，菌落总数超标12倍。品牌方11月6日出示的合格报告对应批号为20261005，两者生产时间不同，不能互相替代。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "阿强吃垮广州的付费探店涉及哪些餐厅？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "11月4日曝光帖列出7家餐厅：天河区的“牛角日本烧肉”“太二酸菜鱼”、越秀区的“点都德”“惠食佳”、海珠区的“炳胜品味”“广州酒家”、荔湾区的“陈添记”。阿强在视频中均未标注“广告”或“合作”字样。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "《庆余年3》言冰云换角会影响剧情走向吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "编剧王倦11月7日在微博评论区回复“角色服务于故事”，未直接解释换角。从预告片看，言冰云的戏份集中在北齐线，与原著第三卷内容对应。换角是否影响剧情需等正片播出后比对，目前无法从预告片推断。"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+              </html>
