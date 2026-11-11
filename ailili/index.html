@@ -1,0 +1,1928 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>艾栗栗 - 作品动态与互动交流平台</title>
+  <meta name="description" content="艾栗栗是汇聚插画与短篇漫画作品、更新动态及读者互动的聚合页面。这里收录了近期连载、创作手记、同人投稿与读者评论，适合关注角色日常与轻松叙事的读者浏览。">
+  <meta name="keywords" content="艾栗栗">
+  <style>
+    :root {
+      --primary: #c44b4b;
+      --primary-light: #f7e6e6;
+      --primary-dark: #9e3a3a;
+      --bg: #fcf8f5;
+      --surface: #ffffff;
+      --text: #2e2622;
+      --text-secondary: #6b5e58;
+      --text-muted: #9b8d86;
+      --border: #e8ddd6;
+      --radius-card: 16px;
+      --radius-btn: 32px;
+      --radius-tag: 20px;
+      --shadow-default: 0 4px 16px rgba(44, 30, 22, 0.06);
+      --shadow-hover: 0 10px 28px rgba(44, 30, 22, 0.12);
+      --font-serif: "Noto Serif SC", "Songti SC", "SimSun", serif;
+      --font-sans: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      --announce-h: 42px;
+      --header-h: 64px;
+      --sticky-offset: calc(var(--announce-h) + var(--header-h));
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+      padding-top: var(--sticky-offset);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+      border: none;
+      background: none;
+    }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--announce-h);
+      background: var(--primary-dark);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      z-index: 100;
+      padding: 0 24px;
+      font-size: 13px;
+      gap: 12px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .announce-bar .brand-mark {
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffe9c9;
+      margin-right: 8px;
+    }
+
+    .announce-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .announce-item .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #ffe9c9;
+      display: inline-block;
+    }
+
+    /* 吸顶页头 */
+    .site-header {
+      position: fixed;
+      top: var(--announce-h);
+      left: 0;
+      width: 100%;
+      height: var(--header-h);
+      background: rgba(252, 248, 245, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      z-index: 99;
+      padding: 0 24px;
+    }
+
+    .header-inner {
+      max-width: 1360px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo-svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    .logo-text {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .header-nav a {
+      padding: 6px 14px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .header-nav a:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 180px;
+      padding: 7px 14px 7px 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      font-size: 13px;
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s, width 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary);
+      width: 220px;
+    }
+
+    .search-box::before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--text-muted);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .search-box::after {
+      content: "";
+      position: absolute;
+      left: 22px;
+      top: 62%;
+      width: 5px;
+      height: 2px;
+      background: var(--text-muted);
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: 0.2s;
+    }
+
+    /* 主容器 */
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 首屏 */
+    .hero {
+      padding: 56px 0 48px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      color: var(--primary-dark);
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin-bottom: 28px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: var(--radius-btn);
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: var(--shadow-default);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: var(--radius-btn);
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-svg {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      filter: drop-shadow(0 12px 32px rgba(196, 75, 75, 0.15));
+    }
+
+    /* 主内容区布局：左侧单栏（频道导航）+ 右侧主内容 */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 36px;
+      padding: 24px 0 48px;
+      align-items: start;
+    }
+
+    /* 左侧频道导航 */
+    .channel-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 20px 16px;
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--border);
+    }
+
+    .channel-sidebar h2 {
+      font-size: 15px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .channel-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .channel-list a {
+      display: block;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .channel-list a:hover,
+    .channel-list a.active {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    /* 主内容区域 */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      min-width: 0;
+    }
+
+    .section-block {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 28px 28px 32px;
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 22px;
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      padding-left: 14px;
+    }
+
+    /* 概览段落 */
+    .overview-text {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      max-width: 800px;
+    }
+
+    .overview-text p + p {
+      margin-top: 12px;
+    }
+
+    /* 精选卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: box-shadow 0.25s, transform 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--border);
+    }
+
+    .card-body {
+      padding: 16px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: var(--radius-tag);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .tag-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      padding-top: 8px;
+      border-top: 1px dashed var(--border);
+    }
+
+    /* 更新列表 */
+    .update-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .update-item {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-date {
+      flex-shrink: 0;
+      width: 72px;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .update-title {
+      font-weight: 600;
+      color: var(--text);
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+
+    .update-summary {
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    /* 分类入口网格 */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .cat-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 10px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      text-align: center;
+    }
+
+    .cat-item:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+
+    .deep-dive h3 {
+      font-size: 18px;
+      color: var(--text);
+      margin: 24px 0 10px;
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      margin-bottom: 12px;
+    }
+
+    .deep-dive ul {
+      margin: 8px 0 16px 20px;
+      font-size: 14px;
+    }
+
+    .deep-dive ul li {
+      margin-bottom: 6px;
+    }
+
+    /* 体验指南步骤 */
+    .guide-steps {
+      counter-reset: step;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .guide-steps li {
+      position: relative;
+      padding-left: 44px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      counter-increment: step;
+    }
+
+    .guide-steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+    }
+
+    .guide-steps li strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 2px;
+      font-size: 15px;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    .faq-item summary {
+      padding: 14px 18px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text);
+      transition: background 0.2s;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 18px;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-item summary:hover {
+      background: var(--primary-light);
+    }
+
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .comment-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .comment-user {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .comment-avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .comment-name {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-date {
+      flex-shrink: 0;
+      width: 80px;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      padding-top: 2px;
+    }
+
+    .news-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .news-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .news-title:hover {
+      color: var(--primary);
+    }
+
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* 相关推荐标签 */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .rec-tag {
+      display: inline-block;
+      padding: 7px 16px;
+      border-radius: var(--radius-tag);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .rec-tag:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    /* 补充板块：时间线 */
+    .timeline {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline li {
+      position: relative;
+      padding: 0 0 18px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .timeline li:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: -21px;
+      top: 7px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      border: 2px solid var(--primary);
+    }
+
+    .timeline-date {
+      font-weight: 700;
+      color: var(--text);
+      margin-right: 8px;
+      font-size: 13px;
+    }
+
+    /* 互动投稿板块 */
+    .interact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+    }
+
+    .interact-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .interact-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .interact-card h4 {
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .interact-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: #2e2622;
+      color: #d9cfc9;
+      padding: 48px 0 32px;
+      margin-top: 24px;
+    }
+
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      color: #a89890;
+      line-height: 1.8;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 12px;
+      font-family: var(--font-sans);
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-col a {
+      font-size: 13px;
+      color: #a89890;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #4a3f3a;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: #7a6b64;
+    }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+      z-index: 90;
+      font-size: 18px;
+      transform: translateY(12px);
+    }
+
+    .back-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-top:hover {
+      background: var(--primary-dark);
+    }
+
+    /* 无结果提示 */
+    .no-result {
+      text-align: center;
+      padding: 32px 16px;
+      color: var(--text-muted);
+      font-size: 14px;
+      display: none;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .channel-sidebar {
+        position: static;
+        padding: 16px;
+      }
+
+      .channel-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .channel-list a {
+        padding: 5px 12px;
+        font-size: 13px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 0 32px;
+      }
+
+      .hero-desc {
+        margin: 0 auto 28px;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .hero-svg {
+        max-width: 300px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      :root {
+        --announce-h: 36px;
+        --header-h: 56px;
+      }
+
+      body {
+        font-size: 14px;
+      }
+
+      .announce-bar {
+        font-size: 11px;
+        padding: 0 12px;
+        gap: 8px;
+      }
+
+      .announce-bar .brand-mark {
+        display: none;
+      }
+
+      .header-inner {
+        padding: 0 4px;
+      }
+
+      .header-nav {
+        display: none;
+        position: absolute;
+        top: var(--header-h);
+        left: 0;
+        width: 100%;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-hover);
+        z-index: 98;
+      }
+
+      .header-nav.open {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .search-box input {
+        width: 120px;
+      }
+
+      .search-box input:focus {
+        width: 160px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .section-block {
+        padding: 20px 16px 24px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-list {
+        grid-template-columns: 1fr;
+      }
+
+      .cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .interact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .update-item {
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .news-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .news-date {
+        width: auto;
+      }
+
+      .back-top {
+        right: 16px;
+        bottom: 16px;
+        width: 38px;
+        height: 38px;
+      }
+
+      .logo-text {
+        font-size: 18px;
+      }
+
+      .logo-svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="status">
+    <span class="brand-mark">艾栗栗</span>
+    <span class="announce-item"><span class="dot"></span>2026-11-08 更新《栗子面包店》第12话</span>
+    <span class="announce-item"><span class="dot"></span>「秋日插画征集」已收到 47 份投稿</span>
+    <span class="announce-item"><span class="dot"></span>本周新增读者评论 128 条</span>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="#f7e6e6"/>
+          <path d="M20 8c-4 0-7 3-7 7 0 2 1 4 3 5-2 1-3 3-3 5 0 4 3 7 7 7s7-3 7-7c0-2-1-4-3-5 2-1 3-3 3-5 0-4-3-7-7-7z" fill="#c44b4b"/>
+          <path d="M20 13c-1.5 0-2.5 1-2.5 2.5S18.5 18 20 18s2.5-1 2.5-2.5S21.5 13 20 13z" fill="#fff"/>
+          <path d="M20 22c-1.5 0-2.5 1-2.5 2.5S18.5 27 20 27s2.5-1 2.5-2.5S21.5 22 20 22z" fill="#fff"/>
+        </svg>
+        <span class="logo-text">艾栗栗</span>
+      </div>
+      <nav class="header-nav" id="headerNav" aria-label="主导航">
+        <a href="#overview">领域概览</a>
+        <a href="#featured">精选作品</a>
+        <a href="#updates">最新动态</a>
+        <a href="#categories">分类入口</a>
+        <a href="#deepdive">深度解析</a>
+        <a href="#guide">体验指南</a>
+        <a href="#interact">投稿互动</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="搜索作品或标签…" aria-label="搜索内容">
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero container">
+    <div class="hero-content">
+      <h1>艾栗栗</h1>
+      <p class="hero-desc">汇集插画师“艾栗栗”的短篇漫画、角色设定、创作手记与读者同人投稿。从栗子镇日常到季节限定小剧场，记录每个温暖而具体的角落。</p>
+      <div class="hero-actions">
+        <a href="#featured" class="btn-primary">浏览近期作品</a>
+        <a href="#interact" class="btn-outline">参与投稿</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="hero-svg" viewBox="0 0 420 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="10" y="10" width="400" height="340" rx="24" fill="#fcf8f5" stroke="#e8ddd6" stroke-width="1.5"/>
+        <circle cx="210" cy="140" r="64" fill="#f7e6e6"/>
+        <path d="M210 90c-18 0-32 13-32 31 0 10 4 18 12 24-8 6-12 14-12 24 0 18 14 31 32 31s32-13 32-31c0-10-4-18-12-24 8-6 12-14 12-24 0-18-14-31-32-31z" fill="#c44b4b"/>
+        <circle cx="194" cy="148" r="5" fill="#fff"/>
+        <circle cx="226" cy="148" r="5" fill="#fff"/>
+        <path d="M202 168c4 6 12 6 16 0" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="80" y="270" width="260" height="2" fill="#e8ddd6"/>
+        <rect x="100" y="280" width="60" height="8" rx="4" fill="#e8ddd6"/>
+        <rect x="180" y="280" width="100" height="8" rx="4" fill="#e8ddd6"/>
+        <rect x="300" y="280" width="40" height="8" rx="4" fill="#e8ddd6"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 主内容区：左侧单栏频道 + 右侧主内容 -->
+  <div class="container">
+    <div class="main-layout">
+
+      <!-- 左侧频道导航 -->
+      <aside class="channel-sidebar" aria-label="频道导航">
+        <h2>频道</h2>
+        <ul class="channel-list">
+          <li><a href="#overview" class="active">领域概览</a></li>
+          <li><a href="#featured">精选作品</a></li>
+          <li><a href="#updates">最新动态</a></li>
+          <li><a href="#categories">分类入口</a></li>
+          <li><a href="#deepdive">深度解析</a></li>
+          <li><a href="#guide">体验指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#comments">读者评论</a></li>
+          <li><a href="#news">相关资讯</a></li>
+          <li><a href="#recommend">相关推荐</a></li>
+          <li><a href="#interact">投稿互动</a></li>
+          <li><a href="#timeline">更新年表</a></li>
+        </ul>
+      </aside>
+
+      <!-- 右侧主内容 -->
+      <main class="main-content">
+
+        <!-- 板块1：领域概览 -->
+        <section class="section-block" id="overview">
+          <h2 class="section-title">领域概览</h2>
+          <p class="section-subtitle">插画、短篇漫画与角色日常的聚合方向</p>
+          <div class="overview-text">
+            <p>“艾栗栗”这个名字在读者圈里通常指向两类内容：一是以栗子镇为背景的系列短篇漫画，主角是一只会做面包的栗色小熊；二是围绕这个角色展开的单幅插画、季节贺图与读者同人创作。从2025年3月第一话《开张日》发布至今，主线故事已更新到第12话，单话平均页数18—24页，更新周期约三周一次。</p>
+            <p>当前值得关注的动向集中在三个方向：主线剧情进入“秋日面包祭”篇章，新角色“蜂蜜罐”在第10话登场；创作者在每月第一个周五发布“创作手记”，公开分镜草稿与配色思路；读者投稿板块“栗子信箱”在2026年10月收到47份同人画作，其中12幅已刊登在专题页。这些内容分别对应剧情追更、幕后了解与参与互动三类需求。</p>
+          </div>
+        </section>
+
+        <!-- 板块2：精选内容推荐 -->
+        <section class="section-block" id="featured">
+          <h2 class="section-title">精选内容</h2>
+          <p class="section-subtitle">近期值得留意的具体条目</p>
+          <div class="card-grid">
+
+            <article class="card">
+              <img class="card-img" src="https://picsum.photos/seed/ailili12/400/300" width="400" height="300" alt="栗子面包店第12话秋日面包祭开场插画" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">《栗子面包店》第12话·秋日面包祭</h3>
+                <div class="card-tags"><span class="tag">主线漫画</span><span class="tag tag-outline">更新</span><span class="tag tag-outline">秋季篇</span></div>
+                <p class="card-desc">面包祭首日摊位被风吹倒，小熊艾栗和兔子阿布用枫糖可颂重新布置。本话首次出现“可颂塔”全景分镜，共24页。</p>
+                <div class="card-meta"><span>2026-11-08 更新</span><span>阅读 2.1k</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <img class="card-img" src="https://picsum.photos/seed/ailili10/400/300" width="400" height="300" alt="蜂蜜罐角色初登场插画" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">蜂蜜罐的初登场·第10话分镜</h3>
+                <div class="card-tags"><span class="tag">角色设定</span><span class="tag tag-outline">新角色</span><span class="tag tag-outline">分镜</span></div>
+                <p class="card-desc">一只背着蜂蜜罐的獾，在第10话末尾推门进店。初登场只有三格分镜，台词两句，但罐子上的贴纸埋了后续线索。</p>
+                <div class="card-meta"><span>2026-10-18 发布</span><span>收藏 890</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <img class="card-img" src="https://picsum.photos/seed/aililihand/400/300" width="400" height="300" alt="十月创作手记分镜草稿照片" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">十月创作手记·分镜草稿公开</h3>
+                <div class="card-tags"><span class="tag">创作手记</span><span class="tag tag-outline">幕后</span><span class="tag tag-outline">分镜</span></div>
+                <p class="card-desc">第12话面包祭场景的原始分镜共31格，最终用掉24格。被删掉的是阿布偷吃面团的七格搞笑桥段。</p>
+                <div class="card-meta"><span>2026-11-06 发布</span><span>阅读 1.6k</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <img class="card-img" src="https://picsum.photos/seed/aililimaple/400/300" width="400" height="300" alt="枫糖可颂季节限定插画" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">枫糖可颂·季节限定插画</h3>
+                <div class="card-tags"><span class="tag">单幅插画</span><span class="tag tag-outline">秋季</span><span class="tag tag-outline">食物</span></div>
+                <p class="card-desc">配合第12话发布的单幅作品，画面只有艾栗捧可颂、背景是飘落的枫叶。配色用了四种暖棕色。</p>
+                <div class="card-meta"><span>2026-11-08 发布</span><span>点赞 1.4k</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <img class="card-img" src="https://picsum.photos/seed/aililimail/400/300" width="400" height="300" alt="栗子信箱同人投稿专题头图" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">栗子信箱·十月同人投稿专题</h3>
+                <div class="card-tags"><span class="tag">同人投稿</span><span class="tag tag-outline">互动</span><span class="tag tag-outline">专题</span></div>
+                <p class="card-desc">47份来稿中选了12幅上线，题材包括艾栗的不同服装、面包店装修方案、阿布的生日会。投稿者来自8个城市。</p>
+                <div class="card-meta"><span>2026-10-30 上线</span><span>收录 12 幅</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <img class="card-img" src="https://picsum.photos/seed/aililimoon/400/300" width="400" height="300" alt="中秋月亮兔贺图插画" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">中秋贺图·月亮兔阿布</h3>
+                <div class="card-tags"><span class="tag">贺图</span><span class="tag tag-outline">节日</span><span class="tag tag-outline">兔子</span></div>
+                <p class="card-desc">2026年10月6日发布的中秋贺图，阿布戴着兔耳帽坐在月饼盒上。背景的月亮用了三图层叠。</p>
+                <div class="card-meta"><span>2026-10-06 发布</span><span>点赞 2.3k</span></div>
+              </div>
+            </article>
+
+          </div>
+          <div class="no-result" id="searchNoResult">没有找到匹配的内容，换个关键词试试。</div>
+        </section>
+
+        <!-- 板块3：最新更新 -->
+        <section class="section-block" id="updates">
+          <h2 class="section-title">最新更新</h2>
+          <p class="section-subtitle">2026年10月9日至11月8日条目摘要</p>
+          <ul class="update-list">
+            <li class="update-item">
+              <span class="update-date">11-08</span>
+              <span class="update-title">《栗子面包店》第12话</span>
+              <span class="update-summary">面包祭首日摊位被风吹倒，艾栗用枫糖可颂重新布置，24页全彩。</span>
+            </li>
+            <li class="update-item">
+              <span class="update-date">11-06</span>
+              <span class="update-title">十月创作手记</span>
+              <span class="update-summary">公开第12话31格原始分镜，解释删掉阿布偷吃桥段的原因。</span>
+            </li>
+            <li class="update-item">
+              <span class="update-date">11-02</span>
+              <span class="update-title">角色设定页更新</span>
+              <span class="update-summary">蜂蜜罐的背上罐子结构补充了剖面图，标注容量为2.4升。</span>
+            </li>
+            <li class="update-item">
+              <span class="update-date">10-30</span>
+              <span class="update-title">栗子信箱专题上线</span>
+              <span class="update-summary">从47份来稿中选出12幅，含3幅面包店装修方案。</span>
+            </li>
+            <li class="update-item">
+              <span class="update-date">10-26</span>
+              <span class="update-title">第11话单行本预订</span>
+              <span class="update-summary">收录第9至11话，增加8页未公开草稿，首印附贴纸。</span>
+            </li>
+            <li class="update-item">
+              <span class="update-date">10-22</span>
+              <span class="update-title">读者问卷结果</span>
+              <span class="update-summary">收到312份回复，最想看到的配角是“蜂蜜罐”，占41%。</span>
+            </li>
+            <li class="update-item">
+              <span class="update-date">10-18</span>
+              <span class="update-title">第10话免费公开</span>
+              <span class="update-summary">蜂蜜罐初登场话数限时免费阅读，持续到11月18日。</span>
+            </li>
+            <li class="update-item">
+              <span class="update-date">10-14</span>
+              <span class="update-title">秋季壁纸包</span>
+              <span class="update-summary">含桌面与手机两种尺寸，图案为枫叶与可颂的循环排列。</span>
+            </li>
+            <li class="update-item">
+              <span class="update-date">10-09</span>
+              <span class="update-title">第9话修正</span>
+              <span class="update-summary">修正面包价格标签数字，从“12”改为“15”，共3页。</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 板块4：分类入口 -->
+        <section class="section-block" id="categories">
+          <h2 class="section-title">分类入口</h2>
+          <p class="section-subtitle">按内容类型快速定位</p>
+          <div class="cat-grid">
+            <a href="#featured" class="cat-item">主线漫画</a>
+            <a href="#featured" class="cat-item">单幅插画</a>
+            <a href="#featured" class="cat-item">创作手记</a>
+            <a href="#featured" class="cat-item">角色设定</a>
+            <a href="#featured" class="cat-item">节日贺图</a>
+            <a href="#featured" class="cat-item">同人投稿</a>
+            <a href="#featured" class="cat-item">分镜草稿</a>
+            <a href="#featured" class="cat-item">面包食谱</a>
+          </div>
+        </section>
+
+        <!-- 板块5：深度解析 -->
+        <section class="section-block" id="deepdive">
+          <h2 class="section-title">深度解析</h2>
+          <p class="section-subtitle">从第12话看秋日篇的叙事变化</p>
+          <div class="deep-dive">
+            <p>第12话《秋日面包祭》和前面11话有一个明显区别：全话没有出现任何角色的完整姓名。艾栗全程被称为“店长”，阿布只叫“阿布”，蜂蜜罐在末尾出现时甚至没有台词。这种处理在之前的章节里没有过。</p>
+
+            <h3>叙事视角从“介绍”转向“在场”</h3>
+            <p>第1话到第5话承担的是世界观搭建任务，每一话都会通过台词交代一个新设定：面包店的营业时间、栗子镇的地图、阿布为什么住在店里。第6话之后这类解释性台词明显减少。到第12话，读者需要自己从画面里判断面包祭的流程——入口的指示牌、摊位编号、收摊时折叠桌的动作，都画出来了但没有配文字说明。这提高了阅读门槛，也意味着作者对读者已有认知的默认。</p>
+            <ul>
+              <li>第1话：全话台词共86句，其中解释性台词31句，占36%。</li>
+              <li>第12话：全话台词共52句，解释性台词4句，占7.7%。</li>
+              <li>下降的27句解释性台词，有19句转成了画面细节，8句直接删除。</li>
+            </ul>
+
+            <h3>新角色“蜂蜜罐”的登场方式</h3>
+            <p>第10话末尾蜂蜜罐推门进店，只有三格：推门、露半张脸、罐子被门框磕了一下。第11话没有出现。第12话末尾再次出现，站在面包祭摊位前看可颂塔，没有台词。两次登场加起来不足一页。这种“反复路过但不展开”的处理在系列里是第一次。按作者在11月6日创作手记里的说法，蜂蜜罐的完整故事线要等到2027年春季篇。在此之前，这个角色的作用更接近一个视觉锚点——让读者注意到摊位前总有个背罐子的身影。</p>
+
+            <h3>“可颂塔”分镜的取舍</h3>
+            <p>第12话第14页的“可颂塔”全景分镜是整话视觉重心。创作手记公布的原始分镜里，这一格原本是俯视角度，能看到摊位全貌和排队人群。最终版本改成了平视，只保留可颂塔和艾栗的背影。作者给出的理由是：“俯视会让人注意到队伍太长，平视只看到塔，和艾栗当时的注意力一致。”这个改动让画面信息量减少了大约四成，但情绪传递更集中。可以核对的是：原始分镜标注了17个人物轮廓，最终版只保留了3个。</p>
+          </div>
+        </section>
+
+        <!-- 板块6：体验指南 -->
+        <section class="section-block" id="guide">
+          <h2 class="section-title">体验指南</h2>
+          <p class="section-subtitle">按什么顺序看，怎么判断一期值不值得追</p>
+          <ol class="guide-steps">
+            <li>
+              <strong>先看第1话和第6话，判断画风与叙事节奏是否合口味。</strong>
+              第1话《开张日》交代了所有基础设定，第6话《雨天休息》是第一个不靠新设定推动的日常回。两话的台词密度和分镜节奏差异，能代表整个系列两个阶段的面貌。
+            </li>
+            <li>
+              <strong>跳过创作手记先读正文，手记留到二刷再看。</strong>
+              第12话的手记里直接提到了“删掉阿布偷吃桥段”和“可颂塔分镜改角度”，先看手记会削弱正文第一遍阅读的发现感。手记更适合在读完正文后对照，看哪些细节是被主动舍弃的。
+            </li>
+            <li>
+              <strong>用“单话信息量”判断更新值不值得当天追。</strong>
+              第10话引入新角色，信息量密度高，适合当天看；第8话《换季菜单》主要是三款面包的展示，信息增量小，可以攒两话一起看。判断依据看更新公告里有没有出现“新角色”“新场景”“剧情转折”这类词。
+            </li>
+            <li>
+              <strong>同人投稿专题按“装修方案”和“角色服装”两类分开看。</strong>
+              10月30日上线的专题里，装修方案类投稿附了作者的文字说明，读起来更像设计提案；角色服装类以单幅为主，信息集中在画面。两类混着看容易把注意力分散。
+            </li>
+            <li>
+              <strong>评论区和创作手记对照着看，能发现正文里没写出来的意图。</strong>
+              第11话发布后，评论区有读者指出面包价格标签前后不一致，作者在两天后的更新里承认了笔误。这类信息只出现在评论和后续修正记录里，正文不会标注。
+            </li>
+          </ol>
+        </section>
+
+        <!-- 板块7：FAQ -->
+        <section class="section-block" id="faq">
+          <h2 class="section-title">常见问题</h2>
+          <p class="section-subtitle">读者问得比较多的六个问题</p>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>《栗子面包店》更新频率是多久？</summary>
+              <div class="faq-answer">主线漫画大约三周更新一话，单话18—24页。2026年9月到11月的实际更新间隔分别是22天、19天、21天。创作手记在每月第一个周五发布，与主线更新错开。</div>
+            </details>
+            <details class="faq-item">
+              <summary>蜂蜜罐在第几话正式出场？</summary>
+              <div class="faq-answer">第10话末尾首次露面，只有三格分镜。第12话末尾再次出现，站在面包祭摊位前，没有台词。完整的角色故事线按作者11月6日手记的说法，安排在2027年春季篇。</div>
+            </details>
+            <details class="faq-item">
+              <summary>第10话限时免费到什么时候？</summary>
+              <div class="faq-answer">2026年10月18日上午10点开放免费阅读，持续到11月18日23:59。免费范围是第10话全话24页，不含创作手记和分镜草稿。</div>
+            </details>
+            <details class="faq-item">
+              <summary>同人投稿需要什么条件？</summary>
+              <div class="faq-answer">栗子信箱专题接受单幅插画和短篇四格，题材限栗子镇世界观内的角色。2026年10月这一期收到47份来稿，选入12幅。投稿时需要附上角色名和一段50字以内的画面说明。</div>
+            </details>
+            <details class="faq-item">
+              <summary>第11话单行本和第9话单行本有什么区别？</summary>
+              <div class="faq-answer">第11话单行本收录第9至第11话，比线上连载多8页未公开草稿，首印附一张贴纸。第9话单行本只收录第7至第8话，没有附加页。两本的装帧尺寸相同，都是A5。</div>
+            </details>
+            <details class="faq-item">
+              <summary>中秋贺图里的月亮用了什么画法？</summary>
+              <div class="faq-answer">2026年10月6日发布的中秋贺图，月亮部分用了三个图层叠加：底层是暖黄色渐变，中层是手绘的环形山纹理，顶层是半透明的光晕。作者在当天的发布说明里提过，光晕层单独降低到72%不透明度。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 板块8：用户评论 -->
+        <section class="section-block" id="comments">
+          <h2 class="section-title">读者评论</h2>
+          <p class="section-subtitle">来自近期更新与专题的读者反馈</p>
+          <div class="comment-list">
+
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">栗</span><span class="comment-name">栗子味增汤</span></div>
+              第12话可颂塔那一格平视真的比俯视好，俯视的时候会忍不住数排队的人，平视就只看塔和艾栗的背影，注意力被收回来了。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">面</span><span class="comment-name">面包边角料</span></div>
+              手记里说删了阿布偷吃面团的七格，有点可惜，但想想正片里阿布已经够抢戏了，删掉也合理。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">蜂</span><span class="comment-name">蜂蜜罐观察员</span></div>
+              第10话末尾蜂蜜罐推门那三格翻来覆去看了好几遍，罐子上的贴纸到底是什么图案啊，有人认出来了吗。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">阿</span><span class="comment-name">阿布的围巾</span></div>
+              秋季壁纸包下载了，手机尺寸那版枫叶位置刚好不挡图标，挺用心的。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">月</span><span class="comment-name">月亮上的兔子洞</span></div>
+              中秋贺图那个月亮的三层画法，手记里要是能出个过程图就好了，光看说明不太能想象出来。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">可</span><span class="comment-name">可颂不要糖</span></div>
+              第8话换季菜单确实信息量小，当时追更觉得有点水，攒两话一起看就好多了。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">分</span><span class="comment-name">分镜本第三页</span></div>
+              31格原始分镜只用了24格，剩下那7格要是能做成附录放进单行本就好了，第11话单行本的8页草稿里不知道有没有。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">镇</span><span class="comment-name">栗子镇邮差</span></div>
+              十月投稿专题里的装修方案那三幅，有一幅把面包店二楼画出来了，正片里好像从来没上过二楼，算不算半官方设定。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">天</span><span class="comment-name">天气好就画画</span></div>
+              第9话价格标签从12改15这个修正，当时评论区就有人提，改得还挺快。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">问</span><span class="comment-name">问卷填了三天</span></div>
+              读者问卷结果说41%的人想看蜂蜜罐，我就是那41%里的一个。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">第</span><span class="comment-name">第一话开始追</span></div>
+              从第1话86句台词到第12话52句，这个数字变化挺有意思的，确实能感觉到现在读起来比以前要自己脑补的地方多了。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">排</span><span class="comment-name">排队买可颂</span></div>
+              面包祭的流程全靠画面看，入口指示牌和摊位编号那几格我反复看了两遍才理清楚顺序。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">秋</span><span class="comment-name">秋天的第一炉</span></div>
+              枫糖可颂那张单幅配色是真舒服，四种暖棕色叠在一起居然不糊。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">贴</span><span class="comment-name">贴纸收集者</span></div>
+              首印贴纸长什么样还没公布，预订页面只写了“附贴纸”三个字，有点盲盒的感觉。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">兔</span><span class="comment-name">兔耳帽阿布</span></div>
+              阿布戴兔耳帽那张贺图，帽子上的绒毛画法跟正片里不太一样，贺图更细。
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">慢</span><span class="comment-name">慢半拍读者</span></div>
+              刚补到第7话，看到大家在聊第12话有点跟不上，先撤了。
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 板块9：相关资讯 -->
+        <section class="section-block" id="news">
+          <h2 class="section-title">相关资讯</h2>
+          <p class="section-subtitle">近期动态与公告</p>
+          <div class="news-list">
+            <div class="news-item">
+              <span class="news-date">2026-11-08</span>
+              <div class="news-content">
+                <div class="news-title">《栗子面包店》第12话上线，面包祭篇章开启</div>
+                <div class="news-summary">本话共24页，全彩，更新时间为上午10点。作者在发布页附言“秋日篇预计四话结束”，第13话定档11月28日。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-11-06</span>
+              <div class="news-content">
+                <div class="news-title">十月创作手记公开31格原始分镜</div>
+                <div class="news-summary">手记中标注了第12话被删除的七格搞笑桥段，涉及阿布偷吃面团。作者解释删除原因是“节奏拖沓”，并附上了被删格线的缩略图。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-10-30</span>
+              <div class="news-content">
+                <div class="news-title">栗子信箱同人专题上线，12幅作品入选</div>
+                <div class="news-summary">本期共收到47份投稿，入选率约25.5%。投稿者来自北京、上海、广州等8个城市，其中3幅为面包店装修方案，附有作者手写说明。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-10-26</span>
+              <div class="news-content">
+                <div class="news-title">第11话单行本开启预订，首印附贴纸</div>
+                <div class="news-summary">单行本收录第9至11话，增加8页未公开草稿。预订页面显示预计12月5日发货，首印数量未公布，贴纸图案在发货前不公开。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-10-22</span>
+              <div class="news-content">
+                <div class="news-title">读者问卷结果公布，蜂蜜罐呼声最高</div>
+                <div class="news-summary">312份有效回复中，41%的读者选择“最想看到蜂蜜罐的后续故事”，其次为“阿布的身世”，占23%。“面包食谱”选项排第三，占17%。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">2026-10-18</span>
+              <div class="news-content">
+                <div class="news-title">第10话限时免费开放，持续一个月</div>
+                <div class="news-summary">免费期从10月18日10:00到11月18日23:59。第10话是蜂蜜罐首次登场的话数，末尾三格分镜为角色首次露面。免费范围不含创作手记。</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 板块10：相关推荐 -->
+        <section class="section-block" id="recommend">
+          <h2 class="section-title">相关推荐</h2>
+          <p class="section-subtitle">按内容方向延伸的条目索引</p>
+          <div class="rec-tags">
+            <a href="#featured" class="rec-tag">栗子镇地图设定</a>
+            <a href="#featured" class="rec-tag">阿布生日会短篇</a>
+            <a href="#featured" class="rec-tag">面包价格标签修正记录</a>
+            <a href="#featured" class="rec-tag">第11话单行本8页草稿</a>
+            <a href="#featured" class="rec-tag">蜂蜜罐罐子剖面图</a>
+            <a href="#featured" class="rec-tag">中秋贺图月亮图层</a>
+            <a href="#featured" class="rec-tag">秋季壁纸包手机尺寸</a>
+            <a href="#featured" class="rec-tag">第12话可颂塔平视分镜</a>
+          </div>
+        </section>
+
+        <!-- 板块11：补充板块 - 时间线 -->
+        <section class="section-block" id="timeline">
+          <h2 class="section-title">更新年表</h2>
+          <p class="section-subtitle">从第1话到第12话的关键节点</p>
+          <ul class="timeline">
+            <li><span class="timeline-date">2025-03-12</span>第1话《开张日》发布，栗子面包店正式开门，全话86句台词。</li>
+            <li><span class="timeline-date">2025-09-05</span>第6话《雨天休息》发布，首个不靠新设定推动的日常回。</li>
+            <li><span class="timeline-date">2026-07-22</span>第8话《换季菜单》发布，展示三款面包，信息增量较小。</li>
+            <li><span class="timeline-date">2026-09-30</span>第9话发布，后经修正将面包价格标签从“12”改为“15”。</li>
+            <li><span class="timeline-date">2026-10-18</span>第10话发布并限时免费，蜂蜜罐首次露面，三格分镜。</li>
+            <li><span class="timeline-date">2026-10-26</span>第11话单行本开启预订，收录第9至11话，附8页草稿。</li>
+            <li><span class="timeline-date">2026-11-08</span>第12话《秋日面包祭》上线，平视可颂塔分镜，台词52句。</li>
+          </ul>
+        </section>
+
+        <!-- 板块12：互动投稿 -->
+        <section class="section-block" id="interact">
+          <h2 class="section-title">投稿与互动</h2>
+          <p class="section-subtitle">参与栗子信箱与读者交流的入口</p>
+          <div class="interact-grid">
+            <div class="interact-card">
+              <h4>同人画作投稿</h4>
+              <p>单幅或四格，附50字说明，每月30日截止</p>
+            </div>
+            <div class="interact-card">
+              <h4>角色服装提案</h4>
+              <p>为艾栗或阿布设计新服装，入选作品会在正片背景中客串</p>
+            </div>
+            <div class="interact-card">
+              <h4>面包食谱分享</h4>
+              <p>文字配方或手绘步骤图，第8话曾采用读者提供的南瓜包配方</p>
+            </div>
+            <div class="interact-card">
+              <h4>读者问卷</h4>
+              <p>2026年10月期已结束，共312份回复，下一期在2027年1月</p>
+            </div>
+            <div class="interact-card">
+              <h4>分镜猜谜</h4>
+              <p>根据局部截图猜出自哪一话，每周五更新题目</p>
+            </div>
+            <div class="interact-card">
+              <h4>贴纸交换</h4>
+              <p>第11话单行本首印贴纸，读者间可自行交换，不设官方渠道</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">艾栗栗</div>
+          <p class="footer-desc">收录2025年3月至2026年11月的主线漫画12话、单幅插画28幅、创作手记9篇与同人投稿专题3期。更新节奏为约三周一次主线、每月一次手记。</p>
+        </div>
+        <div class="footer-col">
+          <h4>内容</h4>
+          <ul>
+            <li><a href="#featured">主线漫画</a></li>
+            <li><a href="#featured">单幅插画</a></li>
+            <li><a href="#featured">创作手记</a></li>
+            <li><a href="#featured">角色设定</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>互动</h4>
+          <ul>
+            <li><a href="#interact">同人投稿</a></li>
+            <li><a href="#interact">服装提案</a></li>
+            <li><a href="#interact">读者问卷</a></li>
+            <li><a href="#interact">分镜猜谜</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>信息</h4>
+          <ul>
+            <li><a href="#news">相关资讯</a></li>
+            <li><a href="#timeline">更新年表</a></li>
+            <li><a href="#faq">常见问题</a></li>
+            <li><a href="#comments">读者评论</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 艾栗栗 · 内容聚合示例页，条目为示例数据，非官方发布</span>
+        <span>最后更新：2026-11-08 · 对应第12话上线</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function() {
+      // 汉堡菜单
+      var hamburger = document.getElementById('hamburgerBtn');
+      var nav = document.getElementById('headerNav');
+
+      hamburger.addEventListener('click', function() {
+        var isOpen = nav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // 点击导航项后收起菜单
+      nav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          nav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // 点击遮罩关闭（移动端）
+      document.addEventListener('click', function(e) {
+        if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== hamburger && !hamburger.contains(e.target)) {
+          nav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Esc 关闭菜单
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // 搜索筛选
+      var searchInput = document.getElementById('searchInput');
+      var noResult = document.getElementById('searchNoResult');
+      var featuredSection = document.getElementById('featured');
+      var cards = featuredSection.querySelectorAll('.card');
+
+      searchInput.addEventListener('input', function() {
+        var query = this.value.trim().toLowerCase();
+        var visibleCount = 0;
+        cards.forEach(function(card) {
+          var text = card.textContent.toLowerCase();
+          if (!query || text.indexOf(query) !== -1) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        if (visibleCount === 0 && query) {
+          noResult.style.display = 'block';
+        } else {
+          noResult.style.display = 'none';
+        }
+      });
+
+      // 回到顶部
+      var backTop = document.getElementById('backTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backTop.classList.add('show');
+        } else {
+          backTop.classList.remove('show');
+        }
+      });
+
+      backTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 侧栏导航高亮
+      var sections = document.querySelectorAll('section[id]');
+      var channelLinks = document.querySelectorAll('.channel-list a');
+
+      function highlightNav() {
+        var scrollPos = window.scrollY + 120;
+        var currentId = '';
+        sections.forEach(function(section) {
+          if (section.offsetTop <= scrollPos) {
+            currentId = section.getAttribute('id');
+          }
+        });
+        channelLinks.forEach(function(link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + currentId) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', highlightNav);
+      window.addEventListener('load', highlightNav);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "艾栗栗",
+    "description": "汇集插画师“艾栗栗”的短篇漫画、角色设定、创作手记与读者同人投稿的聚合页面。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "《栗子面包店》更新频率是多久？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "主线漫画大约三周更新一话，单话18—24页。2026年9月到11月的实际更新间隔分别是22天、19天、21天。创作手记在每月第一个周五发布，与主线更新错开。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "蜂蜜罐在第几话正式出场？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "第10话末尾首次露面，只有三格分镜。第12话末尾再次出现，站在面包祭摊位前，没有台词。完整的角色故事线按作者11月6日手记的说法，安排在2027年春季篇。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "第10话限时免费到什么时候？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2026年10月18日上午10点开放免费阅读，持续到11月18日23:59。免费范围是第10话全话24页，不含创作手记和分镜草稿。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "同人投稿需要什么条件？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "栗子信箱专题接受单幅插画和短篇四格，题材限栗子镇世界观内的角色。2026年10月这一期收到47份来稿，选入12幅。投稿时需要附上角色名和一段50字以内的画面说明。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "第11话单行本和第9话单行本有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "第11话单行本收录第9至第11话，比线上连载多8页未公开草稿，首印附一张贴纸。第9话单行本只收录第7至第8话，没有附加页。两本的装帧尺寸相同，都是A5。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "中秋贺图里的月亮用了什么画法？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2026年10月6日发布的中秋贺图，月亮部分用了三个图层叠加：底层是暖黄色渐变，中层是手绘的环形山纹理，顶层是半透明的光晕。作者在当天的发布说明里提过，光晕层单独降低到72%不透明度。"
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+  </html>
