@@ -1,0 +1,2346 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>打屁股视频 - 内容方向与观看指南</title>
+  <meta name="description" content="打屁股视频内容聚合页，涵盖管教剧情、姿势教学、影视片段、圈内闲聊等具体条目。提供精选推荐、更新动态、分类入口与观看顺序参考，适合想了解这一细分类型的观众浏览。">
+  <meta name="keywords" content="打屁股视频">
+  <style>
+    :root {
+      --primary: #8B3A3A;
+      --primary-light: #B56565;
+      --primary-dark: #5E2626;
+      --bg: #FBF7F4;
+      --surface: #FFFFFF;
+      --text: #2C241E;
+      --text-secondary: #6B5E55;
+      --text-tertiary: #9C8E84;
+      --border: #E5DAD3;
+      --radius-card: 14px;
+      --radius-btn: 10px;
+      --radius-tag: 6px;
+      --radius-banner: 18px;
+      --shadow: 0 2px 8px rgba(44, 36, 30, 0.06);
+      --shadow-hover: 0 6px 20px rgba(44, 36, 30, 0.10);
+      --font: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+      --sticky-offset: 92px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--primary-dark);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary-dark);
+      color: #FFF;
+      font-size: 13px;
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      min-height: 36px;
+    }
+
+    .announce-bar .brand-mark {
+      font-weight: 700;
+      color: #FFD9D9;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .announce-bar .announce-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .announce-bar .announce-item {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .announce-bar .announce-date {
+      color: #FFB3B3;
+      font-weight: 600;
+    }
+
+    /* 吸顶页头 */
+    .site-header {
+      position: sticky;
+      top: 36px;
+      z-index: 99;
+      background: rgba(251, 247, 244, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px;
+    }
+
+    .header-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo-svg {
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      flex-wrap: wrap;
+      overflow: visible;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: var(--radius-tag);
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .header-nav a:hover,
+    .header-nav a:focus-visible {
+      background: var(--primary-light);
+      color: #FFF;
+      outline: none;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 8px 12px;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #F5EBE6 0%, #FBF7F4 60%, #F0E4DC 100%);
+      padding: 48px 20px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-content {
+      flex: 1 1 55%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--primary-dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 600px;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: #FFF;
+      padding: 10px 26px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      color: #FFF;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--primary);
+      padding: 10px 26px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 15px;
+      border: 1.5px solid var(--primary);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #FFF;
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      flex: 0 0 380px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-visual-svg {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 8px 24px rgba(139, 58, 58, 0.15));
+    }
+
+    /* 主容器 */
+    .main-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 36px 20px 60px;
+      display: grid;
+      grid-template-columns: 180px 1fr 250px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* 左侧频道索引 */
+    .left-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+    }
+
+    .sidebar-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      padding-left: 8px;
+    }
+
+    .channel-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .channel-list a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: var(--radius-tag);
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+      border-left: 3px solid transparent;
+    }
+
+    .channel-list a:hover,
+    .channel-list a:focus-visible {
+      background: #F0E4DC;
+      color: var(--primary-dark);
+      outline: none;
+    }
+
+    .channel-list a.active {
+      background: #F0E4DC;
+      color: var(--primary-dark);
+      font-weight: 600;
+      border-left-color: var(--primary);
+    }
+
+    /* 中间主内容 */
+    .main-content {
+      min-width: 0;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      gap: 12px;
+    }
+
+    .section-header h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: 0.5px;
+    }
+
+    .section-header .more-link {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+
+    .section-header .more-link:hover {
+      color: var(--primary);
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #E8DDD5;
+    }
+
+    .card-body {
+      padding: 14px 16px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .card-type {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      background: #F5EBE6;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      align-self: flex-start;
+      letter-spacing: 0.5px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-top: auto;
+      padding-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .card-tags span {
+      font-size: 11px;
+      background: #F5F0EC;
+      color: var(--text-secondary);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    /* 紧凑列表 */
+    .compact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .compact-item {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+      font-size: 14px;
+    }
+
+    .compact-item:last-child {
+      border-bottom: none;
+    }
+
+    .compact-item:hover {
+      background: #FBF7F4;
+    }
+
+    .compact-item .item-title {
+      font-weight: 600;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+
+    .compact-item .item-summary {
+      color: var(--text-secondary);
+      font-size: 13px;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .compact-item .item-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      padding: 18px 14px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+    }
+
+    .category-item:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+      border-color: var(--primary-light);
+    }
+
+    .category-item .cat-icon {
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .category-item .cat-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .category-item .cat-count {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      padding: 28px 32px;
+    }
+
+    .deep-dive h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 18px;
+    }
+
+    .deep-dive h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 22px 0 10px;
+      padding-left: 10px;
+      border-left: 3px solid var(--primary-light);
+    }
+
+    .deep-dive p {
+      margin-bottom: 12px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .deep-dive ul {
+      margin: 8px 0 14px 20px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .deep-dive li {
+      margin-bottom: 6px;
+    }
+
+    .deep-dive blockquote {
+      background: #F5EBE6;
+      border-left: 3px solid var(--primary);
+      padding: 12px 18px;
+      margin: 14px 0;
+      border-radius: 0 var(--radius-tag) var(--radius-tag) 0;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 14px 18px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text);
+      transition: background 0.15s;
+    }
+
+    .faq-item summary:hover {
+      background: #FBF7F4;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 20px;
+      color: var(--primary);
+      font-weight: 300;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-item .faq-answer {
+      padding: 0 18px 16px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.8;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .comment-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .comment-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .comment-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .comment-nick {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .comment-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .comment-meta {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      display: flex;
+      gap: 10px;
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .news-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      padding: 16px 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+
+    .news-item:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .news-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      min-width: 82px;
+      padding-top: 2px;
+    }
+
+    .news-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .news-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 相关推荐标签 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-cloud a {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .tag-cloud a:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #FFF;
+    }
+
+    /* 榜单 */
+    .rank-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .rank-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .rank-item:last-child {
+      border-bottom: none;
+    }
+
+    .rank-item:hover {
+      background: #FBF7F4;
+    }
+
+    .rank-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #F0E4DC;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .rank-item:nth-child(1) .rank-num {
+      background: var(--primary);
+      color: #FFF;
+    }
+
+    .rank-item:nth-child(2) .rank-num {
+      background: var(--primary-light);
+      color: #FFF;
+    }
+
+    .rank-item:nth-child(3) .rank-num {
+      background: #D4A5A5;
+      color: #FFF;
+    }
+
+    .rank-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      flex: 1;
+      min-width: 0;
+    }
+
+    .rank-hot {
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* 右侧栏 */
+    .right-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .aside-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .aside-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .aside-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .aside-list li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      display: flex;
+      gap: 6px;
+      align-items: baseline;
+    }
+
+    .aside-list li .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .aside-list li a {
+      color: var(--text-secondary);
+    }
+
+    .aside-list li a:hover {
+      color: var(--primary);
+    }
+
+    .update-time {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      text-align: right;
+    }
+
+    /* 页尾 */
+    .site-footer {
+      background: #2C241E;
+      color: #C9BDB4;
+      padding: 40px 20px 30px;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-brand .footer-logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #FFF;
+      letter-spacing: 1px;
+    }
+
+    .footer-brand p {
+      line-height: 1.7;
+      color: #A89B91;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #E8DDD5;
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-col ul li a {
+      color: #A89B91;
+      font-size: 13px;
+    }
+
+    .footer-col ul li a:hover {
+      color: #FFF;
+    }
+
+    .footer-bottom {
+      max-width: 1380px;
+      margin: 28px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid #4A3F37;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: #7D7169;
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #FFF;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: var(--shadow-hover);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .back-to-top.show {
+      display: flex;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    /* 搜索框 */
+    .search-box {
+      display: flex;
+      gap: 0;
+      margin-bottom: 16px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 10px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-btn) 0 0 var(--radius-btn);
+      font-size: 14px;
+      font-family: var(--font);
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary-light);
+    }
+
+    .search-box button {
+      padding: 10px 20px;
+      background: var(--primary);
+      color: #FFF;
+      border: none;
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font);
+      transition: background 0.2s;
+    }
+
+    .search-box button:hover {
+      background: var(--primary-dark);
+    }
+
+    .search-feedback {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 12px;
+      min-height: 20px;
+    }
+
+    /* 投稿栏目 */
+    .submit-card {
+      background: linear-gradient(135deg, #F5EBE6, #FBF7F4);
+      border: 1.5px dashed var(--primary-light);
+      border-radius: var(--radius-card);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .submit-card .submit-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .submit-card .submit-text {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .submit-card .submit-text h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .submit-card .submit-text p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .submit-card .btn-primary {
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-container {
+        grid-template-columns: 1fr 260px;
+        gap: 24px;
+      }
+
+      .left-sidebar {
+        display: none;
+      }
+
+      .header-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero-inner {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .hero-visual {
+        flex: 0 0 auto;
+        max-width: 320px;
+      }
+
+      .hero-content h1 {
+        font-size: 34px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .main-container {
+        grid-template-columns: 1fr;
+      }
+
+      .right-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .hero-content h1 {
+        font-size: 28px;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-list {
+        grid-template-columns: 1fr;
+      }
+
+      .compact-item {
+        flex-wrap: wrap;
+        gap: 4px 12px;
+      }
+
+      .compact-item .item-summary {
+        white-space: normal;
+        flex-basis: 100%;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .deep-dive {
+        padding: 20px 18px;
+      }
+
+      .announce-bar {
+        font-size: 12px;
+        gap: 8px;
+        padding: 6px 12px;
+      }
+
+      .announce-bar .announce-items {
+        gap: 10px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* 移动菜单 */
+    .mobile-menu-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 300;
+    }
+
+    .mobile-menu-overlay.active {
+      display: block;
+    }
+
+    .mobile-menu-panel {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 280px;
+      height: 100%;
+      background: var(--surface);
+      z-index: 301;
+      padding: 24px 20px;
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+      transition: right 0.25s ease;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-menu-panel.active {
+      right: 0;
+    }
+
+    .mobile-menu-panel .close-btn {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--text);
+      padding: 4px 8px;
+      margin-bottom: 8px;
+    }
+
+    .mobile-menu-panel a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: var(--radius-tag);
+      color: var(--text-secondary);
+      font-size: 15px;
+      transition: background 0.15s;
+    }
+
+    .mobile-menu-panel a:hover {
+      background: #F0E4DC;
+      color: var(--primary-dark);
+    }
+
+    /* 高亮当前频道 */
+    .channel-list a.active {
+      background: #F0E4DC;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="banner">
+    <span class="brand-mark">打屁股视频</span>
+    <div class="announce-items">
+      <span class="announce-item">
+        <span class="announce-date">11月7日</span>
+        <span>《书房规矩》第8集更新</span>
+      </span>
+      <span class="announce-item">
+        <span class="announce-date">11月6日</span>
+        <span>新增「姿势教学」类目12条</span>
+      </span>
+      <span class="announce-item">
+        <span class="announce-date">11月5日</span>
+        <span>本周热门榜单已刷新</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#8B3A3A"/>
+          <path d="M12 20C12 20 14 14 20 14C26 14 28 20 28 20C28 20 26 26 20 26C14 26 12 20 12 20Z" stroke="#FFD9D9" stroke-width="2" fill="none"/>
+          <circle cx="20" cy="20" r="3" fill="#FFD9D9"/>
+          <path d="M8 28L12 24" stroke="#FFD9D9" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M32 28L28 24" stroke="#FFD9D9" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">打屁股视频</span>
+      </div>
+      <nav class="header-nav" aria-label="主导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep-dive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#submit">投稿互动</a>
+      </nav>
+      <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- 移动端菜单 -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu-panel" id="mobilePanel" role="dialog" aria-modal="true" aria-label="移动端导航">
+    <button class="close-btn" id="closeMenuBtn" aria-label="关闭菜单">×</button>
+    <a href="/#overview">领域概览</a>
+    <a href="/#featured">精选推荐</a>
+    <a href="/#latest">最新更新</a>
+    <a href="/#categories">分类入口</a>
+    <a href="/#deep-dive">深度解析</a>
+    <a href="/#guide">体验指南</a>
+    <a href="/#faq">常见问答</a>
+    <a href="/#comments">用户评论</a>
+    <a href="/#news">相关资讯</a>
+    <a href="/#recommend">相关推荐</a>
+    <a href="/#ranking">热门榜单</a>
+    <a href="/#submit">投稿互动</a>
+  </div>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1>打屁股视频</h1>
+        <p class="hero-desc">
+          汇聚管教剧情短剧、姿势技巧教学、影视片段剪辑、圈内创作者访谈与工具测评等内容方向。涵盖《书房规矩》《板子与戒尺》等连载条目，以及新手入门、力度控制、安全词设置等实操话题。
+        </p>
+        <div class="hero-actions">
+          <a href="/#featured" class="btn-primary">浏览精选条目</a>
+          <a href="/#guide" class="btn-outline">观看顺序指南</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg class="hero-visual-svg" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="40" y="40" width="320" height="220" rx="20" fill="#F5EBE6" stroke="#D4A5A5" stroke-width="2"/>
+          <rect x="60" y="60" width="280" height="120" rx="12" fill="#FFF" stroke="#E5DAD3" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="14" fill="#8B3A3A" opacity="0.7"/>
+          <rect x="130" y="88" width="120" height="8" rx="4" fill="#D4A5A5" opacity="0.6"/>
+          <rect x="130" y="104" width="80" height="6" rx="3" fill="#E5DAD3"/>
+          <rect x="60" y="196" width="120" height="48" rx="10" fill="#8B3A3A" opacity="0.15"/>
+          <rect x="196" y="196" width="144" height="48" rx="10" fill="#8B3A3A" opacity="0.08"/>
+          <path d="M80 268 L120 268" stroke="#8B3A3A" stroke-width="3" stroke-linecap="round"/>
+          <path d="M140 268 L200 268" stroke="#D4A5A5" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="320" cy="70" r="8" fill="#FFD9D9" opacity="0.8"/>
+          <circle cx="340" cy="90" r="5" fill="#FFD9D9" opacity="0.6"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主容器 -->
+  <div class="main-container">
+
+    <!-- 左侧频道索引 -->
+    <aside class="left-sidebar" aria-label="频道索引">
+      <div class="sidebar-title">频道索引</div>
+      <ul class="channel-list">
+        <li><a href="/#featured" class="active">管教剧情</a></li>
+        <li><a href="/#latest">姿势教学</a></li>
+        <li><a href="/#categories">影视片段</a></li>
+        <li><a href="/#deep-dive">工具测评</a></li>
+        <li><a href="/#guide">新手入门</a></li>
+        <li><a href="/#faq">安全须知</a></li>
+        <li><a href="/#comments">圈内闲聊</a></li>
+        <li><a href="/#news">行业动态</a></li>
+        <li><a href="/#ranking">热门榜单</a></li>
+        <li><a href="/#submit">投稿交流</a></li>
+      </ul>
+    </aside>
+
+    <!-- 中间主内容 -->
+    <main class="main-content">
+
+      <!-- 主题领域概览 -->
+      <section id="overview" class="section">
+        <div class="section-header">
+          <h2>领域概览：从管教剧情到实操教学</h2>
+        </div>
+        <div class="deep-dive" style="padding:22px 26px;">
+          <p>
+            打屁股视频这一内容类型涵盖的范围比多数人以为的要宽。按表现形态分，至少有四条线并行发展：一是以角色关系为驱动的管教剧情短剧，常见设定包括师生、主仆、家庭管教等，典型代表如《书房规矩》《板子与戒尺》《家规三十条》；二是姿势与力度控制的实操教学，创作者用分解动作演示不同工具（手掌、木板、藤条）的落点差异；三是影视剧中的相关片段剪辑，来源包括老电影、网剧和纪录片；四是圈内创作者访谈与工具测评，侧重安全经验和材质选择。
+          </p>
+          <p>
+            2026年秋季以来，剧情类条目的制作水准有明显提升。《书房规矩》第七集在10月28日上线后，单集时长拉到22分钟，出现了完整的前情回顾和分镜设计，这在两年前的同类型内容里很少见。与此同时，教学类内容正在向“低门槛”方向走：10月以来至少有6位创作者发布了针对新手的分解教程，单条时长控制在8到12分钟，重点讲安全词设置和力度递进。
+          </p>
+          <p>
+            工具测评方面，10月19日有创作者发布了三款常见木板的对比测试，从厚度、表面处理、击打反馈三个角度做了量化记录，评论区讨论集中在“厚度12mm和15mm的实际感受差异”上。这类内容虽然播放量不如剧情类，但对想认真了解的人来说更有参考价值。
+          </p>
+        </div>
+      </section>
+
+      <!-- 精选内容推荐 -->
+      <section id="featured" class="section">
+        <div class="section-header">
+          <h2>精选内容推荐</h2>
+          <a href="/#latest" class="more-link">查看全部 →</a>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/guanshu1/400/300" alt="《书房规矩》第八集书房场景剧照" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">管教剧情</span>
+              <h3 class="card-title">《书房规矩》第八集：罚抄与戒尺的先后顺序</h3>
+              <p class="card-desc">第八集把冲突放在“先罚抄还是先挨板子”的规矩之争上，台词密度比前七集都高。书房长镜头从18分22秒持续到21分40秒，没有剪切。</p>
+              <div class="card-meta">
+                <span>更新 11-07</span>
+                <span>热度 9.2</span>
+              </div>
+              <div class="card-tags">
+                <span>连载</span>
+                <span>师生管教</span>
+                <span>长镜头</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/banzi2/400/300" alt="《板子与戒尺》第二季封面图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">管教剧情</span>
+              <h3 class="card-title">《板子与戒尺》第二季：换角后的节奏变化</h3>
+              <p class="card-desc">第二季主演更换后，第3集起对话节奏明显加快，单集时长从28分钟压缩到19分钟。老观众在评论区对“新主演的威慑感不够”有持续讨论。</p>
+              <div class="card-meta">
+                <span>更新 11-03</span>
+                <span>热度 8.7</span>
+              </div>
+              <div class="card-tags">
+                <span>第二季</span>
+                <span>换角</span>
+                <span>争议</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/zishi3/400/300" alt="手掌击打落点分解教学截图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">姿势教学</span>
+              <h3 class="card-title">手掌击打落点分解：从臀中到臀下沿</h3>
+              <p class="card-desc">把落点分成上、中、下三个区域逐帧演示，重点讲“臀下沿附近神经更密集”这个常被忽略的细节。全程8分14秒，附慢放对比。</p>
+              <div class="card-meta">
+                <span>更新 11-05</span>
+                <span>评分 9.0</span>
+              </div>
+              <div class="card-tags">
+                <span>新手</span>
+                <span>落点</span>
+                <span>慢放</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/muban4/400/300" alt="三款木板对比测评展示图" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">工具测评</span>
+              <h3 class="card-title">12mm与15mm木板：厚度差3毫米的实际区别</h3>
+              <p class="card-desc">用同一力度分别在两种厚度木板上做记录，12mm的击打声更脆、回弹更快，15mm的接触面更大、冲击更闷。附分贝仪读数截图。</p>
+              <div class="card-meta">
+                <span>更新 10-19</span>
+                <span>评分 8.8</span>
+              </div>
+              <div class="card-tags">
+                <span>测评</span>
+                <span>厚度对比</span>
+                <span>分贝仪</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/yingshi5/400/300" alt="老电影管教片段剪辑画面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">影视片段</span>
+              <h3 class="card-title">老电影里的管教场景：1980—2000年片段整理</h3>
+              <p class="card-desc">收录了11部老电影中的相关片段，按年代排列。1987年《家法》和1994年《训诫》两段被反复引用，后者有完整的训话前戏。</p>
+              <div class="card-meta">
+                <span>更新 10-25</span>
+                <span>热度 8.1</span>
+              </div>
+              <div class="card-tags">
+                <span>老电影</span>
+                <span>片段合集</span>
+                <span>年代整理</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/anquan6/400/300" alt="安全词设置要点讲解画面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">安全须知</span>
+              <h3 class="card-title">安全词到底怎么设：三个常见误区</h3>
+              <p class="card-desc">红绿灯词系不是唯一选择，但“只设一个安全词”确实风险偏高。视频用三个真实对话案例说明为什么需要区分“暂停”和“终止”两个层级。</p>
+              <div class="card-meta">
+                <span>更新 11-01</span>
+                <span>评分 9.3</span>
+              </div>
+              <div class="card-tags">
+                <span>安全词</span>
+                <span>沟通</span>
+                <span>案例</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/fangtan7/400/300" alt="创作者访谈对谈画面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">创作者访谈</span>
+              <h3 class="card-title">对话「老陈」：拍了三年管教短剧，最怕什么</h3>
+              <p class="card-desc">老陈是圈内较早做系列剧的创作者，三年拍了40多集。访谈里他提到最担心新人模仿视频里的力度而不看安全提示，第14分钟有具体说明。</p>
+              <div class="card-meta">
+                <span>更新 10-30</span>
+                <span>热度 8.4</span>
+              </div>
+              <div class="card-tags">
+                <span>访谈</span>
+                <span>老陈</span>
+                <span>创作幕后</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img" src="https://picsum.photos/seed/xiaojia8/400/300" alt="家庭管教题材短剧画面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <span class="card-type">管教剧情</span>
+              <h3 class="card-title">《家规三十条》第12集：板子与藤条的台词分配</h3>
+              <p class="card-desc">这集把两种工具的“台词权”做了区分——板子配长训话，藤条配短促指令。导演在片尾花絮里解释了这种设计是为了区分情绪强度。</p>
+              <div class="card-meta">
+                <span>更新 11-04</span>
+                <span>热度 8.6</span>
+              </div>
+              <div class="card-tags">
+                <span>家庭管教</span>
+                <span>第12集</span>
+                <span>花絮</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 / 动态 -->
+      <section id="latest" class="section">
+        <div class="section-header">
+          <h2>最新更新</h2>
+          <a href="/#featured" class="more-link">更多条目 →</a>
+        </div>
+        <div class="compact-list">
+          <div class="compact-item">
+            <span class="item-title">《书房规矩》第8集</span>
+            <span class="item-summary">罚抄与戒尺先后顺序引发规矩之争，书房长镜头无剪切</span>
+            <span class="item-date">11-07</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">姿势教学·落点分解</span>
+            <span class="item-summary">手掌击打上中下三区逐帧演示，重点讲臀下沿神经分布</span>
+            <span class="item-date">11-05</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">《家规三十条》第12集</span>
+            <span class="item-summary">板子配长训话、藤条配短促指令，导演花絮解释情绪区分</span>
+            <span class="item-date">11-04</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">《板子与戒尺》S2E5</span>
+            <span class="item-summary">换角后第5集，对话节奏加快，单集时长压缩至19分钟</span>
+            <span class="item-date">11-03</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">安全词设置三个误区</span>
+            <span class="item-summary">区分“暂停”和“终止”两个层级，附三个对话案例</span>
+            <span class="item-date">11-01</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">访谈·老陈</span>
+            <span class="item-summary">三年40多集创作幕后，第14分钟谈新人模仿风险</span>
+            <span class="item-date">10-30</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">老电影管教片段整理</span>
+            <span class="item-summary">1980—2000年11部电影片段，按年代排列</span>
+            <span class="item-date">10-25</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">木板厚度对比测评</span>
+            <span class="item-summary">12mm与15mm击打声、回弹、接触面差异，附分贝仪读数</span>
+            <span class="item-date">10-19</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 分类入口 -->
+      <section id="categories" class="section">
+        <div class="section-header">
+          <h2>分类入口</h2>
+        </div>
+        <div class="category-grid">
+          <a href="/#featured" class="category-item">
+            <span class="cat-icon">🎬</span>
+            <span class="cat-name">管教剧情</span>
+            <span class="cat-count">87条</span>
+          </a>
+          <a href="/#latest" class="category-item">
+            <span class="cat-icon">📐</span>
+            <span class="cat-name">姿势教学</span>
+            <span class="cat-count">43条</span>
+          </a>
+          <a href="/#latest" class="category-item">
+            <span class="cat-icon">🎞️</span>
+            <span class="cat-name">影视片段</span>
+            <span class="cat-count">61条</span>
+          </a>
+          <a href="/#deep-dive" class="category-item">
+            <span class="cat-icon">🔧</span>
+            <span class="cat-name">工具测评</span>
+            <span class="cat-count">29条</span>
+          </a>
+          <a href="/#guide" class="category-item">
+            <span class="cat-icon">🌱</span>
+            <span class="cat-name">新手入门</span>
+            <span class="cat-count">18条</span>
+          </a>
+          <a href="/#faq" class="category-item">
+            <span class="cat-icon">⚠️</span>
+            <span class="cat-name">安全须知</span>
+            <span class="cat-count">24条</span>
+          </a>
+          <a href="/#comments" class="category-item">
+            <span class="cat-icon">💬</span>
+            <span class="cat-name">圈内闲聊</span>
+            <span class="cat-count">156条</span>
+          </a>
+          <a href="/#news" class="category-item">
+            <span class="cat-icon">📰</span>
+            <span class="cat-name">行业动态</span>
+            <span class="cat-count">32条</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section id="deep-dive" class="section">
+        <div class="deep-dive">
+          <h2>深度解析：管教剧情的“规矩感”从哪来</h2>
+          <p>
+            管教剧情能成立，靠的不只是“打”这个动作。看多了会发现，决定一条视频能不能让人看下去的核心，是规矩的呈现方式。规矩立得住，打才有分量；规矩含糊，打就变成零散的动作展示。
+          </p>
+
+          <h3>一、规矩的三种来源与可信度差异</h3>
+          <p>
+            目前剧情类条目里的规矩主要有三种来源。第一种是“家规/校规”型，以《家规三十条》为代表，规矩被白纸黑字列出来，第几条规定什么、对应什么惩罚，观众能逐条对照。第二种是“情境约定”型，比如《书房规矩》里师生之间临时定下的约定，规矩本身是对话里谈出来的。第三种是“仪式传统”型，多见于老电影片段，规矩不解释，直接执行。
+          </p>
+          <p>
+            三种来源的可信度不一样。家规型最容易被观众记住，因为条文具体、可引用；情境约定型依赖台词的清晰度，第8集里“先罚抄还是先挨板子”的争论之所以好看，就是因为双方把各自理解的规矩说清楚了；仪式传统型在短视频里最容易翻车——不解释规矩，观众只看到动作，剧情就退化成动作展示。
+          </p>
+          <blockquote>
+            一个可核对的观察：在10月更新的12条剧情类条目中，带明确条文引用的7条，平均完播率比不带的高出约两成。数据来自创作者在评论区自行披露的后台截图，样本不大，但方向一致。
+          </blockquote>
+
+          <h3>二、工具选择与台词节奏的对应关系</h3>
+          <p>
+            《家规三十条》第12集做了个值得注意的尝试：板子和藤条不只是道具，还承担了台词节奏的功能。板子出现时，训话可以长，因为“板子落下前”本身就是一段等待；藤条出现时，指令必须短促，因为藤条的视觉预期是快速、连续。
+          </p>
+          <p>
+            导演在片尾花絮里说得很直接——“板子是句号，藤条是逗号”。这个比喻不严谨，但点出了关键：工具选择会影响观众对“这一下有多重”的预判。10月19日的木板测评从另一个角度印证了这点：12mm木板击打声音更脆，观众在听觉上会默认“更疼”；15mm声音闷，视觉冲击反而依赖演员的反应表演。
+          </p>
+          <ul>
+            <li>板子+长训话：适用于情绪铺垫充分的场景，典型时长比例约3:1（训话3，动作1）</li>
+            <li>藤条+短指令：适用于冲突升级段落，指令间隔通常不超过5秒</li>
+            <li>手掌+无台词：适用于收尾或转折，依赖肢体语言和表情</li>
+          </ul>
+
+          <h3>三、新人最容易忽略的一点：反应镜头比击打镜头重要</h3>
+          <p>
+            翻看播放量靠前的条目会发现，击打本身的镜头时长往往不长，真正占时间的是“落下之前”和“落下之后”。落下之前的等待、落下之后的反应，才是观众代入的位置。10月30日老陈在访谈里提到，他拍一条3分钟的打屁股视频，实际拍摄时击打动作只占不到40秒，其余全是铺垫和反应。
+          </p>
+          <p>
+            这个比例在剧情类里更明显。《书房规矩》第8集18分22秒开始的长镜头，真正的击打动作出现在19分50秒之后，前面一分半全是规矩争论。换句话说，观众看的不是“打”，是“为什么打、打完怎么样”。
+          </p>
+          <p>
+            对想自己拍的人来说，这个判断可以直接用：先写清楚规矩是什么、违反了什么、双方怎么确认，再考虑动作怎么拍。反过来做，片子大概率会散。
+          </p>
+        </div>
+      </section>
+
+      <!-- 体验指南 -->
+      <section id="guide" class="section">
+        <div class="section-header">
+          <h2>体验指南：按什么顺序看更省时间</h2>
+        </div>
+        <div class="deep-dive" style="padding:22px 26px;">
+          <p>
+            这个类型的内容跨度大，从8分钟的教学到22分钟的剧情都有。如果时间有限，建议按“先安全、再看剧情、最后补教学”的顺序来。
+          </p>
+          <p>
+            <strong>第一步，先看安全须知类。</strong>不是扫一眼，是认真看一遍安全词设置和力度递进的说明。11月1日那条讲“暂停”和“终止”两个层级的视频，8分钟不到，但把常见误区说清楚了。这一步的意义在于建立判断基准——后面看剧情里的动作，你能大概分辨哪些是表演、哪些有实际参考价值。
+          </p>
+          <p>
+            <strong>第二步，挑一部连载剧情跟。</strong>《书房规矩》适合看规矩怎么立，《板子与戒尺》适合看换角后的节奏调整，《家规三十条》适合看条文引用。三部都从第1集开始，别跳集——这个类型的前情回顾做得普遍粗糙，跳集容易接不上人物关系。
+          </p>
+          <p>
+            <strong>第三步，按需要补教学和测评。</strong>落点分解那条适合想了解具体操作的人；木板厚度对比适合想买工具的人。教学类不用全看，找到一条讲得清楚的、跟着做一遍，比刷十条更管用。
+          </p>
+          <p>
+            判断一条内容值不值得投入时间，有个简单的办法：看它有没有说清楚“为什么是这个力度/工具/顺序”。说得清的，哪怕画质一般也值得看；说不清只给结果的，大概率是模仿之作。
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <div class="section-header">
+          <h2>常见问答</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>管教剧情里板子和藤条到底有什么区别？</summary>
+            <div class="faq-answer">
+              板子接触面大、落点集中，击打声偏闷或偏脆取决于厚度，视觉上适合配长训话；藤条接触面小、速度快，声音尖细，适合配短促指令。两者在剧情里的功能不同，板子常用来做“仪式感”段落，藤条多用于冲突升级。厚度12mm和15mm的板子实际感受也有差异，10月19日的测评有量化对比。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>安全词除了“红绿灯”还能怎么设？</summary>
+            <div class="faq-answer">
+              红绿灯词系是常见做法，但核心是分层：至少要有“暂停”和“终止”两个不同层级的信号。11月1日的视频里举了三个案例，其中一个是用两个不相关的词分别代表暂停和终止，避免在紧张状态下说不清楚。另两个案例分别涉及非语言信号（比如连续敲击两下）和事前约定好的手势。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>《书房规矩》第八集为什么被讨论这么多？</summary>
+            <div class="faq-answer">
+              第8集把冲突放在“先罚抄还是先挨板子”的规矩之争上，18分22秒开始的长镜头一直持续到21分40秒，中间没有剪切。台词密度是前七集里最高的，观众在评论区逐句分析双方对规矩的理解差异。另外这一集的片长比第七集多了约4分钟，节奏反而更慢。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>新手看教学类视频要注意什么？</summary>
+            <div class="faq-answer">
+              优先看带慢放和分解动作的条目。11月5日的落点分解把击打分成上、中、下三个区域逐帧演示，全程8分14秒，附慢放对比。要警惕只给结果、不讲“为什么是这个落点”的内容。教学类视频的价值在于解释逻辑，不在于展示动作。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>老电影里的管教片段和现在的短剧差别在哪？</summary>
+            <div class="faq-answer">
+              1980到2000年的片段普遍不解释规矩，直接进入执行，节奏快但背景模糊。现在的短剧更注重规矩的呈现，会花时间交代“为什么罚”。1987年《家法》和1994年《训诫》两段被反复引用，后者有完整的训话前戏，这在当年的电影里并不常见。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>木板厚度选12mm还是15mm？</summary>
+            <div class="faq-answer">
+              取决于用途。12mm击打声更脆、回弹更快，适合需要清晰听觉反馈的场景；15mm接触面更大、冲击更闷，视觉冲击依赖演员反应。10月19日的测评用分贝仪记录了两种厚度的差异，12mm的峰值声压高出约6分贝。另外表面处理（是否打磨、是否上漆）对实际感受的影响不比厚度小。
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 用户评论 -->
+      <section id="comments" class="section">
+        <div class="section-header">
+          <h2>用户评论</h2>
+          <span style="font-size:13px;color:var(--text-tertiary);">共 14 条</span>
+        </div>
+        <div class="comment-list">
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">阿</div>
+              <span class="comment-nick">阿七</span>
+            </div>
+            <p class="comment-text">《书房规矩》第8集那个长镜头是真的顶。18分22秒到21分40秒，中间一点没切，台词一句接一句，看得我暂停了好几次才跟上。</p>
+            <div class="comment-meta"><span>11-07</span><span>👍 23</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">大</div>
+              <span class="comment-nick">大橘为重</span>
+            </div>
+            <p class="comment-text">12mm和15mm那期测评做得挺细，分贝仪读数都放出来了。就是后面讲表面处理那段有点赶，希望能单独出一期。</p>
+            <div class="comment-meta"><span>11-06</span><span>👍 17</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">木</div>
+              <span class="comment-nick">木子李</span>
+            </div>
+            <p class="comment-text">换角之后的《板子与戒尺》确实有点接不住。新主演台词没问题，但那种“说一不二”的气场差了一截，第5集我看了两遍才入戏。</p>
+            <div class="comment-meta"><span>11-05</span><span>👍 41</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">半</div>
+              <span class="comment-nick">半截烟</span>
+            </div>
+            <p class="comment-text">安全词那期看完把之前设的改了。以前就一个词，现在分了暂停和终止两个，确实清楚多了。</p>
+            <div class="comment-meta"><span>11-04</span><span>👍 12</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">老</div>
+              <span class="comment-nick">老猫不吃鱼</span>
+            </div>
+            <p class="comment-text">老陈访谈里说最怕新人模仿力度，这话真没说错。评论区里就有人问“木板要多用力”，视频里明明写了安全提示。</p>
+            <div class="comment-meta"><span>11-03</span><span>👍 29</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">夜</div>
+              <span class="comment-nick">夜班公交</span>
+            </div>
+            <p class="comment-text">说实话《家规三十条》第12集的花絮比正片好看，导演那句“板子是句号藤条是逗号”虽然不准确但挺形象。</p>
+            <div class="comment-meta"><span>11-02</span><span>👍 8</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">三</div>
+              <span class="comment-nick">三三得九</span>
+            </div>
+            <p class="comment-text">落点分解那条跟了一遍，臀下沿那段以前真没注意，慢放看得很清楚。就是8分钟有点短，要是能再加点常见错误示范就好了。</p>
+            <div class="comment-meta"><span>11-01</span><span>👍 15</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">不</div>
+              <span class="comment-nick">不瘦十斤不改名</span>
+            </div>
+            <p class="comment-text">老电影那个合集里1994年《训诫》的训话前戏确实完整，现在很多短剧反而省了这段，直接开打，没意思。</p>
+            <div class="comment-meta"><span>10-31</span><span>👍 22</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">路</div>
+              <span class="comment-nick">路边社</span>
+            </div>
+            <p class="comment-text">有没有人觉得最近教学类视频越来越长了？以前5分钟能讲完的，现在非要拉到10分钟，中间还插广告。</p>
+            <div class="comment-meta"><span>10-30</span><span>👍 6</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">橘</div>
+              <span class="comment-nick">橘子汽水</span>
+            </div>
+            <p class="comment-text">《书房规矩》第七集和第八集连着看，会发现第八集的节奏明显更稳。第七集还在试探，第八集规矩立住了。</p>
+            <div class="comment-meta"><span>10-29</span><span>👍 19</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">冬</div>
+              <span class="comment-nick">冬瓜茶</span>
+            </div>
+            <p class="comment-text">测评里说15mm声音闷、视觉冲击靠演员反应，这点我深有体会。之前看一条15mm的，演员表情不到位，整段就垮了。</p>
+            <div class="comment-meta"><span>10-28</span><span>👍 11</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">小</div>
+              <span class="comment-nick">小满</span>
+            </div>
+            <p class="comment-text">找了好久终于有个把安全词讲清楚的了。之前看的要么只提一句红绿灯，要么干脆不说。</p>
+            <div class="comment-meta"><span>10-27</span><span>👍 14</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">卡</div>
+              <span class="comment-nick">卡夫卡的兔子</span>
+            </div>
+            <p class="comment-text">换个角度说，《板子与戒尺》第二季的配乐比第一季好，第3集那段弦乐铺得挺有意思。</p>
+            <div class="comment-meta"><span>10-26</span><span>👍 4</span></div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="comment-avatar">七</div>
+              <span class="comment-nick">七号球衣</span>
+            </div>
+            <p class="comment-text">板子厚度那个测评里分贝仪截图看不清具体数值，希望下次能放大一点。</p>
+            <div class="comment-meta"><span>10-25</span><span>👍 7</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section id="news" class="section">
+        <div class="section-header">
+          <h2>相关资讯</h2>
+        </div>
+        <div class="news-list">
+          <article class="news-item">
+            <span class="news-date">2026-11-07</span>
+            <div class="news-body">
+              <h3 class="news-title">《书房规矩》第八集上线，长镜头片段被逐帧分析</h3>
+              <p class="news-summary">该集18分22秒至21分40秒的长镜头在发布后12小时内被多个账号截取分析，有观众逐句整理了台词中涉及的七条书房规矩。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <span class="news-date">2026-11-05</span>
+            <div class="news-body">
+              <h3 class="news-title">姿势教学类目新增12条视频，落点分解成热门选题</h3>
+              <p class="news-summary">11月第一周新增的教学视频中，有4条聚焦手掌落点，其中11月5日发布的分解视频在发布当天进入类目热度前三。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <span class="news-date">2026-11-03</span>
+            <div class="news-body">
+              <h3 class="news-title">《板子与戒尺》第二季更换主演后更新至第5集</h3>
+              <p class="news-summary">新主演在第3集正式登场，第二季单集时长从28分钟调整至19分钟。制作方在10月31日的直播中提到，节奏调整是“为了适应移动端观看”。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <span class="news-date">2026-10-30</span>
+            <div class="news-body">
+              <h3 class="news-title">创作者老陈接受访谈，透露系列剧已拍摄40余集</h3>
+              <p class="news-summary">老陈在访谈中首次公开三年来的拍摄数据：累计40多集、单集平均拍摄时长3.5小时，并提到第14分钟有关于新人模仿风险的说明。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <span class="news-date">2026-10-25</span>
+            <div class="news-body">
+              <h3 class="news-title">老电影管教片段合集更新，新增1994年《训诫》完整段落</h3>
+              <p class="news-summary">合集从8部扩展到11部，新增的《训诫》片段包含完整训话前戏，长度约6分钟。整理者在简介中标注了来源片名和年代。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <span class="news-date">2026-10-19</span>
+            <div class="news-body">
+              <h3 class="news-title">三款木板对比测评发布，12mm与15mm差异被量化</h3>
+              <p class="news-summary">测评用分贝仪记录两种厚度的击打声压，12mm峰值高出约6分贝。视频还记录了表面打磨与未打磨木板的实际手感差异。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section id="recommend" class="section">
+        <div class="section-header">
+          <h2>相关推荐</h2>
+        </div>
+        <div class="tag-cloud">
+          <a href="/#featured">书房规矩分集解析</a>
+          <a href="/#featured">板子与戒尺换角讨论</a>
+          <a href="/#latest">手掌落点上中下三区</a>
+          <a href="/#deep-dive">12mm与15mm木板对比</a>
+          <a href="/#guide">安全词分层设置</a>
+          <a href="/#latest">老电影管教片段年代整理</a>
+          <a href="/#comments">家规三十条第12集花絮</a>
+          <a href="/#faq">新手常见力度误区</a>
+        </div>
+      </section>
+
+      <!-- 热门榜单 -->
+      <section id="ranking" class="section">
+        <div class="section-header">
+          <h2>本周热门榜单</h2>
+          <span style="font-size:13px;color:var(--text-tertiary);">截至 11-08</span>
+        </div>
+        <div class="rank-list">
+          <div class="rank-item">
+            <span class="rank-num">1</span>
+            <span class="rank-title">《书房规矩》第8集 · 罚抄与戒尺之争</span>
+            <span class="rank-hot">热度 9.2</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">2</span>
+            <span class="rank-title">安全词到底怎么设 · 三个误区</span>
+            <span class="rank-hot">热度 9.1</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">3</span>
+            <span class="rank-title">手掌击打落点分解 · 臀下沿细节</span>
+            <span class="rank-hot">热度 9.0</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">4</span>
+            <span class="rank-title">《板子与戒尺》S2E5 · 换角后节奏</span>
+            <span class="rank-hot">热度 8.7</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">5</span>
+            <span class="rank-title">《家规三十条》第12集 · 板子与藤条</span>
+            <span class="rank-hot">热度 8.6</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">6</span>
+            <span class="rank-title">12mm与15mm木板对比测评</span>
+            <span class="rank-hot">热度 8.5</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">7</span>
+            <span class="rank-title">老陈访谈 · 三年40集幕后</span>
+            <span class="rank-hot">热度 8.4</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-num">8</span>
+            <span class="rank-title">老电影管教片段 · 1980—2000</span>
+            <span class="rank-hot">热度 8.1</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 投稿互动 -->
+      <section id="submit" class="section">
+        <div class="submit-card">
+          <span class="submit-icon">📮</span>
+          <div class="submit-text">
+            <h3>投稿 / 推荐条目</h3>
+            <p>有想推荐的具体条目、工具测评或教学片段？提交名称与一句话说明，编辑会整理进对应分类。</p>
+          </div>
+          <a href="/#submit" class="btn-primary" onclick="alert('示例功能：投稿入口，当前为静态展示。'); return false;">提交内容</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右侧辅助栏 -->
+    <aside class="right-sidebar" aria-label="辅助信息">
+      <div class="aside-card">
+        <h3>更新速览</h3>
+        <ul class="aside-list">
+          <li><span class="dot"></span><a href="/#latest">《书房规矩》第8集 11-07</a></li>
+          <li><span class="dot"></span><a href="/#latest">落点分解教学 11-05</a></li>
+          <li><span class="dot"></span><a href="/#latest">《家规三十条》第12集 11-04</a></li>
+          <li><span class="dot"></span><a href="/#latest">《板子与戒尺》S2E5 11-03</a></li>
+          <li><span class="dot"></span><a href="/#latest">安全词设置误区 11-01</a></li>
+        </ul>
+        <div class="update-time">今日 11-08 已更新 2 条</div>
+      </div>
+      <div class="aside-card">
+        <h3>热门标签</h3>
+        <div class="tag-cloud" style="gap:6px;">
+          <a href="/#featured" style="font-size:12px;padding:4px 10px;">书房规矩</a>
+          <a href="/#featured" style="font-size:12px;padding:4px 10px;">板子与戒尺</a>
+          <a href="/#featured" style="font-size:12px;padding:4px 10px;">家规三十条</a>
+          <a href="/#latest" style="font-size:12px;padding:4px 10px;">落点分解</a>
+          <a href="/#deep-dive" style="font-size:12px;padding:4px 10px;">木板厚度</a>
+          <a href="/#faq" style="font-size:12px;padding:4px 10px;">安全词</a>
+          <a href="/#latest" style="font-size:12px;padding:4px 10px;">老电影片段</a>
+        </div>
+      </div>
+      <div class="aside-card">
+        <h3>工具测评速查</h3>
+        <ul class="aside-list">
+          <li><span class="dot"></span>12mm 木板：声脆，回弹快</li>
+          <li><span class="dot"></span>15mm 木板：声闷，接触面大</li>
+          <li><span class="dot"></span>藤条：适合短促指令</li>
+          <li><span class="dot"></span>手掌：适合收尾段落</li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">打屁股视频</div>
+        <p>聚合管教剧情、姿势教学、影视片段与工具测评的内容索引。收录2024—2026年间的连载短剧、分解教学和创作者访谈，每周更新3—5条。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容频道</h4>
+        <ul>
+          <li><a href="/#featured">管教剧情</a></li>
+          <li><a href="/#latest">姿势教学</a></li>
+          <li><a href="/#latest">影视片段</a></li>
+          <li><a href="/#deep-dive">工具测评</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>入门与安全</h4>
+        <ul>
+          <li><a href="/#guide">新手入门</a></li>
+          <li><a href="/#faq">安全须知</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">圈内闲聊</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>互动</h4>
+        <ul>
+          <li><a href="/#submit">投稿推荐</a></li>
+          <li><a href="/#ranking">热门榜单</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 打屁股视频 · 内容示例页面</span>
+      <span>最近更新：2026-11-08 · 新增《书房规矩》第8集条目</span>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "打屁股视频",
+    "description": "打屁股视频内容聚合页，涵盖管教剧情、姿势教学、影视片段、工具测评等具体条目。",
+    "inLanguage": "zh-CN",
+    "about": {
+      "@type": "Thing",
+      "name": "打屁股视频内容"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "管教剧情里板子和藤条到底有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "板子接触面大、落点集中，击打声偏闷或偏脆取决于厚度，视觉上适合配长训话；藤条接触面小、速度快，声音尖细，适合配短促指令。两者在剧情里的功能不同，板子常用来做仪式感段落，藤条多用于冲突升级。厚度12mm和15mm的板子实际感受也有差异，10月19日的测评有量化对比。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "安全词除了红绿灯还能怎么设？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "红绿灯词系是常见做法，但核心是分层：至少要有暂停和终止两个不同层级的信号。11月1日的视频里举了三个案例，其中一个是用两个不相关的词分别代表暂停和终止，避免在紧张状态下说不清楚。另两个案例分别涉及非语言信号和事前约定好的手势。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "《书房规矩》第八集为什么被讨论这么多？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "第8集把冲突放在先罚抄还是先挨板子的规矩之争上，18分22秒开始的长镜头一直持续到21分40秒，中间没有剪切。台词密度是前七集里最高的，观众在评论区逐句分析双方对规矩的理解差异。这一集的片长比第七集多了约4分钟，节奏反而更慢。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "新手看教学类视频要注意什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "优先看带慢放和分解动作的条目。11月5日的落点分解把击打分成上、中、下三个区域逐帧演示，全程8分14秒，附慢放对比。要警惕只给结果、不讲为什么是这个落点的内容。教学类视频的价值在于解释逻辑，不在于展示动作。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "老电影里的管教片段和现在的短剧差别在哪？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1980到2000年的片段普遍不解释规矩，直接进入执行，节奏快但背景模糊。现在的短剧更注重规矩的呈现，会花时间交代为什么罚。1987年《家法》和1994年《训诫》两段被反复引用，后者有完整的训话前戏，这在当年的电影里并不常见。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "木板厚度选12mm还是15mm？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "取决于用途。12mm击打声更脆、回弹更快，适合需要清晰听觉反馈的场景；15mm接触面更大、冲击更闷，视觉冲击依赖演员反应。10月19日的测评用分贝仪记录了两种厚度的差异，12mm的峰值声压高出约6分贝。另外表面处理对实际感受的影响不比厚度小。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    (function() {
+      // 移动端菜单
+      const hamburger = document.getElementById('hamburgerBtn');
+      const overlay = document.getElementById('mobileOverlay');
+      const panel = document.getElementById('mobilePanel');
+      const closeBtn = document.getElementById('closeMenuBtn');
+
+      function openMenu() {
+        overlay.classList.add('active');
+        panel.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        overlay.classList.remove('active');
+        panel.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel.classList.contains('active')) {
+          closeMenu();
+        }
+      });
+
+      // 点击移动菜单链接后关闭
+      panel.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          closeMenu();
+        });
+      });
+
+      // 回到顶部
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 侧栏频道高亮
+      const sections = document.querySelectorAll('section[id]');
+      const channelLinks = document.querySelectorAll('.channel-list a');
+
+      function updateActiveChannel() {
+        let current = '';
+        sections.forEach(function(section) {
+          const sectionTop = section.offsetTop - 180;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        channelLinks.forEach(function(link) {
+          link.classList.remove('active');
+          const href = link.getAttribute('href');
+          if (href === '/#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveChannel);
+      updateActiveChannel();
+
+      // 本地搜索
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const searchFeedback = document.getElementById('searchFeedback');
+      const featuredSection = document.getElementById('featured');
+      const cards = featuredSection.querySelectorAll('.card');
+
+      function doSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        if (!query) {
+          cards.forEach(function(card) { card.classList.remove('hidden'); });
+          searchFeedback.textContent = '';
+          return;
+        }
+        let found = 0;
+        cards.forEach(function(card) {
+          const title = card.querySelector('.card-title').textContent.toLowerCase();
+          const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+          const tags = card.querySelector('.card-tags').textContent.toLowerCase();
+          if (title.includes(query) || desc.includes(query) || tags.includes(query)) {
+            card.classList.remove('hidden');
+            found++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+        if (found === 0) {
+          searchFeedback.textContent = '没有找到匹配的条目，试试「书房」「木板」「安全词」等关键词。';
+        } else {
+          searchFeedback.textContent = '找到 ' + found + ' 条结果。';
+        }
+      }
+
+      if (searchBtn) {
+        searchBtn.addEventListener('click', doSearch);
+      }
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            doSearch();
+          }
+        });
+      }
+    })();
+  </script>
+
+</body>
+            </html>
