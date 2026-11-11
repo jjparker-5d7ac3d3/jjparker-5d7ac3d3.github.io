@@ -1,0 +1,1558 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海角大神披风少年绝对真实 - 长篇连载与悬疑纪实</title>
+  <meta name="description" content="海角大神披风少年绝对真实是海角社区悬疑纪实与灵异连载写手。这里汇集披风少年的作品列表、最新更新、读者评论、事件时间线与阅读指南，适合追更真实向长篇连载的读者。">
+  <meta name="keywords" content="海角大神披风少年绝对真实">
+  <style>
+    :root {
+      --brand: #1e3a5f;
+      --brand-light: #2c5282;
+      --brand-dark: #0f1f33;
+      --accent: #d97706;
+      --accent-soft: #fef3c7;
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --text-primary: #1a202c;
+      --text-secondary: #4a5568;
+      --text-tertiary: #718096;
+      --line: #e2e8f0;
+      --radius-card: 12px;
+      --radius-btn: 8px;
+      --radius-tag: 20px;
+      --radius-banner: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+      --shadow-hover: 0 8px 24px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.06);
+      --max-width: 1320px;
+      --sticky-offset: 100px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { cursor: pointer; font-family: inherit; }
+
+    /* ===== 吸顶公告条 + 页头 ===== */
+    .sticky-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.92);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .announce-bar {
+      background: var(--brand-dark);
+      color: #e2e8f0;
+      font-size: 0.82rem;
+      padding: 8px 0;
+    }
+    .announce-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .announce-brand {
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+      font-size: 0.85rem;
+    }
+    .announce-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .announce-items span { display: inline-flex; align-items: center; gap: 6px; }
+    .announce-date { color: #fbbf24; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .announce-tag {
+      background: rgba(255,255,255,0.12);
+      padding: 1px 8px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+    }
+
+    .site-header {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--brand);
+      white-space: nowrap;
+      letter-spacing: -0.01em;
+    }
+    .brand svg { flex-shrink: 0; }
+
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .main-nav a {
+      padding: 6px 12px;
+      border-radius: var(--radius-btn);
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .main-nav a:hover, .main-nav a:focus-visible {
+      background: var(--brand-light);
+      color: #fff;
+      outline: none;
+    }
+    .main-nav a:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
+
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--line);
+      padding: 6px 16px;
+      border-radius: var(--radius-btn);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-ghost:hover { border-color: var(--brand); color: var(--brand); background: #f0f4ff; }
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      padding: 7px 18px;
+      border-radius: var(--radius-btn);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-primary:hover { background: var(--brand-light); }
+
+    .hamburger { display: none; background: none; border: none; padding: 6px; border-radius: 6px; }
+    .hamburger svg { display: block; }
+    .hamburger:focus-visible { outline: 2px solid var(--accent); }
+
+    /* ===== 首屏 ===== */
+    .hero {
+      background: linear-gradient(160deg, var(--brand-dark) 0%, #1a2f4a 40%, #1e3a5f 70%, #1b3350 100%);
+      color: #e8edf5;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 4px solid var(--accent);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(217,119,6,0.18) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px 24px 48px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hero-content { flex: 1 1 480px; min-width: 300px; }
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .hero h1 .accent-underline {
+      background: linear-gradient(transparent 60%, rgba(217,119,6,0.45) 60%);
+      padding: 0 4px;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #b8c9dd;
+      max-width: 620px;
+      margin-bottom: 24px;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hero-meta-num { font-size: 1.5rem; font-weight: 800; color: #fbbf24; line-height: 1.2; }
+    .hero-meta-label { font-size: 0.78rem; color: #8ba3bf; letter-spacing: 0.03em; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-hero {
+      background: var(--accent);
+      color: #1a202c;
+      border: none;
+      padding: 11px 28px;
+      border-radius: var(--radius-btn);
+      font-size: 0.92rem;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-hero:hover { background: #f59e0b; transform: translateY(-1px); }
+    .btn-hero-outline {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.35);
+      color: #e8edf5;
+      padding: 11px 28px;
+      border-radius: var(--radius-btn);
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-hero-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+    .hero-visual {
+      flex: 0 0 340px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-visual svg { width: 100%; max-width: 340px; height: auto; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3)); }
+    @keyframes float-soft {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .float-anim { animation: float-soft 6s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .float-anim { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ===== 三栏门户 ===== */
+    .portal-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+      display: grid;
+      grid-template-columns: 180px minmax(0,1fr) 250px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* 左侧频道索引 */
+    .channel-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+    }
+    .sidebar-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-tertiary);
+      margin-bottom: 12px;
+      padding-left: 12px;
+    }
+    .channel-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .channel-nav a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: var(--radius-btn);
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+      font-weight: 500;
+    }
+    .channel-nav a:hover, .channel-nav a:focus-visible {
+      background: #edf2f7;
+      color: var(--brand);
+      outline: none;
+    }
+    .channel-nav a.active {
+      background: #ebf4ff;
+      color: var(--brand);
+      font-weight: 700;
+      border-left: 3px solid var(--brand);
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      padding-left: 9px;
+    }
+    .channel-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--text-tertiary); flex-shrink: 0;
+    }
+    .channel-nav a.active .channel-dot { background: var(--brand); }
+
+    /* 中间主内容 */
+    .main-content { min-width: 0; display: flex; flex-direction: column; gap: 40px; }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::before {
+      content: '';
+      width: 4px; height: 20px;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .section-sub {
+      font-size: 0.85rem;
+      color: var(--text-tertiary);
+      margin-bottom: 20px;
+      padding-left: 14px;
+    }
+
+    /* 概览 */
+    .overview-text {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      background: var(--panel);
+      padding: 24px 28px;
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+    }
+    .overview-text p + p { margin-top: 14px; }
+    .overview-text strong { color: var(--text-primary); }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .pick-card {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .pick-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+    .pick-card-img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+      background: #edf2f7;
+    }
+    .pick-card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; gap: 8px; }
+    .pick-card-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+    .pick-card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag-sm {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      background: #edf2f7;
+      color: var(--text-secondary);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .tag-accent { background: var(--accent-soft); color: #92400e; }
+    .pick-card-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .pick-card-meta {
+      display: flex; gap: 12px;
+      font-size: 0.73rem;
+      color: var(--text-tertiary);
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+      margin-top: auto;
+    }
+    .pick-card-meta span { display: inline-flex; align-items: center; gap: 3px; }
+
+    /* 更新列表 */
+    .update-list { display: flex; flex-direction: column; gap: 2px; }
+    .update-item {
+      display: flex; gap: 16px; align-items: baseline;
+      padding: 12px 16px;
+      background: var(--panel);
+      border-radius: var(--radius-btn);
+      transition: background 0.2s;
+      border-bottom: 1px solid var(--line);
+    }
+    .update-item:last-child { border-bottom: none; }
+    .update-item:hover { background: #f0f4ff; }
+    .update-date {
+      font-size: 0.75rem; color: var(--text-tertiary);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap; flex-shrink: 0; min-width: 72px;
+    }
+    .update-name { font-weight: 700; font-size: 0.9rem; color: var(--brand); }
+    .update-summary { font-size: 0.82rem; color: var(--text-secondary); }
+    .update-tag { font-size: 0.68rem; background: #e2e8f0; border-radius: 10px; padding: 1px 8px; white-space: nowrap; }
+
+    /* 分类入口 */
+    .category-index {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .cat-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-btn);
+      padding: 12px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .cat-item:hover { border-color: var(--brand); color: var(--brand); background: #f7faff; }
+    .cat-count { font-size: 0.72rem; color: var(--text-tertiary); font-weight: 400; }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+      padding: 28px 32px;
+    }
+    .deep-dive h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    .deep-dive h3:first-of-type { margin-top: 0; }
+    .deep-dive p {
+      font-size: 0.92rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .deep-dive ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .deep-dive li { margin-bottom: 6px; }
+    .deep-dive .callout {
+      background: #f0f7ff;
+      border-left: 3px solid var(--brand);
+      padding: 12px 16px;
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      font-size: 0.88rem;
+      margin: 14px 0;
+    }
+
+    /* 指南步骤 */
+    .guide-steps { display: flex; flex-direction: column; gap: 0; }
+    .guide-step {
+      display: flex; gap: 18px;
+      padding: 16px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .guide-step:last-child { border-bottom: none; }
+    .step-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--brand);
+      color: #fff; font-weight: 800; font-size: 0.9rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-body h4 { font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; }
+    .step-body p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    .faq-list details {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-btn);
+      overflow: hidden;
+    }
+    .faq-list summary {
+      padding: 14px 18px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+      transition: background 0.2s;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text-tertiary);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .faq-list details[open] summary::after { content: '−'; }
+    .faq-list summary:hover { background: #f7faff; }
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .comment-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-btn);
+      padding: 14px 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .comment-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .comment-avatar {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--brand-light);
+      color: #fff; font-size: 0.7rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .comment-name { font-size: 0.8rem; font-weight: 700; color: var(--text-primary); }
+    .comment-text { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; }
+    .comment-text em { font-style: normal; color: var(--brand); font-weight: 600; }
+
+    /* 资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 10px; }
+    .news-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-btn);
+      padding: 14px 18px;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .news-date {
+      font-size: 0.73rem; color: var(--text-tertiary); white-space: nowrap;
+      min-width: 80px; padding-top: 2px;
+    }
+    .news-body h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+    .news-body p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+
+    /* 相关推荐 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rec-tag {
+      padding: 6px 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-tag);
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+    }
+    .rec-tag:hover { border-color: var(--brand); color: var(--brand); background: #f0f7ff; }
+
+    /* 榜单 */
+    .rank-list { display: flex; flex-direction: column; gap: 6px; }
+    .rank-item {
+      display: flex; gap: 12px; align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-btn);
+      padding: 10px 14px;
+    }
+    .rank-num {
+      font-size: 0.9rem; font-weight: 800; color: var(--text-tertiary);
+      width: 24px; text-align: center; flex-shrink: 0;
+    }
+    .rank-num.top3 { color: var(--accent); }
+    .rank-name { font-weight: 700; font-size: 0.88rem; flex: 1; }
+    .rank-score { font-size: 0.78rem; color: var(--text-tertiary); font-variant-numeric: tabular-nums; }
+    .rank-bar {
+      width: 60px; height: 5px; background: #edf2f7; border-radius: 3px; overflow: hidden;
+      flex-shrink: 0;
+    }
+    .rank-bar-fill { height: 100%; background: var(--accent); border-radius: 3px; }
+
+    /* 右侧辅助栏 */
+    .aux-sidebar { position: sticky; top: var(--sticky-offset); display: flex; flex-direction: column; gap: 24px; }
+    .aux-card {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      padding: 18px 16px;
+    }
+    .aux-title {
+      font-size: 0.82rem; font-weight: 800; color: var(--text-primary);
+      margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .aux-list { display: flex; flex-direction: column; gap: 8px; }
+    .aux-list-item { font-size: 0.8rem; color: var(--text-secondary); display: flex; gap: 8px; align-items: baseline; }
+    .aux-list-item span:first-child { color: var(--accent); font-weight: 800; font-size: 0.72rem; flex-shrink: 0; }
+    .aux-list-item a:hover { color: var(--brand); }
+
+    .topic-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #edf2f7;
+      border-radius: var(--radius-tag);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin: 0 4px 6px 0;
+    }
+    .topic-tag:hover { background: var(--brand); color: #fff; }
+
+    /* 投稿入口 */
+    .submit-panel {
+      background: linear-gradient(135deg, #1e3a5f, #2c5282);
+      color: #e8edf5;
+      border-radius: var(--radius-banner);
+      padding: 28px 32px;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .submit-panel h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; color: #fff; }
+    .submit-panel p { font-size: 0.85rem; color: #b8c9dd; }
+    .submit-panel .btn-hero { padding: 9px 24px; font-size: 0.85rem; }
+
+    /* 页尾 */
+    .site-footer {
+      background: var(--brand-dark);
+      color: #a0b3c9;
+      padding: 48px 24px 0;
+      margin-top: 32px;
+    }
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 36px;
+    }
+    .footer-brand { font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .footer-desc { font-size: 0.82rem; line-height: 1.7; color: #8ba3bf; max-width: 340px; }
+    .footer-col h4 { font-size: 0.82rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .footer-col a { display: block; font-size: 0.8rem; color: #8ba3bf; padding: 3px 0; transition: color 0.2s; }
+    .footer-col a:hover { color: #fbbf24; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 16px 0;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #6b7f96;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      box-shadow: var(--shadow-md);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, background 0.2s;
+      z-index: 90;
+      font-size: 1.2rem;
+    }
+    .back-top.show { opacity: 1; visibility: visible; }
+    .back-top:hover { background: var(--brand-light); }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 1024px) {
+      .portal-layout {
+        grid-template-columns: 1fr 240px;
+        gap: 24px;
+      }
+      .channel-sidebar {
+        grid-column: 1 / -1;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+      }
+      .sidebar-title { display: none; }
+      .channel-nav { flex-direction: row; flex-wrap: wrap; gap: 4px; }
+      .channel-nav a { padding: 6px 12px; font-size: 0.82rem; }
+      .channel-nav a.active { border-left: none; border-radius: var(--radius-btn); padding-left: 12px; background: var(--brand); color: #fff; }
+      .channel-nav a.active .channel-dot { background: #fff; }
+      .main-content { grid-column: 1; }
+      .aux-sidebar { grid-column: 2; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 740px) {
+      .portal-layout {
+        grid-template-columns: 1fr;
+        padding: 20px 16px 48px;
+        gap: 20px;
+      }
+      .main-content { grid-column: 1; }
+      .aux-sidebar { grid-column: 1; position: static; }
+      .hero-inner { padding: 36px 16px 32px; flex-direction: column; align-items: flex-start; }
+      .hero-visual { display: none; }
+      .hero h1 { font-size: 1.55rem; }
+      .hero-desc { font-size: 0.9rem; }
+      .site-header { padding: 8px 16px; gap: 10px; }
+      .main-nav { display: none; }
+      .main-nav.open {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: var(--panel);
+        padding: 8px 0;
+        border-top: 1px solid var(--line);
+        order: 10;
+      }
+      .main-nav.open a { padding: 10px 16px; border-radius: 0; }
+      .hamburger { display: flex; align-items: center; justify-content: center; }
+      .header-actions { margin-left: auto; }
+      .header-actions .btn-ghost { display: none; }
+      .announce-inner { padding: 0 12px; gap: 10px; }
+      .announce-items { flex-direction: column; gap: 4px; align-items: flex-start; }
+      .announce-items span { font-size: 0.75rem; }
+      .deep-dive { padding: 20px 18px; }
+      .comment-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+      .submit-panel { padding: 20px; flex-direction: column; align-items: flex-start; }
+      .back-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+      .section-title { font-size: 1.15rem; }
+      .card-grid { grid-template-columns: 1fr; }
+      .category-index { grid-template-columns: repeat(2, 1fr); }
+      .update-item { flex-wrap: wrap; gap: 4px 12px; }
+      .update-date { min-width: auto; }
+    }
+
+    @media (max-width: 400px) {
+      .category-index { grid-template-columns: 1fr; }
+      .hero-meta { gap: 12px; }
+    }
+
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    .no-results {
+      padding: 24px;
+      text-align: center;
+      color: var(--text-tertiary);
+      font-size: 0.9rem;
+      display: none;
+    }
+    .no-results.show { display: block; }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 + 页头 -->
+<div class="sticky-wrap">
+  <div class="announce-bar" id="announce">
+    <div class="announce-inner">
+      <span class="announce-brand">海角大神披风少年绝对真实</span>
+      <div class="announce-items">
+        <span><span class="announce-date">11月7日</span><span class="announce-tag">更新</span>《地窖手记·续章》第14节</span>
+        <span><span class="announce-date">11月5日</span><span class="announce-tag">新增</span>读者投稿《矿灯熄灭之后》</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="brand">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <circle cx="14" cy="14" r="13" stroke="#1e3a5f" stroke-width="2.5"/>
+        <path d="M8 17 C10 12, 12 9, 14 9 C16 9, 18 12, 20 17" stroke="#d97706" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <circle cx="14" cy="19" r="1.5" fill="#1e3a5f"/>
+      </svg>
+      海角大神披风少年绝对真实
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="主导航">
+      <a href="#overview">领域概览</a>
+      <a href="#picks">精选连载</a>
+      <a href="#updates">更新动态</a>
+      <a href="#categories">分类</a>
+      <a href="#deep-dive">深度解析</a>
+      <a href="#guide">阅读指南</a>
+      <a href="#faq">问答</a>
+      <a href="#comments">读者评论</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn-ghost" type="button" aria-label="搜索连载">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M11 11 L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        搜索
+      </button>
+      <a class="btn-primary" href="#submit">投稿</a>
+      <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mainNav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1e3a5f" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+</div>
+
+<!-- 首屏 -->
+<section class="hero" aria-label="主题首屏">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1><span class="accent-underline">海角大神披风少年绝对真实</span></h1>
+      <p class="hero-desc">
+        披风少年的连载以实地走访记录为骨架，掺入手绘地图、录音转写与当事人化名口述。故事背景从西南矿区的废弃巷道延伸到闽东渔村的妈祖庙偏殿——所有地点标注到村一级，时间线卡到日。
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="hero-meta-num">37</span><span class="hero-meta-label">篇连载中</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-num">8</span><span class="hero-meta-label">个故事系列</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-num">11月7日</span><span class="hero-meta-label">最近更新</span></div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn-hero" href="#picks">浏览连载</a>
+        <a class="btn-hero-outline" href="#guide">阅读顺序建议</a>
+      </div>
+    </div>
+    <div class="hero-visual float-anim" aria-hidden="true">
+      <svg viewBox="0 0 320 320" fill="none">
+        <defs>
+          <linearGradient id="cape-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#d97706" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#92400e" stop-opacity="0.7"/>
+          </linearGradient>
+          <linearGradient id="bg-circle" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#2c5282" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#1e3a5f" stop-opacity="0.1"/>
+          </linearGradient>
+        </defs>
+        <circle cx="160" cy="160" r="140" fill="url(#bg-circle)"/>
+        <circle cx="160" cy="160" r="110" stroke="#3b6a9e" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.5"/>
+        <circle cx="160" cy="160" r="80" stroke="#3b6a9e" stroke-width="0.8" opacity="0.3"/>
+        <!-- 披风轮廓 -->
+        <path d="M160 90 C130 90, 100 130, 95 190 C92 225, 105 245, 120 250 L200 250 C215 245, 228 225, 225 190 C220 130, 190 90, 160 90Z" fill="url(#cape-grad)" opacity="0.85"/>
+        <path d="M160 90 C145 90, 130 105, 125 130 C122 148, 128 160, 140 165 L180 165 C192 160, 198 148, 195 130 C190 105, 175 90, 160 90Z" fill="#f8fafc" opacity="0.9"/>
+        <!-- 兜帽 -->
+        <ellipse cx="160" cy="125" rx="28" ry="32" fill="#1e3a5f"/>
+        <ellipse cx="160" cy="130" rx="18" ry="20" fill="#0f1f33"/>
+        <!-- 手电光 -->
+        <path d="M140 170 L100 230 L130 235 L160 180Z" fill="#fbbf24" opacity="0.25"/>
+        <path d="M180 170 L220 230 L190 235 L160 180Z" fill="#fbbf24" opacity="0.25"/>
+        <circle cx="160" cy="160" r="6" fill="#fbbf24" opacity="0.8"/>
+        <!-- 地图碎片 -->
+        <rect x="230" y="80" width="40" height="30" rx="3" fill="#1e3a5f" opacity="0.6" transform="rotate(15 250 95)"/>
+        <rect x="60" y="200" width="35" height="25" rx="3" fill="#1e3a5f" opacity="0.5" transform="rotate(-10 77 212)"/>
+        <path d="M245 88 L255 82 L262 90 L250 96Z" fill="#d97706" opacity="0.6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 三栏门户 -->
+<div class="portal-layout">
+
+  <!-- 左侧频道 -->
+  <aside class="channel-sidebar" aria-label="频道索引">
+    <div class="sidebar-title">频道索引</div>
+    <nav class="channel-nav" id="channelNav">
+      <a href="#overview" class="active"><span class="channel-dot"></span>领域概览</a>
+      <a href="#picks"><span class="channel-dot"></span>精选连载</a>
+      <a href="#updates"><span class="channel-dot"></span>更新动态</a>
+      <a href="#categories"><span class="channel-dot"></span>分类入口</a>
+      <a href="#deep-dive"><span class="channel-dot"></span>深度解析</a>
+      <a href="#guide"><span class="channel-dot"></span>阅读指南</a>
+      <a href="#faq"><span class="channel-dot"></span>常见问答</a>
+      <a href="#comments"><span class="channel-dot"></span>读者评论</a>
+      <a href="#news"><span class="channel-dot"></span>相关资讯</a>
+      <a href="#recommend"><span class="channel-dot"></span>相关推荐</a>
+      <a href="#rank"><span class="channel-dot"></span>热度榜单</a>
+      <a href="#submit"><span class="channel-dot"></span>投稿入口</a>
+    </nav>
+  </aside>
+
+  <!-- 中间主内容 -->
+  <main class="main-content">
+
+    <!-- 1. 领域概览 -->
+    <section id="overview" aria-labelledby="overview-title">
+      <h2 class="section-title" id="overview-title">悬疑纪实连载的题材版图</h2>
+      <div class="overview-text">
+        <p>披风少年的连载集中在三个方向：<strong>矿区巷道探险</strong>、<strong>闽东渔村口述史</strong>、<strong>湘西赶尸传闻的实地核查</strong>。矿区系列以贵州万山汞矿旧址为地理锚点，每篇标注具体巷道编号与海拔；渔村系列大量引用1980年代县志与老人方言录音的转写文本；赶尸传闻核查则附有与当地文化站工作人员的通信截图。</p>
+        <p>读者追更的核心动力在于<strong>可验证的细节密度</strong>——比如《地窖手记》里出现的“1958年苏联专家留下的水平仪”，在贵州省档案馆的电子目录里能查到对应条目的缩微胶卷编号。这种写法与纯粹的氛围渲染拉开了距离：故事推进靠的是物证链和口述矛盾，而非Jump Scare。</p>
+        <p>当前值得关注的连载包括正在更新的<strong>《地窖手记·续章》</strong>、已完结的<strong>《矿灯熄灭之后》</strong>、以及刚开篇的<strong>《妈祖庙偏殿的第七块砖》</strong>。后者在11月3日的更新里首次引入了渔村族谱与生产队工分簿的交叉比对，评论区已经有人按图索骥去查同年代的渔业日志。</p>
+      </div>
+    </section>
+
+    <!-- 2. 精选内容推荐 -->
+    <section id="picks" aria-labelledby="picks-title">
+      <h2 class="section-title" id="picks-title">精选连载与单篇</h2>
+      <div class="section-sub">按故事系列与更新状态筛选，每篇标注实地核查程度</div>
+      <div class="card-grid" id="pickGrid">
+        <article class="pick-card">
+          <img class="pick-card-img" src="https://picsum.photos/seed/dijiao14/400/300" alt="地窖手记续章第十四节矿区巷道插图" width="400" height="300" loading="lazy">
+          <div class="pick-card-body">
+            <h3 class="pick-card-title">地窖手记·续章 第14节</h3>
+            <div class="pick-card-tags"><span class="tag-sm tag-accent">连载中</span><span class="tag-sm">矿区</span><span class="tag-sm">物证链</span></div>
+            <p class="pick-card-desc">第14节聚焦1958年苏联水平仪的校准记录，附三张不同年代的巷道剖面手绘图对比。评论区有人贴出了同型号水平仪在辽宁杨家杖子矿的使用报告。</p>
+            <div class="pick-card-meta"><span>11月7日更新</span><span>阅读 2.1万</span><span>收藏 846</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <img class="pick-card-img" src="https://picsum.photos/seed/kuangdeng/400/300" alt="矿灯熄灭之后矿工头盔与矿灯特写" width="400" height="300" loading="lazy">
+          <div class="pick-card-body">
+            <h3 class="pick-card-title">矿灯熄灭之后</h3>
+            <div class="pick-card-tags"><span class="tag-sm tag-accent">已完结</span><span class="tag-sm">口述史</span><span class="tag-sm">万山汞矿</span></div>
+            <p class="pick-card-desc">12篇完结，以四位退休矿工的独立口述交叉验证1962年一次未上报的冒顶事故。第四篇末尾附有当时工区卫生所的病历复印件（姓名已做模糊处理）。</p>
+            <div class="pick-card-meta"><span>10月28日完结</span><span>阅读 3.4万</span><span>评分 9.2</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <img class="pick-card-img" src="https://picsum.photos/seed/mazu7/400/300" alt="妈祖庙偏殿木门与青砖地面" width="400" height="300" loading="lazy">
+          <div class="pick-card-body">
+            <h3 class="pick-card-title">妈祖庙偏殿的第七块砖</h3>
+            <div class="pick-card-tags"><span class="tag-sm tag-accent">新开篇</span><span class="tag-sm">闽东渔村</span><span class="tag-sm">族谱比对</span></div>
+            <p class="pick-card-desc">11月3日开篇，从霞浦县一处妈祖庙偏殿的地砖磨损痕迹切入，对比三本不同年份的族谱里对同一块地砖的记载差异。第二篇已进入生产队工分簿的核查。</p>
+            <div class="pick-card-meta"><span>11月3日开篇</span><span>阅读 1.2万</span><span>追更 533</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <img class="pick-card-img" src="https://picsum.photos/seed/ganShi/400/300" alt="湘西赶尸传闻核查途中拍摄的山路" width="400" height="300" loading="lazy">
+          <div class="pick-card-body">
+            <h3 class="pick-card-title">赶尸传闻核查笔记·沅陵段</h3>
+            <div class="pick-card-tags"><span class="tag-sm tag-accent">已完结</span><span class="tag-sm">传闻核查</span><span class="tag-sm">沅陵</span></div>
+            <p class="pick-card-desc">与文化站工作人员杨德贵的六次通信全文公开，其中第三次通信里对方明确否认了“赶尸路线经过学堂坪”的说法，但提供了另一条未经证实的路线口述。</p>
+            <div class="pick-card-meta"><span>10月19日完结</span><span>阅读 2.8万</span><span>评分 8.7</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <img class="pick-card-img" src="https://picsum.photos/seed/yuchang/400/300" alt="渔村码头旧船与缆绳" width="400" height="300" loading="lazy">
+          <div class="pick-card-body">
+            <h3 class="pick-card-title">渔村口述史：阿婆的台风记忆</h3>
+            <div class="pick-card-tags"><span class="tag-sm tag-accent">单篇</span><span class="tag-sm">口述录音</span><span class="tag-sm">霞浦</span></div>
+            <p class="pick-card-desc">全文基于2026年10月14日对霞浦三沙镇一位83岁阿婆的录音转写，时长2小时17分钟，涉及1959年台风“艾瑞斯”登陆前后的避风流程。附方言词汇对照表。</p>
+            <div class="pick-card-meta"><span>10月22日发布</span><span>阅读 1.6万</span><span>收藏 712</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <img class="pick-card-img" src="https://picsum.photos/seed/kuangdao/400/300" alt="矿区废弃铁轨与矿车" width="400" height="300" loading="lazy">
+          <div class="pick-card-body">
+            <h3 class="pick-card-title">矿车轨道尽头的那扇铁门</h3>
+            <div class="pick-card-tags"><span class="tag-sm tag-accent">连载中</span><span class="tag-sm">矿区</span><span class="tag-sm">实地测绘</span></div>
+            <p class="pick-card-desc">作者带激光测距仪进入万山汞矿四坑口，测得铁门到最近通风井的水平距离为47.3米，与1963年矿区平面图标注的49米存在1.7米误差。第3节正在追查误差原因。</p>
+            <div class="pick-card-meta"><span>11月1日更新</span><span>阅读 9,800</span><span>追更 421</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. 最新更新 / 动态 -->
+    <section id="updates" aria-labelledby="updates-title">
+      <h2 class="section-title" id="updates-title">更新动态与进度</h2>
+      <div class="section-sub">按时间倒序，标注每篇的状态与核查进展</div>
+      <div class="update-list">
+        <div class="update-item">
+          <span class="update-date">11月7日</span>
+          <span class="update-name">地窖手记·续章 第14节</span>
+          <span class="update-summary">苏联水平仪校准记录的三个版本比对完成，新增与辽宁杨家杖子矿同型号设备的参数对照。</span>
+          <span class="update-tag">连载</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月5日</span>
+          <span class="update-name">矿灯熄灭之后 · 读者投稿附录</span>
+          <span class="update-summary">读者“老矿灯”投稿1964年工区安全学习班签到表照片，第四位矿工的口述时间线因此前移两周。</span>
+          <span class="update-tag">投稿</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月3日</span>
+          <span class="update-name">妈祖庙偏殿的第七块砖 · 开篇</span>
+          <span class="update-summary">霞浦县三沙镇妈祖庙偏殿地砖磨损痕迹与三本族谱的记载差异，第一篇附GPS坐标与拍摄时间戳。</span>
+          <span class="update-tag">新篇</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月1日</span>
+          <span class="update-name">矿车轨道尽头的那扇铁门 · 第3节</span>
+          <span class="update-summary">激光测距与1963年矿区平面图的1.7米误差溯源，初步判断与后期巷道支护改造有关。</span>
+          <span class="update-tag">连载</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月29日</span>
+          <span class="update-name">赶尸传闻核查笔记 · 沅陵段 通信全文补档</span>
+          <span class="update-summary">补发与杨德贵的第四次通信完整扫描件，包含对方手绘的学堂坪周边地形草图。</span>
+          <span class="update-tag">补档</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月26日</span>
+          <span class="update-name">地窖手记·续章 第13节</span>
+          <span class="update-summary">1962年工区卫生所病历的笔迹鉴定初步意见：三份病历的书写者并非同一人，与第四位矿工口述矛盾。</span>
+          <span class="update-tag">连载</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月22日</span>
+          <span class="update-name">渔村口述史：阿婆的台风记忆</span>
+          <span class="update-summary">2小时17分钟录音的转写全文与方言词汇对照表，涉及1959年台风“艾瑞斯”避风流程。</span>
+          <span class="update-tag">单篇</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月19日</span>
+          <span class="update-name">赶尸传闻核查笔记 · 沅陵段 完结</span>
+          <span class="update-summary">十二篇完结，附核查结论：三条主要传闻路线中两条有口述支持但无实物证据，一条被通信对象明确否认。</span>
+          <span class="update-tag">完结</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section id="categories" aria-labelledby="categories-title">
+      <h2 class="section-title" id="categories-title">按题材与手法分类</h2>
+      <div class="section-sub">点击进入对应频道，连载按题材、地域、核查方式归类</div>
+      <div class="category-index">
+        <a class="cat-item" href="#picks">矿区巷道 <span class="cat-count">9篇</span></a>
+        <a class="cat-item" href="#picks">闽东渔村 <span class="cat-count">7篇</span></a>
+        <a class="cat-item" href="#picks">湘西传闻核查 <span class="cat-count">12篇</span></a>
+        <a class="cat-item" href="#picks">口述史转写 <span class="cat-count">6篇</span></a>
+        <a class="cat-item" href="#picks">物证链分析 <span class="cat-count">11篇</span></a>
+        <a class="cat-item" href="#picks">族谱与地方志 <span class="cat-count">5篇</span></a>
+        <a class="cat-item" href="#picks">实地测绘记录 <span class="cat-count">4篇</span></a>
+        <a class="cat-item" href="#picks">读者投稿附录 <span class="cat-count">3篇</span></a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析 -->
+    <section id="deep-dive" aria-labelledby="deep-title">
+      <h2 class="section-title" id="deep-title">物证链写作的核查逻辑拆解</h2>
+      <div class="deep-dive">
+        <h3>一、物证优先于口述的排序原则</h3>
+        <p>《矿灯熄灭之后》第四篇里，四位矿工对1962年冒顶事故的死亡人数给出了三个版本：2人、3人、5人。作者没有取“多数一致”的2人，而是先查了工区卫生所1962年11月的病历登记册——当月中下旬共有四份“外伤性休克”入院记录，其中两份在三天内转为“死亡登记”。病历登记册是物证，口述是回忆，物证的优先级高于口述，这是披风少年在连载中反复使用的排序。</p>
+        <p>但这个原则有一个明确的边界：物证本身也需要验真。同一篇里附了病历册封底的借阅记录卡，显示这本册子在1987年被县档案馆借出过一次，归还日期栏空白。作者在正文里直接写了“归还日期缺失，病历册在1987年至1992年间是否被改动无法排除”。这种写法把判断拆到了可核对的程度，而不是只给结论。</p>
+
+        <h3>二、三个连载的核查节奏差异</h3>
+        <p>《地窖手记·续章》走的是“单点深挖”路线：第13节到第14节只推进了一个物证——苏联水平仪的校准记录，从三份不同来源的校准单里比对出厂编号和校准日期，发现其中一份的日期比设备出厂日期早了四个月。这个矛盾点被单独拎出来，用了一整节来排除“笔误”的可能性。</p>
+        <p>《妈祖庙偏殿的第七块砖》则是“多点交叉”模式：地砖磨损、族谱记载、生产队工分簿三条线同时推进，每篇只交代一条线的新进展，但会在文末列出三条线当前的状态表。11月3日的开篇里，地砖磨损线已经确认了磨损方向与庙门朝向一致，但族谱线还停在“三本族谱对同一块砖的记载文字互不相同”的初步比对阶段。</p>
+        <ul>
+          <li><strong>单点深挖适合：</strong>物证本身信息密度高、可深挖的细节多（如设备编号、校准日期、借阅记录）。</li>
+          <li><strong>多点交叉适合：</strong>单一物证信息量低，需要靠多条弱证据的交叉来建立可信度（如族谱、工分簿、口述）。</li>
+        </ul>
+        <p>两种节奏各有代价：单点深挖容易在某一节里信息过载，读者需要停下来对照附录；多点交叉则容易出现“每篇都在推进但整体进展慢”的观感，评论区里已经有人催更族谱线的结果。</p>
+
+        <h3>三、读者可自行核对的三个入口</h3>
+        <p>披风少年在每篇末尾附的“核查入口”是这套写法里最实用的部分。以11月7日第14节为例，文末列出了三条可自行核对的线索：</p>
+        <ul>
+          <li>贵州省档案馆电子目录的缩微胶卷编号（1958年苏联专家技术援助卷宗），检索关键词为“水平仪 校准 汞矿”。</li>
+          <li>辽宁杨家杖子矿1960年设备台账的公开影印件，其中第47页有同型号水平仪的校准记录。</li>
+          <li>万山汞矿四坑口1963年平面图，贵州省图书馆地方文献室藏，索书号K297.34/11。</li>
+        </ul>
+        <p>三个入口里，前两个在线上可以查到目录信息，第三个需要到馆查阅。这种分级披露的方式让读者能按自己的条件选择核查深度，而不是把所有验证成本都推给作者。评论区里“老矿灯”贴出的1964年签到表照片，就是按第一个入口的检索路径找到的。</p>
+        <div class="callout">
+          一个容易被忽略的细节：第14节正文里写“校准单上的墨水颜色与同一卷宗内其他文件不一致”，但没有据此推断任何结论，只是把它列入了待查项。这种“记录异常但不急于定性”的处理，是这套写法区别于纯氛围渲染的关键。
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 阅读指南 -->
+    <section id="guide" aria-labelledby="guide-title">
+      <h2 class="section-title" id="guide-title">从哪篇开始读：消费顺序与判断依据</h2>
+      <div class="section-sub">按阅读门槛与核查密度排序，适合不同投入程度的读者</div>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>先读《矿灯熄灭之后》第1—4篇</h4>
+            <p>这四篇是整套连载里口述与物证比例最均衡的段落，每篇约3000字，附两到三份原件扫描。读完能建立对“物证优先”写法的基本预期，也最容易判断自己是否适应这种信息密度。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>再按地域兴趣选一条支线</h4>
+            <p>对西南矿区感兴趣，接《地窖手记·续章》从第9节开始读——第9节起进入水平仪线，前后关联紧密；对闽东渔村感兴趣，直接读《妈祖庙偏殿的第七块砖》开篇，篇幅短、线索清晰，适合试读。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>判断一篇值不值得投入时间的三个指标</h4>
+            <p>看文末“核查入口”是否给出了可检索的编号或索书号；看正文里是否区分了“已公开事实”和“当事人回应”；看同一事件是否列出了至少两个版本的说法。三条里满足两条，这篇的核查密度就值得花时间。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>同系列内比较：看附录厚度</h4>
+            <p>同一系列里，附录越厚的篇目通常核查越扎实。《地窖手记·续章》第14节的附录有11页，包含三份校准单的转录和一份手绘剖面图；第11节的附录只有2页。附录厚度与正文信息量基本正相关，但第13节是个例外——附录薄，正文里却嵌入了病历笔迹鉴定的完整比对过程。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 class="section-title" id="faq-title">读者常问的具体问题</h2>
+      <div class="faq-list">
+        <details>
+          <summary>《地窖手记·续章》的苏联水平仪校准单，在贵州省档案馆能查到原件吗？</summary>
+          <div class="faq-answer">能查到目录条目。1958年苏联专家技术援助卷宗在贵州省档案馆电子目录里有缩微胶卷编号，但该卷宗目前只开放目录检索，原件调阅需要提前三个工作日预约。第14节正文里引用的三份校准单，其中两份在该卷宗内，第三份来自辽宁杨家杖子矿的设备台账影印件。</div>
+        </details>
+        <details>
+          <summary>《妈祖庙偏殿的第七块砖》里提到的三本族谱，具体是哪三本？</summary>
+          <div class="faq-answer">分别是霞浦县三沙镇林氏族谱（清光绪年间抄本）、民国二十三年重修本、以及1982年生产队时期的手抄补充本。三本对偏殿第七块地砖的记载文字互不相同：光绪本写“砖下有铁函”，民国本写“砖下中空”，1982年本只标注了“第七砖”三个字，没有进一步描述。</div>
+        </details>
+        <details>
+          <summary>“老矿灯”投稿的1964年签到表照片，和其他物证有冲突吗？</summary>
+          <div class="faq-answer">有冲突。签到表显示第四位矿工在1964年3月12日参加了安全学习班，但《矿灯熄灭之后》第四篇里这位矿工的口述说“1964年春天我在老家养伤，没参加学习班”。两者时间重叠，作者在11月5日的附录里把这一点列为待查项，没有下结论，只标注了“口述与签到表存在时间矛盾，需查同期医疗记录”。</div>
+        </details>
+        <details>
+          <summary>赶尸传闻核查笔记里，杨德贵否认的是哪条路线？</summary>
+          <div class="faq-answer">否认的是“学堂坪—凉水井”这条路线。第三次通信里杨德贵明确写“学堂坪那条路1950年代就改道了，赶尸不可能走那里”。但他同时提供了一条未经证实的替代路线口述，从凉水井经鹿溪口到麻溪铺，这条路线目前只有他一个人的口述支持，没有实物证据。</div>
+        </details>
+        <details>
+          <summary>矿车轨道铁门的1.7米误差，最后查清了吗？</summary>
+          <div class="faq-answer">第3节给出了初步判断：误差可能与1965年巷道支护改造有关。1963年平面图标注的是改造前的净距，而铁门安装位置在改造后的支护结构上，两者基准不同。但这个判断还需要1965年改造工程的验收报告来佐证，目前该报告尚未找到，作者在文末标注了“待查”。</div>
+        </details>
+        <details>
+          <summary>渔村口述史里阿婆提到的台风“艾瑞斯”，和气象记录对得上吗？</summary>
+          <div class="faq-answer">登陆时间对得上，避风流程的细节对不上。气象记录显示“艾瑞斯”于1959年8月23日在霞浦附近登陆，与阿婆说的“八月廿三”一致。但阿婆说当时全村转移到了后山的防空洞，而三沙镇的地方志记载该防空洞建于1962年，1959年尚未建成。这个矛盾在转写全文的注释里已经标出。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section id="comments" aria-labelledby="comments-title">
+      <h2 class="section-title" id="comments-title">读者评论</h2>
+      <div class="section-sub">来自连载评论区与投稿附录的反馈</div>
+      <div class="comment-grid">
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">矿</span><span class="comment-name">老矿灯</span></div><p class="comment-text">签到表是我父亲留下的遗物，1964年安全学习班他也在场。第四位矿工说的“养伤”可能记岔了年份，1963年才是养伤。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">霞</span><span class="comment-name">霞浦阿明</span></div><p class="comment-text">第七块砖那篇，我上周回三沙专门去看了偏殿，地砖确实有磨损，但方向和文章里说的不太一样。改天拍照片发投稿。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">档</span><span class="comment-name">档案馆常客</span></div><p class="comment-text">水平仪校准单的缩微胶卷编号我查了，目录里有，但调阅要预约。另外那个索书号K297.34/11我印象里是地方志不是平面图，可能记错了。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">湘</span><span class="comment-name">湘西老表</span></div><p class="comment-text">杨德贵说的鹿溪口那条线，我外婆家就在鹿溪口附近，没听说过赶尸走那里。不过她倒是提过凉水井那边有老路。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">追</span><span class="comment-name">追更三年</span></div><p class="comment-text">第14节信息量太大了，附录11页看了两遍才理清三份校准单的先后顺序。建议以后附录里加个时间轴。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">路</span><span class="comment-name">路人甲</span></div><p class="comment-text">说实话有些节太像学术论文了，读起来累。但我就是冲这个来的，氛围文看多了没意思。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">台</span><span class="comment-name">台风记忆</span></div><p class="comment-text">阿婆说的防空洞我小时候也进去过，但确实建得晚。可能是后来记混了，老人家的记忆有时候会把不同年代的事叠在一起。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">测</span><span class="comment-name">测绘小陈</span></div><p class="comment-text">1.7米误差那个，如果是支护改造导致的，验收报告可能在矿务局档案里，不在省档案馆。可以往这个方向找。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">半</span><span class="comment-name">半截话</span></div><p class="comment-text">第13节笔迹鉴定那段，我是外行，看不出门道，但觉得厉害。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">万</span><span class="comment-name">万山本地人</span></div><p class="comment-text">四坑口现在封了，铁门还在，但轨道拆了一段。文章里写的47.3米我没量过，不过那个位置我熟。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">随</span><span class="comment-name">随便看看</span></div><p class="comment-text">更新太慢了，等族谱线的结果等得心焦。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">图</span><span class="comment-name">图馆员</span></div><p class="comment-text">索书号那个确实可能记错了，K297.34是地方志类，平面图一般在TU类。下次到馆可以查一下分类目录。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">渔</span><span class="comment-name">渔村小辈</span></div><p class="comment-text">族谱三本的说法我信，我们那边修谱确实有好几个版本，各房手里留的都不一样。</p></div>
+        <div class="comment-card"><div class="comment-head"><span class="comment-avatar">赶</span><span class="comment-name">赶集路过</span></div><p class="comment-text">赶尸那篇看完反而没那么怕了，通信一公开，感觉就是个地方文化站大叔在认真回信。</p></div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section id="news" aria-labelledby="news-title">
+      <h2 class="section-title" id="news-title">相关资讯</h2>
+      <div class="news-list">
+        <article class="news-item">
+          <span class="news-date">11月6日</span>
+          <div class="news-body">
+            <h4>贵州省档案馆新增1950年代汞矿技术档案电子目录</h4>
+            <p>新上线的电子目录包含1956—1959年苏联专家技术援助卷宗共47卷，其中第12—18卷涉及水平仪、经纬仪等测量设备的校准记录，支持在线检索缩微胶卷编号。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <span class="news-date">11月4日</span>
+          <div class="news-body">
+            <h4>霞浦县三沙镇启动妈祖庙偏殿修缮前期勘察</h4>
+            <p>勘察范围包括偏殿地砖的磨损记录与结构测绘，预计11月中旬完成。施工方表示勘察期间偏殿暂停开放，但外围可正常参观。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <span class="news-date">10月31日</span>
+          <div class="news-body">
+            <h4>辽宁杨家杖子矿1960年设备台账影印件在地方文献展展出</h4>
+            <p>展出的台账第47页有同型号水平仪的校准记录，与《地窖手记·续章》第14节引用的校准单编号可交叉比对，展出持续至11月30日。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <span class="news-date">10月27日</span>
+          <div class="news-body">
+            <h4>沅陵县文化站工作人员杨德贵退休，通信核查资料移交县档案馆</h4>
+            <p>移交资料包括与披风少年的六次通信原件及手绘地形草图，县档案馆表示将在整理后开放目录查询，具体时间未定。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <span class="news-date">10月23日</span>
+          <div class="news-body">
+            <h4>万山汞矿四坑口工业遗产保护范围划定公示</h4>
+            <p>公示文件附有1963年矿区平面图与现状对比图，铁门所在位置被划入核心保护区，轨道拆除段列入恢复计划，公示期至11月20日。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <span class="news-date">10月20日</span>
+          <div class="news-body">
+            <h4>读者“老矿灯”向万山汞矿博物馆捐赠1964年安全学习班签到表原件</h4>
+            <p>博物馆已接收并完成初步登记，编号WSN-2026-1047，预计12月起在矿区生活展区展出，与《矿灯熄灭之后》附录中的影印件可对照查看。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section id="recommend" aria-labelledby="rec-title">
+      <h2 class="section-title" id="rec-title">按具体方向延伸</h2>
+      <div class="rec-tags">
+        <a class="rec-tag" href="#picks">苏联水平仪校准记录比对</a>
+        <a class="rec-tag" href="#picks">万山汞矿四坑口平面图</a>
+        <a class="rec-tag" href="#picks">霞浦林氏族谱三个版本</a>
+        <a class="rec-tag" href="#picks">1959年台风艾瑞斯避风流程</a>
+        <a class="rec-tag" href="#picks">沅陵学堂坪赶尸路线争议</a>
+        <a class="rec-tag" href="#picks">1962年冒顶事故口述矛盾</a>
+        <a class="rec-tag" href="#picks">生产队工分簿与地砖磨损</a>
+        <a class="rec-tag" href="#picks">1964年安全学习班签到表</a>
+      </div>
+    </section>
+
+    <!-- 11. 补充板块：热度榜单 -->
+    <section id="rank" aria-labelledby="rank-title">
+      <h2 class="section-title" id="rank-title">连载热度榜（11月第1周）</h2>
+      <div class="section-sub">按收藏数与追更人数综合排序，数据统计截至11月7日</div>
+      <div class="rank-list">
+        <div class="rank-item"><span class="rank-num top3">1</span><span class="rank-name">矿灯熄灭之后</span><span class="rank-score">收藏 2,847</span><div class="rank-bar"><div class="rank-bar-fill" style="width:95%"></div></div></div>
+        <div class="rank-item"><span class="rank-num top3">2</span><span class="rank-name">地窖手记·续章</span><span class="rank-score">收藏 2,103</span><div class="rank-bar"><div class="rank-bar-fill" style="width:82%"></div></div></div>
+        <div class="rank-item"><span class="rank-num top3">3</span><span class="rank-name">赶尸传闻核查笔记·沅陵段</span><span class="rank-score">收藏 1,876</span><div class="rank-bar"><div class="rank-bar-fill" style="width:74%"></div></div></div>
+        <div class="rank-item"><span class="rank-num">4</span><span class="rank-name">妈祖庙偏殿的第七块砖</span><span class="rank-score">收藏 1,244</span><div class="rank-bar"><div class="rank-bar-fill" style="width:58%"></div></div></div>
+        <div class="rank-item"><span class="rank-num">5</span><span class="rank-name">矿车轨道尽头的那扇铁门</span><span class="rank-score">收藏 987</span><div class="rank-bar"><div class="rank-bar-fill" style="width:46%"></div></div></div>
+        <div class="rank-item"><span class="rank-num">6</span><span class="rank-name">渔村口述史：阿婆的台风记忆</span><span class="rank-score">收藏 712</span><div class="rank-bar"><div class="rank-bar-fill" style="width:35%"></div></div></div>
+      </div>
+    </section>
+
+    <!-- 投稿入口 -->
+    <section id="submit" aria-labelledby="submit-title">
+      <div class="submit-panel">
+        <div>
+          <h3 id="submit-title">有实地照片、老物件或长辈口述？</h3>
+          <p>投稿附录长期开放。提供原件照片、录音转写或地方志摘录的读者，会在核对后纳入对应连载的附录。署名方式可自选。</p>
+        </div>
+        <a class="btn-hero" href="#submit">提交材料说明</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右侧辅助栏 -->
+  <aside class="aux-sidebar" aria-label="辅助信息">
+    <div class="aux-card">
+      <div class="aux-title">本周更新速览</div>
+      <div class="aux-list">
+        <div class="aux-list-item"><span>11/07</span><a href="#updates">地窖手记·续章 第14节</a></div>
+        <div class="aux-list-item"><span>11/05</span><a href="#updates">矿灯熄灭之后 投稿附录</a></div>
+        <div class="aux-list-item"><span>11/03</span><a href="#updates">妈祖庙偏殿的第七块砖 开篇</a></div>
+        <div class="aux-list-item"><span>11/01</span><a href="#updates">矿车轨道尽头的那扇铁门 第3节</a></div>
+        <div class="aux-list-item"><span>10/29</span><a href="#updates">赶尸传闻核查笔记 补档</a></div>
+      </div>
+    </div>
+    <div class="aux-card">
+      <div class="aux-title">热门标签</div>
+      <div>
+        <a class="topic-tag" href="#picks">水平仪校准单</a>
+        <a class="topic-tag" href="#picks">万山汞矿</a>
+        <a class="topic-tag" href="#picks">霞浦族谱</a>
+        <a class="topic-tag" href="#picks">沅陵赶尸</a>
+        <a class="topic-tag" href="#picks">口述史转写</a>
+        <a class="topic-tag" href="#picks">物证链</a>
+        <a class="topic-tag" href="#picks">实地测绘</a>
+        <a class="topic-tag" href="#picks">投稿附录</a>
+      </div>
+    </div>
+    <div class="aux-card">
+      <div class="aux-title">核查进度</div>
+      <div class="aux-list">
+        <div class="aux-list-item"><span>待查</span>1965年巷道改造验收报告</div>
+        <div class="aux-list-item"><span>待查</span>第四位矿工1964年医疗记录</div>
+        <div class="aux-list-item"><span>推进中</span>霞浦林氏族谱第四版本</div>
+        <div class="aux-list-item"><span>已确认</span>1959年台风艾瑞斯登陆日期</div>
+        <div class="aux-list-item"><span>已排除</span>学堂坪赶尸路线</div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="13" stroke="#fbbf24" stroke-width="2"/>
+          <path d="M8 17 C10 12, 12 9, 14 9 C16 9, 18 12, 20 17" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        </svg>
+        海角大神披风少年绝对真实
+      </div>
+      <p class="footer-desc">连载跨度从2024年3月至2026年11月，累计37篇。条目类型包括实地走访记录、口述史转写、物证比对附录、读者投稿补充。更新频率平均每周1—2篇，矿区系列与渔村系列交替推进。</p>
+    </div>
+    <div class="footer-col">
+      <h4>连载系列</h4>
+      <a href="#picks">矿区巷道</a>
+      <a href="#picks">闽东渔村</a>
+      <a href="#picks">湘西传闻核查</a>
+      <a href="#picks">口述史转写</a>
+    </div>
+    <div class="footer-col">
+      <h4>核查方法</h4>
+      <a href="#deep-dive">物证优先原则</a>
+      <a href="#deep-dive">单点深挖与多点交叉</a>
+      <a href="#guide">核查入口索引</a>
+      <a href="#faq">常见疑问</a>
+    </div>
+    <div class="footer-col">
+      <h4>参与</h4>
+      <a href="#submit">投稿附录</a>
+      <a href="#comments">读者评论</a>
+      <a href="#rank">热度榜单</a>
+      <a href="#news">相关资讯</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>内容为连载示例与读者投稿汇编，事实性表述以标注来源为准。更新日期 2026年11月8日。</p>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+  // 移动端菜单
+  const hamburger = document.getElementById('hamburger');
+  const mainNav = document.getElementById('mainNav');
+
+  hamburger.addEventListener('click', function() {
+    const open = mainNav.classList.toggle('open');
+    this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    this.setAttribute('aria-label', open ? '关闭导航菜单' : '打开导航菜单');
+  });
+
+  // 点击导航后收起
+  mainNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 740) {
+        mainNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', '打开导航菜单');
+      }
+    });
+  });
+
+  // Esc 关闭
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+      mainNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', '打开导航菜单');
+      hamburger.focus();
+    }
+  });
+
+  // 回到顶部
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > window.innerHeight * 0.8) {
+      backTop.classList.add('show');
+    } else {
+      backTop.classList.remove('show');
+    }
+  });
+  backTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 左侧频道高亮
+  const sections = document.querySelectorAll('main section[id]');
+  const channelLinks = document.querySelectorAll('#channelNav a');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        channelLinks.forEach(function(l) { l.classList.remove('active'); });
+        const active = document.querySelector('#channelNav a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-100px 0px -60% 0px', threshold: 0.1 });
+  sections.forEach(function(s) { observer.observe(s); });
+
+  // 搜索按钮（本地筛选示例）
+  const searchBtn = document.querySelector('.btn-ghost');
+  if (searchBtn) {
+    searchBtn.addEventListener('click', function() {
+      const term = prompt('输入关键词筛选连载（标题或标签）：');
+      if (term === null) return;
+      const q = term.trim().toLowerCase();
+      const cards = document.querySelectorAll('.pick-card');
+      let visible = 0;
+      cards.forEach(function(card) {
+        const text = card.textContent.toLowerCase();
+        if (!q || text.indexOf(q) !== -1) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      let noResult = document.getElementById('noResultMsg');
+      if (!noResult) {
+        noResult = document.createElement('div');
+        noResult.id = 'noResultMsg';
+        noResult.className = 'no-results';
+        noResult.textContent = '没有找到匹配的连载，试试“矿灯”“族谱”或“水平仪”。';
+        document.getElementById('pickGrid').after(noResult);
+      }
+      noResult.classList.toggle('show', visible === 0);
+    });
+  }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "海角大神披风少年绝对真实",
+  "description": "海角社区悬疑纪实连载写手披风少年的作品聚合：矿区巷道、闽东渔村口述史、湘西传闻核查，附物证链分析与读者投稿。",
+  "inLanguage": "zh-CN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "《地窖手记·续章》的苏联水平仪校准单，在贵州省档案馆能查到原件吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能查到目录条目。1958年苏联专家技术援助卷宗在贵州省档案馆电子目录里有缩微胶卷编号，但该卷宗目前只开放目录检索，原件调阅需要提前三个工作日预约。第14节正文里引用的三份校准单，其中两份在该卷宗内，第三份来自辽宁杨家杖子矿的设备台账影印件。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《妈祖庙偏殿的第七块砖》里提到的三本族谱，具体是哪三本？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "分别是霞浦县三沙镇林氏族谱（清光绪年间抄本）、民国二十三年重修本、以及1982年生产队时期的手抄补充本。三本对偏殿第七块地砖的记载文字互不相同：光绪本写“砖下有铁函”，民国本写“砖下中空”，1982年本只标注了“第七砖”三个字，没有进一步描述。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "“老矿灯”投稿的1964年签到表照片，和其他物证有冲突吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有冲突。签到表显示第四位矿工在1964年3月12日参加了安全学习班，但《矿灯熄灭之后》第四篇里这位矿工的口述说“1964年春天我在老家养伤，没参加学习班”。两者时间重叠，作者在11月5日的附录里把这一点列为待查项，没有下结论，只标注了“口述与签到表存在时间矛盾，需查同期医疗记录”。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "赶尸传闻核查笔记里，杨德贵否认的是哪条路线？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "否认的是“学堂坪—凉水井”这条路线。第三次通信里杨德贵明确写“学堂坪那条路1950年代就改道了，赶尸不可能走那里”。但他同时提供了一条未经证实的替代路线口述，从凉水井经鹿溪口到麻溪铺，这条路线目前只有他一个人的口述支持，没有实物证据。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "矿车轨道铁门的1.7米误差，最后查清了吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "第3节给出了初步判断：误差可能与1965年巷道支护改造有关。1963年平面图标注的是改造前的净距，而铁门安装位置在改造后的支护结构上，两者基准不同。但这个判断还需要1965年改造工程的验收报告来佐证，目前该报告尚未找到，作者在文末标注了“待查”。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "渔村口述史里阿婆提到的台风“艾瑞斯”，和气象记录对得上吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "登陆时间对得上，避风流程的细节对不上。气象记录显示“艾瑞斯”于1959年8月23日在霞浦附近登陆，与阿婆说的“八月廿三”一致。但阿婆说当时全村转移到了后山的防空洞，而三沙镇的地方志记载该防空洞建于1962年，1959年尚未建成。这个矛盾在转写全文的注释里已经标出。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+          </html>
